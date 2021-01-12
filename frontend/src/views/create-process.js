@@ -1,10 +1,10 @@
 import React from "react";
-import { Text, View } from "react-native";
-
+import { View } from "react-native";
+import FormCreate from "../components/form-create-process";
 export default function CreateProcess() {
   return (
     <View>
-      <Text>process </Text>
+      <FormCreate />
     </View>
   );
 }
