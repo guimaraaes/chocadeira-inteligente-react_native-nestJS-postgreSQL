@@ -17,48 +17,52 @@ export default function Header(props) {
 
   return (
     <Appbar.Header style={styles.header}>
-      <Menu
-        // style={styles.menu}
-        visible={visible}
-        onDismiss={closeMenu}
-        anchor={<Appbar.Action icon="menu" onPress={openMenu}></Appbar.Action>}
-      >
-        <View style={styles.menu}>
-          <View style={styles.menuHeader}>
-            <IconButton
-              icon="close"
-              onPress={closeMenu}
-              style={styles.buttonClose}
-            />
+      {props.login ? null : (
+        <Menu
+          // style={styles.menu}
+          visible={visible}
+          onDismiss={closeMenu}
+          anchor={
+            <Appbar.Action icon="menu" onPress={openMenu}></Appbar.Action>
+          }
+        >
+          <View style={styles.menu}>
+            <View style={styles.menuHeader}>
+              <IconButton
+                icon="close"
+                onPress={closeMenu}
+                style={styles.buttonClose}
+              />
 
+              <Menu.Item
+                title={<Text style={styles.client}>Francisco da Silva</Text>}
+              />
+            </View>
+
+            <Menu.Item icon="logout" title="Sair" onPress={() => {}} />
             <Menu.Item
-              title={<Text style={styles.client}>Francisco da Silva</Text>}
+              style={styles.menuFooter}
+              title={
+                <View>
+                  <Text style={styles.menuFooter}>por</Text>
+                  <Text>SARA GUIMARAES</Text>
+                </View>
+              }
             />
           </View>
-
-          <Menu.Item icon="logout" title="Sair" onPress={() => {}} />
-          <Menu.Item
-            style={styles.menuFooter}
-            title={
-              <View>
-                <Text style={styles.menuFooter}>por</Text>
-                <Text>SARA GUIMARAES</Text>
-              </View>
-            }
-          />
-        </View>
-      </Menu>
-
-      {props.process ? (
+        </Menu>
+      )}
+      <Appbar.Content
+        style={{ alignItems: "center" }}
+        title="chocadeira inteligente"
+      />
+      {props.login ? null : props.process ? (
         <>
-          <Appbar.Content title="chocadeira inteligente" />
-
           <Appbar.Action icon="share" onPress={() => {}} />
           <Appbar.Action icon="delete" onPress={() => {}} />
         </>
       ) : search ? (
         <>
-          <Appbar.Content title="chocadeira inteligente" />
           <Appbar.Action
             icon="magnify"
             onPress={() => {
@@ -119,6 +123,8 @@ const styles = StyleSheet.create({
     // backgroundColor: "#F9A825",
   },
   search: {
-    width: "75%",
+    marginLeft: -10,
+    // backgroundColor: "#FFF",
+    width: Dimensions.get("window").width * 0.7,
   },
 });
