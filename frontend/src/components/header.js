@@ -2,7 +2,7 @@ import React from "react";
 import { Dimensions, StyleSheet, Text, View } from "react-native";
 import { Appbar, IconButton, Menu, Searchbar } from "react-native-paper";
 
-export default function Header() {
+export default function Header(props) {
   const [searchQuery, setSearchQuery] = React.useState("");
   const [search, setSearch] = React.useState(true);
 
@@ -48,15 +48,23 @@ export default function Header() {
           />
         </View>
       </Menu>
-      {search ? (
+
+      {props.process ? (
         <>
-          <Appbar.Content title="chocadeira inteligente"></Appbar.Content>
+          <Appbar.Content title="chocadeira inteligente" />
+
+          <Appbar.Action icon="share" onPress={() => {}} />
+          <Appbar.Action icon="delete" onPress={() => {}} />
+        </>
+      ) : search ? (
+        <>
+          <Appbar.Content title="chocadeira inteligente" />
           <Appbar.Action
             icon="magnify"
             onPress={() => {
               setSearch(!search);
             }}
-          ></Appbar.Action>
+          />
         </>
       ) : (
         <>
@@ -108,7 +116,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-end",
     alignSelf: "center",
-    backgroundColor: "#F9A825",
+    // backgroundColor: "#F9A825",
   },
   search: {
     width: "75%",

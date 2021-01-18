@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Provider>
       <View>
-        <Header />
+        <Header process={true} />
         <Process />
         {/* <ListProcesses /> */}
       </View>

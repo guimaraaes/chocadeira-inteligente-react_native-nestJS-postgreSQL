@@ -43,12 +43,7 @@ export default function FormCreate() {
         <Text>alerta altas variações</Text>
       </View>
 
-      <Button
-        style={styles.button}
-        color="#F9A825"
-        label="CONFIGURAR"
-        mode="contained"
-      >
+      <Button style={styles.button} color="#F9A825" mode="contained">
         CONFIGURAR
       </Button>
     </View>
