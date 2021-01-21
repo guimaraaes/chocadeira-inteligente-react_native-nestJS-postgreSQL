@@ -21,6 +21,11 @@
         "signature": "8a12173c586e95f4433e0c6dc446bc88346be73ffe9ca6eec7aa63c8f3dca7f9",
         "affectsGlobalScope": false
       },
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2018.d.ts": {
+        "version": "5f4e733ced4e129482ae2186aae29fde948ab7182844c3a5a51dd346182c7b06",
+        "signature": "5f4e733ced4e129482ae2186aae29fde948ab7182844c3a5a51dd346182c7b06",
+        "affectsGlobalScope": false
+      },
       "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.dom.d.ts": {
         "version": "38130cdd16bd2318b9362f9d60dd9670f7e38708bb6131cf11fc78a41b2c34a0",
         "signature": "38130cdd16bd2318b9362f9d60dd9670f7e38708bb6131cf11fc78a41b2c34a0",
@@ -114,6 +119,41 @@
       "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
         "version": "b0124885ef82641903d232172577f2ceb5d3e60aed4da1153bab4221e1f6dd4e",
         "signature": "b0124885ef82641903d232172577f2ceb5d3e60aed4da1153bab4221e1f6dd4e",
+        "affectsGlobalScope": true
+      },
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts": {
+        "version": "0eb85d6c590b0d577919a79e0084fa1744c1beba6fd0d4e951432fa1ede5510a",
+        "signature": "0eb85d6c590b0d577919a79e0084fa1744c1beba6fd0d4e951432fa1ede5510a",
+        "affectsGlobalScope": true
+      },
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
+        "version": "a40c4d82bf13fcded295ac29f354eb7d40249613c15e07b53f2fc75e45e16359",
+        "signature": "a40c4d82bf13fcded295ac29f354eb7d40249613c15e07b53f2fc75e45e16359",
+        "affectsGlobalScope": true
+      },
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2018.intl.d.ts": {
+        "version": "df9c8a72ca8b0ed62f5470b41208a0587f0f73f0a7db28e5a1272cf92537518e",
+        "signature": "df9c8a72ca8b0ed62f5470b41208a0587f0f73f0a7db28e5a1272cf92537518e",
+        "affectsGlobalScope": true
+      },
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2018.promise.d.ts": {
+        "version": "bb2d3fb05a1d2ffbca947cc7cbc95d23e1d053d6595391bd325deb265a18d36c",
+        "signature": "bb2d3fb05a1d2ffbca947cc7cbc95d23e1d053d6595391bd325deb265a18d36c",
+        "affectsGlobalScope": true
+      },
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
+        "version": "c80df75850fea5caa2afe43b9949338ce4e2de086f91713e9af1a06f973872b8",
+        "signature": "c80df75850fea5caa2afe43b9949338ce4e2de086f91713e9af1a06f973872b8",
+        "affectsGlobalScope": true
+      },
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2020.bigint.d.ts": {
+        "version": "7b5a10e3c897fabece5a51aa85b4111727d7adb53c2734b5d37230ff96802a09",
+        "signature": "7b5a10e3c897fabece5a51aa85b4111727d7adb53c2734b5d37230ff96802a09",
+        "affectsGlobalScope": true
+      },
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.esnext.intl.d.ts": {
+        "version": "89bf2b7a601b73ea4311eda9c41f86a58994fec1bee3b87c4a14d68d9adcdcbd",
+        "signature": "89bf2b7a601b73ea4311eda9c41f86a58994fec1bee3b87c4a14d68d9adcdcbd",
         "affectsGlobalScope": true
       },
       "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2017.full.d.ts": {
@@ -1146,9 +1186,574 @@
         "signature": "ef022c91ea9e75ab4082f2e881f9c4db7b346be2da706e876b253bebce5e6140",
         "affectsGlobalScope": false
       },
+      "../node_modules/@types/node/globals.d.ts": {
+        "version": "215d8d9a2c480fd460127edc048d68d9931d3b27f95132253a6e71975f060bb1",
+        "signature": "215d8d9a2c480fd460127edc048d68d9931d3b27f95132253a6e71975f060bb1",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@types/node/async_hooks.d.ts": {
+        "version": "c438b413e94ff76dfa20ae005f33a1c84f2480d1d66e0fd687501020d0de9b50",
+        "signature": "c438b413e94ff76dfa20ae005f33a1c84f2480d1d66e0fd687501020d0de9b50",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/buffer.d.ts": {
+        "version": "bc6a78961535181265845bf9b9e8a147ffd0ca275097ceb670a9b92afa825152",
+        "signature": "bc6a78961535181265845bf9b9e8a147ffd0ca275097ceb670a9b92afa825152",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/child_process.d.ts": {
+        "version": "a4b5411d87995b9fb847f491f4388b38f829d8ab39be3e2fd65a3e40709f29a8",
+        "signature": "a4b5411d87995b9fb847f491f4388b38f829d8ab39be3e2fd65a3e40709f29a8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/cluster.d.ts": {
+        "version": "123ec69e4b3a686eb49afd94ebe3292a5c84a867ecbcb6bb84bdd720a12af803",
+        "signature": "123ec69e4b3a686eb49afd94ebe3292a5c84a867ecbcb6bb84bdd720a12af803",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/console.d.ts": {
+        "version": "eb5197aade83cb0e360ac407289c53a8009e8fdae7939892a0240d30444496b6",
+        "signature": "eb5197aade83cb0e360ac407289c53a8009e8fdae7939892a0240d30444496b6",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@types/node/constants.d.ts": {
+        "version": "90c85ddbb8de82cd19198bda062065fc51b7407c0f206f2e399e65a52e979720",
+        "signature": "90c85ddbb8de82cd19198bda062065fc51b7407c0f206f2e399e65a52e979720",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/crypto.d.ts": {
+        "version": "3d9c3ccc05ebc6e288bef007bcc47a2fc0dce748ea634093ef0732b9be743805",
+        "signature": "3d9c3ccc05ebc6e288bef007bcc47a2fc0dce748ea634093ef0732b9be743805",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/dgram.d.ts": {
+        "version": "7e050b767ed10c7ffbc01f314defbf420bf0b5d54ce666e1c87507c035dfc191",
+        "signature": "7e050b767ed10c7ffbc01f314defbf420bf0b5d54ce666e1c87507c035dfc191",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/dns.d.ts": {
+        "version": "d6bc4b879a18de0a1ba065b9a1c6888c67d98f3fe4886584459cdaa9e211a5f7",
+        "signature": "d6bc4b879a18de0a1ba065b9a1c6888c67d98f3fe4886584459cdaa9e211a5f7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/domain.d.ts": {
+        "version": "2866a528b2708aa272ec3eaafd3c980abb23aec1ef831cfc5eb2186b98c37ce5",
+        "signature": "2866a528b2708aa272ec3eaafd3c980abb23aec1ef831cfc5eb2186b98c37ce5",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@types/node/events.d.ts": {
+        "version": "153d835dc32985120790e10102834b0a5bd979bb5e42bfbb33c0ff6260cf03ce",
+        "signature": "153d835dc32985120790e10102834b0a5bd979bb5e42bfbb33c0ff6260cf03ce",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@types/node/fs.d.ts": {
+        "version": "80b94a222a5e83289583833de76f8b3a5962ec4c3803690e20c875a2776ddfdc",
+        "signature": "80b94a222a5e83289583833de76f8b3a5962ec4c3803690e20c875a2776ddfdc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/fs/promises.d.ts": {
+        "version": "05b5679a897598ebe556ee93415b3af1f456e674ea82e4d7afcd716bfe43aa98",
+        "signature": "05b5679a897598ebe556ee93415b3af1f456e674ea82e4d7afcd716bfe43aa98",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/http.d.ts": {
+        "version": "f2f8a385694fd71a421616cbaca477a539f30f4098f11261b1d188d72dc3478a",
+        "signature": "f2f8a385694fd71a421616cbaca477a539f30f4098f11261b1d188d72dc3478a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/http2.d.ts": {
+        "version": "f15f1f1104aaf47d25124de81949375416e3f8ee704e3d221bea339e35421edb",
+        "signature": "f15f1f1104aaf47d25124de81949375416e3f8ee704e3d221bea339e35421edb",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/https.d.ts": {
+        "version": "c969bf4c7cdfe4d5dd28aa09432f99d09ad1d8d8b839959646579521d0467d1a",
+        "signature": "c969bf4c7cdfe4d5dd28aa09432f99d09ad1d8d8b839959646579521d0467d1a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/inspector.d.ts": {
+        "version": "6c3857edaeeaaf43812f527830ebeece9266b6e8eb5271ab6d2f0008306c9947",
+        "signature": "6c3857edaeeaaf43812f527830ebeece9266b6e8eb5271ab6d2f0008306c9947",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/module.d.ts": {
+        "version": "bc6a77e750f4d34584e46b1405b771fb69a224197dd6bafe5b0392a29a70b665",
+        "signature": "bc6a77e750f4d34584e46b1405b771fb69a224197dd6bafe5b0392a29a70b665",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/net.d.ts": {
+        "version": "5345d90ffb42ef6a15807f494b38b818f668f5fd6e5086586497ea0125334cd4",
+        "signature": "5345d90ffb42ef6a15807f494b38b818f668f5fd6e5086586497ea0125334cd4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/os.d.ts": {
+        "version": "ed4ae81196cccc10f297d228bca8d02e31058e6d723a3c5bc4be5fb3c61c6a34",
+        "signature": "ed4ae81196cccc10f297d228bca8d02e31058e6d723a3c5bc4be5fb3c61c6a34",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/path.d.ts": {
+        "version": "84044697c8b3e08ef24e4b32cfe6440143d07e469a5e34bda0635276d32d9f35",
+        "signature": "84044697c8b3e08ef24e4b32cfe6440143d07e469a5e34bda0635276d32d9f35",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/perf_hooks.d.ts": {
+        "version": "4982d94cb6427263c8839d8d6324a8bbe129e931deb61a7380f8fad17ba2cfc0",
+        "signature": "4982d94cb6427263c8839d8d6324a8bbe129e931deb61a7380f8fad17ba2cfc0",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/process.d.ts": {
+        "version": "ae4bc1dd4d9de7bbea6ce419db45af82a81358e6014c9e1235b5d252e06f8ab8",
+        "signature": "ae4bc1dd4d9de7bbea6ce419db45af82a81358e6014c9e1235b5d252e06f8ab8",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@types/node/punycode.d.ts": {
+        "version": "3f6a1fd73c9dc3bd7f4b79bc075297ca6527904df69b0f2c2c94e4c4c7d9a32c",
+        "signature": "3f6a1fd73c9dc3bd7f4b79bc075297ca6527904df69b0f2c2c94e4c4c7d9a32c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/querystring.d.ts": {
+        "version": "884560fda6c3868f925f022adc3a1289fe6507bbb45adb10fa1bbcc73a941bb0",
+        "signature": "884560fda6c3868f925f022adc3a1289fe6507bbb45adb10fa1bbcc73a941bb0",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/readline.d.ts": {
+        "version": "6b2bb67b0942bcfce93e1d6fad5f70afd54940a2b13df7f311201fba54b2cbe9",
+        "signature": "6b2bb67b0942bcfce93e1d6fad5f70afd54940a2b13df7f311201fba54b2cbe9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/repl.d.ts": {
+        "version": "acbed967a379b3e9f73237ba9473f8b337eeea14b7dc64d445430b5d695751da",
+        "signature": "acbed967a379b3e9f73237ba9473f8b337eeea14b7dc64d445430b5d695751da",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/stream.d.ts": {
+        "version": "e7b5a3f40f19d9eea71890c70dfb37ac5dd82cbffe5f95bc8f23c536455732d0",
+        "signature": "e7b5a3f40f19d9eea71890c70dfb37ac5dd82cbffe5f95bc8f23c536455732d0",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/string_decoder.d.ts": {
+        "version": "d67e08745494b000da9410c1ae2fdc9965fc6d593fe0f381a47491f75417d457",
+        "signature": "d67e08745494b000da9410c1ae2fdc9965fc6d593fe0f381a47491f75417d457",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/timers.d.ts": {
+        "version": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9",
+        "signature": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/tls.d.ts": {
+        "version": "c52eb62e3388a01b966c57bd14ca0ee9d5f6e656d6a18f6ce6b7cdece63734a3",
+        "signature": "c52eb62e3388a01b966c57bd14ca0ee9d5f6e656d6a18f6ce6b7cdece63734a3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/trace_events.d.ts": {
+        "version": "a77fdb357c78b70142b2fdbbfb72958d69e8f765fd2a3c69946c1018e89d4638",
+        "signature": "a77fdb357c78b70142b2fdbbfb72958d69e8f765fd2a3c69946c1018e89d4638",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/tty.d.ts": {
+        "version": "3c2ac350c3baa61fd2b1925844109e098f4376d0768a4643abc82754fd752748",
+        "signature": "3c2ac350c3baa61fd2b1925844109e098f4376d0768a4643abc82754fd752748",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/url.d.ts": {
+        "version": "4001971b90f18161f7bd46d68150d32a5da47e3f177956a267a2b29a2771896a",
+        "signature": "4001971b90f18161f7bd46d68150d32a5da47e3f177956a267a2b29a2771896a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/util.d.ts": {
+        "version": "f28704c27e1bd58068052f5407541a3306f0ffc77f068e2891f46527a4569e25",
+        "signature": "f28704c27e1bd58068052f5407541a3306f0ffc77f068e2891f46527a4569e25",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/v8.d.ts": {
+        "version": "289be113bad7ee27ee7fa5b1e373c964c9789a5e9ed7db5ddcb631371120b953",
+        "signature": "289be113bad7ee27ee7fa5b1e373c964c9789a5e9ed7db5ddcb631371120b953",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/vm.d.ts": {
+        "version": "baf0b82ffc5d2616f44a6fb1f81e8d798545bebf0c30f5d8b003a1dba1acfb3f",
+        "signature": "baf0b82ffc5d2616f44a6fb1f81e8d798545bebf0c30f5d8b003a1dba1acfb3f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/worker_threads.d.ts": {
+        "version": "c6a5b34f1e725019445754f1e733585f113e0dced75f137bd3c4af5853d3f6ab",
+        "signature": "c6a5b34f1e725019445754f1e733585f113e0dced75f137bd3c4af5853d3f6ab",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/zlib.d.ts": {
+        "version": "15fbe50526244954eb2f933546bca6cdcf0db16c9428d099b3b386c1db5799ab",
+        "signature": "15fbe50526244954eb2f933546bca6cdcf0db16c9428d099b3b386c1db5799ab",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/ts3.4/base.d.ts": {
+        "version": "d44028ae0127eb3e9fcfa5f55a8b81d64775ce15aca1020fe25c511bbb055834",
+        "signature": "d44028ae0127eb3e9fcfa5f55a8b81d64775ce15aca1020fe25c511bbb055834",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/globals.global.d.ts": {
+        "version": "2708349d5a11a5c2e5f3a0765259ebe7ee00cdcc8161cb9990cb4910328442a1",
+        "signature": "2708349d5a11a5c2e5f3a0765259ebe7ee00cdcc8161cb9990cb4910328442a1",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@types/node/wasi.d.ts": {
+        "version": "4e0a4d84b15692ea8669fe4f3d05a4f204567906b1347da7a58b75f45bae48d3",
+        "signature": "4e0a4d84b15692ea8669fe4f3d05a4f204567906b1347da7a58b75f45bae48d3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/ts3.6/base.d.ts": {
+        "version": "ad1ae5ae98eceb9af99061e83e867b9897d267aebc8f3b938c9424deabadf4bb",
+        "signature": "ad1ae5ae98eceb9af99061e83e867b9897d267aebc8f3b938c9424deabadf4bb",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/assert.d.ts": {
+        "version": "b3593bd345ebea5e4d0a894c03251a3774b34df3d6db57075c18e089a599ba76",
+        "signature": "b3593bd345ebea5e4d0a894c03251a3774b34df3d6db57075c18e089a599ba76",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/base.d.ts": {
+        "version": "e61a21e9418f279bc480394a94d1581b2dee73747adcbdef999b6737e34d721b",
+        "signature": "e61a21e9418f279bc480394a94d1581b2dee73747adcbdef999b6737e34d721b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/node/index.d.ts": {
+        "version": "744e6430bafc6f39f66c4fc1e6a0d8c9551260ffd1782aa7e3f5166ac6aa1f86",
+        "signature": "744e6430bafc6f39f66c4fc1e6a0d8c9551260ffd1782aa7e3f5166ac6aa1f86",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/credential/index.d.ts": {
+        "version": "4f0b55e3a2541b15ba72f05c0b2ac9b26fdf85ff1a605b207f69d0d1a3c069a8",
+        "signature": "4f0b55e3a2541b15ba72f05c0b2ac9b26fdf85ff1a605b207f69d0d1a3c069a8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/auth/index.d.ts": {
+        "version": "54371b7ccd8e4260cbba6e35702b4507dc7e0d04945a6a3ae187953e1e54f5a7",
+        "signature": "54371b7ccd8e4260cbba6e35702b4507dc7e0d04945a6a3ae187953e1e54f5a7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@firebase/logger/dist/src/logger.d.ts": {
+        "version": "a0abcb32b7a9291276879912c9a3205fbd1d6930ae4f29e91fe30227e2762893",
+        "signature": "a0abcb32b7a9291276879912c9a3205fbd1d6930ae4f29e91fe30227e2762893",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@firebase/logger/dist/index.d.ts": {
+        "version": "b67fb584ca2449669c113e75866d339ee4e6bc74a441efd00c1beac460412584",
+        "signature": "b67fb584ca2449669c113e75866d339ee4e6bc74a441efd00c1beac460412584",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@firebase/app-types/index.d.ts": {
+        "version": "085a23471ca8930566c28e044040a34c05c191d35b47143e3f518204963d96ce",
+        "signature": "085a23471ca8930566c28e044040a34c05c191d35b47143e3f518204963d96ce",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@firebase/database-types/index.d.ts": {
+        "version": "75ce63c8ebf94a999d4846c8d397c426420b40d654f3954d978807a01c978431",
+        "signature": "75ce63c8ebf94a999d4846c8d397c426420b40d654f3954d978807a01c978431",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/database/index.d.ts": {
+        "version": "c1c81ffce912d58c4038263583a646ac296544a1b7b3921cd91128f4fc37c55c",
+        "signature": "c1c81ffce912d58c4038263583a646ac296544a1b7b3921cd91128f4fc37c55c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/firestore/types/firestore.d.ts": {
+        "version": "bc7f93a14cd63f9b7fccbd5f88b6bb0308b9469d802ff3a53dfca662aba9e939",
+        "signature": "bc7f93a14cd63f9b7fccbd5f88b6bb0308b9469d802ff3a53dfca662aba9e939",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/firebase-admin/lib/firestore/index.d.ts": {
+        "version": "b41b024373e06f7788588d2f61976a711034a831b9a0dcd228d5371f783cec3d",
+        "signature": "b41b024373e06f7788588d2f61976a711034a831b9a0dcd228d5371f783cec3d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/instance-id/index.d.ts": {
+        "version": "598995025c2e7d70aaa4c37948409903d857d68dfe30d4c4df13e9fbcd9bb046",
+        "signature": "598995025c2e7d70aaa4c37948409903d857d68dfe30d4c4df13e9fbcd9bb046",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/machine-learning/index.d.ts": {
+        "version": "8f53ad956bc6b28d58d4b888d1de952a6b16a30c73ae5cebedcea39adf9351d4",
+        "signature": "8f53ad956bc6b28d58d4b888d1de952a6b16a30c73ae5cebedcea39adf9351d4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/messaging/index.d.ts": {
+        "version": "e2ae5d3d049c0f5b4002f7c38bb0d08def1781a9a79dfb6fa9aaa8ad225d6c8e",
+        "signature": "e2ae5d3d049c0f5b4002f7c38bb0d08def1781a9a79dfb6fa9aaa8ad225d6c8e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/project-management/index.d.ts": {
+        "version": "d304b75eb917b821559e25e5079934976ede956d3d6d40e76a6e2df927cd87cd",
+        "signature": "d304b75eb917b821559e25e5079934976ede956d3d6d40e76a6e2df927cd87cd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/remote-config/index.d.ts": {
+        "version": "df612dd557e79c7f8b58db13983a6077f7dc0d4c89f6dc37d9f37453bef2b652",
+        "signature": "df612dd557e79c7f8b58db13983a6077f7dc0d4c89f6dc37d9f37453bef2b652",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/security-rules/index.d.ts": {
+        "version": "735721e22f4085e31be4c8a42bc0a6b376b6b7a90b6731c023fb2e2292781681",
+        "signature": "735721e22f4085e31be4c8a42bc0a6b376b6b7a90b6731c023fb2e2292781681",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/event-target-shim/index.d.ts": {
+        "version": "2859adaa4f2db3d4f0fc37ad86f056045341496b58fba0dbc16a222f9d5d55b1",
+        "signature": "2859adaa4f2db3d4f0fc37ad86f056045341496b58fba0dbc16a222f9d5d55b1",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/abort-controller/dist/abort-controller.d.ts": {
+        "version": "655ed305e8f4cb95d3f578040301a4e4d6ace112b1bd8824cd32bda66c3677d1",
+        "signature": "655ed305e8f4cb95d3f578040301a4e4d6ace112b1bd8824cd32bda66c3677d1",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/gaxios/build/src/common.d.ts": {
+        "version": "4b2e14d8643cd0bb5ade320253d9348558fac72753e380e52e56c64a8b6b5f81",
+        "signature": "4b2e14d8643cd0bb5ade320253d9348558fac72753e380e52e56c64a8b6b5f81",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/gaxios/build/src/gaxios.d.ts": {
+        "version": "fb72f0c714cc4337bba5c802dc4845e9bd042389c6f2f09858cd6370567d2b4d",
+        "signature": "fb72f0c714cc4337bba5c802dc4845e9bd042389c6f2f09858cd6370567d2b4d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/gaxios/build/src/index.d.ts": {
+        "version": "cb789da1f75dc9d53848949aed3bb1d521de13c6340e5792a6b3f2c5e0c53e29",
+        "signature": "cb789da1f75dc9d53848949aed3bb1d521de13c6340e5792a6b3f2c5e0c53e29",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/transporters.d.ts": {
+        "version": "82b70e72d3e16b95c6f933b0d146240214ef01dfe8e270f6e50f349223b0615d",
+        "signature": "82b70e72d3e16b95c6f933b0d146240214ef01dfe8e270f6e50f349223b0615d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/crypto/crypto.d.ts": {
+        "version": "48426cea1f526c040f5e25b5b46c72dc58e28dbca236ecb2d2f3c23ee2f3147e",
+        "signature": "48426cea1f526c040f5e25b5b46c72dc58e28dbca236ecb2d2f3c23ee2f3147e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/auth/credentials.d.ts": {
+        "version": "60b042f1a2a32d4d5e065e7fb229399562b9949984e63e09fd6a42dbc8e22c35",
+        "signature": "60b042f1a2a32d4d5e065e7fb229399562b9949984e63e09fd6a42dbc8e22c35",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/auth/authclient.d.ts": {
+        "version": "ee00a6280d0c2a54ca31bc935a678ec560ec47fdab207382b64290b06995e626",
+        "signature": "ee00a6280d0c2a54ca31bc935a678ec560ec47fdab207382b64290b06995e626",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/auth/loginticket.d.ts": {
+        "version": "f025aff69699033567ebb4925578dedb18f63b4aa185f85005451cfd5fc53343",
+        "signature": "f025aff69699033567ebb4925578dedb18f63b4aa185f85005451cfd5fc53343",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts": {
+        "version": "b88a8b7a6076a7fd426998475eca017619fdd468cdabad48d9fadb3398eda28f",
+        "signature": "b88a8b7a6076a7fd426998475eca017619fdd468cdabad48d9fadb3398eda28f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/auth/computeclient.d.ts": {
+        "version": "64cc158e07ce953307a95ee711b67fc8cd980380d12aee33670d483ba6f642f3",
+        "signature": "64cc158e07ce953307a95ee711b67fc8cd980380d12aee33670d483ba6f642f3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/auth/idtokenclient.d.ts": {
+        "version": "01b8fe09ea0b18ceba458308fd349bd2545227995c1b370a6897ea7c8f4ae577",
+        "signature": "01b8fe09ea0b18ceba458308fd349bd2545227995c1b370a6897ea7c8f4ae577",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/auth/envDetect.d.ts": {
+        "version": "ea9efc84288c02adb551e56f59235b5b3d613993acb0cbb74f1e1169a6ddaf23",
+        "signature": "ea9efc84288c02adb551e56f59235b5b3d613993acb0cbb74f1e1169a6ddaf23",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/gtoken/build/src/index.d.ts": {
+        "version": "2ee6c6e12729bd41bf99cd5a1158650d3afe9cd435e2d3ce6746de2dbf93a2ad",
+        "signature": "2ee6c6e12729bd41bf99cd5a1158650d3afe9cd435e2d3ce6746de2dbf93a2ad",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/auth/jwtclient.d.ts": {
+        "version": "9e2a0c32cf5d3f2cb76fa49f098bb3c359360d38a7d6e8e546bca18cdf52d25b",
+        "signature": "9e2a0c32cf5d3f2cb76fa49f098bb3c359360d38a7d6e8e546bca18cdf52d25b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/auth/refreshclient.d.ts": {
+        "version": "e9203259c5f820618a0c10df0e0e28df87f2469770461540919b23d864b0e2f8",
+        "signature": "e9203259c5f820618a0c10df0e0e28df87f2469770461540919b23d864b0e2f8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/auth/googleauth.d.ts": {
+        "version": "2213b460a8db89922ecc63a0d71fd27f59c4a086a36e8bd24dc117d46e207cc2",
+        "signature": "2213b460a8db89922ecc63a0d71fd27f59c4a086a36e8bd24dc117d46e207cc2",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/auth/iam.d.ts": {
+        "version": "71725ba9235f9d2aa02839162b1df2df59fd9dd91c110a54ea02112243d7a4d9",
+        "signature": "71725ba9235f9d2aa02839162b1df2df59fd9dd91c110a54ea02112243d7a4d9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/auth/jwtaccess.d.ts": {
+        "version": "814eea256000a0d4c1171ab1adbe688b126079c44b21d0a88bb4d63ffa4e9078",
+        "signature": "814eea256000a0d4c1171ab1adbe688b126079c44b21d0a88bb4d63ffa4e9078",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/google-auth-library/build/src/index.d.ts": {
+        "version": "b5f5fb8682b627fabd6173249639436577a19d93a36d09599879dd9dc104ac63",
+        "signature": "b5f5fb8682b627fabd6173249639436577a19d93a36d09599879dd9dc104ac63",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/teeny-request/build/src/TeenyStatistics.d.ts": {
+        "version": "eb8f406406a1c933f6793410a632a125d1698cfcfb7a947c54ba498616a65f94",
+        "signature": "eb8f406406a1c933f6793410a632a125d1698cfcfb7a947c54ba498616a65f94",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/teeny-request/build/src/index.d.ts": {
+        "version": "b02ffee841b1cf41c5389684602be8acbe3788d3f5982b088d0bc56e2273c0a2",
+        "signature": "b02ffee841b1cf41c5389684602be8acbe3788d3f5982b088d0bc56e2273c0a2",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/common/build/src/util.d.ts": {
+        "version": "6e2c8ed913b49e9c93cf0aa682e48c97347d3da54d60d81d2b0e11e09da2f953",
+        "signature": "6e2c8ed913b49e9c93cf0aa682e48c97347d3da54d60d81d2b0e11e09da2f953",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/common/build/src/service-object.d.ts": {
+        "version": "95bd7af3324579b9044e88d24b628483b22adfefee06dc372499cbf6a3621c5f",
+        "signature": "95bd7af3324579b9044e88d24b628483b22adfefee06dc372499cbf6a3621c5f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/common/build/src/operation.d.ts": {
+        "version": "4d1f83476d82fdbfb4a27fa4f97b58a95f75ef1d4a76624788654efec99bdf7d",
+        "signature": "4d1f83476d82fdbfb4a27fa4f97b58a95f75ef1d4a76624788654efec99bdf7d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/common/build/src/service.d.ts": {
+        "version": "dab8e8757d932a2522259e1ca55c0a4f99fe05138a28cec9015dbdc3d26a421a",
+        "signature": "dab8e8757d932a2522259e1ca55c0a4f99fe05138a28cec9015dbdc3d26a421a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/common/build/src/index.d.ts": {
+        "version": "aeffdf94389753bb406ea43bd3e667666dfe74874d82c723fa473593e5c01e7f",
+        "signature": "aeffdf94389753bb406ea43bd3e667666dfe74874d82c723fa473593e5c01e7f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/storage/build/src/acl.d.ts": {
+        "version": "4a16f63eab2003bf18f93d7c39c2cc582c75ebed56e64d382c427e22bcec509a",
+        "signature": "4a16f63eab2003bf18f93d7c39c2cc582c75ebed56e64d382c427e22bcec509a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/storage/build/src/signer.d.ts": {
+        "version": "67655ba5107115c9f491ab1002f9da21624945da35056590e877293890be044c",
+        "signature": "67655ba5107115c9f491ab1002f9da21624945da35056590e877293890be044c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/storage/build/src/file.d.ts": {
+        "version": "1cd38a2f1587f9e3e2176502e9c5a31b618dc8a056b6067496a52411dd76b383",
+        "signature": "1cd38a2f1587f9e3e2176502e9c5a31b618dc8a056b6067496a52411dd76b383",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/storage/build/src/hmacKey.d.ts": {
+        "version": "f247b3137976a84658c08855bf98933f2b23610b0721a150493826bd24f17a18",
+        "signature": "f247b3137976a84658c08855bf98933f2b23610b0721a150493826bd24f17a18",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/storage/build/src/storage.d.ts": {
+        "version": "e48ac725d77743774e9891e25acb7a1d61cc78971c3de9197c51cf40bee6563a",
+        "signature": "e48ac725d77743774e9891e25acb7a1d61cc78971c3de9197c51cf40bee6563a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/storage/build/src/channel.d.ts": {
+        "version": "88e327017e5db7730f40e993f75fe947a8f4fdbf344d6176dba1a85490c824e4",
+        "signature": "88e327017e5db7730f40e993f75fe947a8f4fdbf344d6176dba1a85490c824e4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/storage/build/src/iam.d.ts": {
+        "version": "15981245ba7b6481bfab67ef18725554e5031da8d90f5153bfadce62aeedbb9e",
+        "signature": "15981245ba7b6481bfab67ef18725554e5031da8d90f5153bfadce62aeedbb9e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/storage/build/src/notification.d.ts": {
+        "version": "095c24b5a0438c2aaa92f432c95f23d677976977b9c862f859ad91b2d0f4e912",
+        "signature": "095c24b5a0438c2aaa92f432c95f23d677976977b9c862f859ad91b2d0f4e912",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/storage/build/src/bucket.d.ts": {
+        "version": "fd67946ddaa7b58ea52b014b9f22427310c1aa689461fe3fd73ce9c6a37aea65",
+        "signature": "fd67946ddaa7b58ea52b014b9f22427310c1aa689461fe3fd73ce9c6a37aea65",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@google-cloud/storage/build/src/index.d.ts": {
+        "version": "053ea839b135a17a15ad95c3635ab23fc1e12681082a86b91684df20c6e379df",
+        "signature": "053ea839b135a17a15ad95c3635ab23fc1e12681082a86b91684df20c6e379df",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/storage/index.d.ts": {
+        "version": "2d97cfcc665fcbd18245318d7be6b19a4a06a67ecad15b9044ac1cc646950885",
+        "signature": "2d97cfcc665fcbd18245318d7be6b19a4a06a67ecad15b9044ac1cc646950885",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts": {
+        "version": "6a6e29ad9d2ed5c5be06387032385f16c886bfacfd66c78bd59def92fdd90891",
+        "signature": "6a6e29ad9d2ed5c5be06387032385f16c886bfacfd66c78bd59def92fdd90891",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/firebase-namespace.d.ts": {
+        "version": "6c415c492a59658433e76e237ae78546f25b9105baf7f4c28ab16de21ae534fc",
+        "signature": "6c415c492a59658433e76e237ae78546f25b9105baf7f4c28ab16de21ae534fc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/firebase-admin/lib/index.d.ts": {
+        "version": "c2722ea1c0a431fd601c0ad3fab52b69b4bd266f938b66d6c5e4bf1c79a39725",
+        "signature": "c2722ea1c0a431fd601c0ad3fab52b69b4bd266f938b66d6c5e4bf1c79a39725",
+        "affectsGlobalScope": false
+      },
+      "../src/database/firebaseServiceAccount.json": {
+        "version": "c950a4bdc3253bff57eca4ec3a9800b2d2a70e19754c14b34b138dea17ae6825",
+        "signature": "5c0a111360223d2d551d21420cb62e47677caa84b27d26e65b5590e30f5796d2",
+        "affectsGlobalScope": true
+      },
+      "../src/database/preauth.middleware.ts": {
+        "version": "5fa1a5e7f6ecbde0303a3788b251cb17b6889a9bce2b44e06b05135c5b12d193",
+        "signature": "7f1c930d18fb3996cbbbee833444922112e73192dc624c81b3bcff120cf07b4e",
+        "affectsGlobalScope": false
+      },
+      "../src/process/process.controller.ts": {
+        "version": "7b071241160ea7395ee1142b1b084db40f296a2e5349300ca1532555d369000a",
+        "signature": "deee47fb6b70c78efc6c78d1db9cc54b2b3342a68f4e23dacb8823d310e2984a",
+        "affectsGlobalScope": false
+      },
+      "../src/process/process.service.ts": {
+        "version": "0bc3f6929b1536ab823515da48dd16652a2359ab9229c968bf8db856123344d0",
+        "signature": "11856c881ca00dab71fa7f6e22a71b74d702b689d4a6ac26c50feef3875c6fd5",
+        "affectsGlobalScope": false
+      },
+      "../src/process/process.module.ts": {
+        "version": "9f21b90dc96b2bca63f823adb66580b68c3ae5c74cb47824fedcbc933c6c79d7",
+        "signature": "3e96b15b87ad8c07da2e1bc348c3e14b4d812c23a63a2190e2a615a4ba565276",
+        "affectsGlobalScope": false
+      },
+      "../src/user/user.controller.ts": {
+        "version": "efa5fc8dd03af3bbd413b62720d8abd0321337176090ea1b11a01c4b43654cb5",
+        "signature": "190ebe988cb0002a58dfa4e7b206b50e5711d31e854fc018a4c3ef7bf179d757",
+        "affectsGlobalScope": false
+      },
+      "../src/user/user.service.ts": {
+        "version": "230ca661961fc66c122621883c098d2b1e1b3bbb212eef1f23df18203f50a490",
+        "signature": "87766d73d7dbeee6ba94874f66534c261407facf6ed49d8f080f095f52366e9d",
+        "affectsGlobalScope": false
+      },
+      "../src/user/user.module.ts": {
+        "version": "89d53ea35605ee5af534839426a8bb41211d7350c99d195e082ea7e9126e5682",
+        "signature": "482b8f0d35a3d453500a15b6c6057c1e4c40baa4329b39da9e1026d8e1de4329",
+        "affectsGlobalScope": false
+      },
+      "../src/auth/auth.module.ts": {
+        "version": "da2b8b8660542a34ee4e2d234d69b83fa7e8143d62392ba8bffa94561e7d7b98",
+        "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "319f8e45e370ba3d33f0887e3046096714959d3764fc68b444885cfdb9c101dd",
-        "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
+        "version": "d0fc56ae091c6430d212127391a91830cebe57a43d3195adf6aecd0147ee769e",
+        "signature": "9e55d69c2879e4c1f6039d177c0daf79a72435ac51ec7d4f46fc72e8b0c503d6",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -1520,6 +2125,11 @@
         "version": "cf5c0a05de38fcbf3197df77d84953300286022d7cf55f456802ce0f4ec89755",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
+      },
+      "../node_modules/@types/long/index.d.ts": {
+        "version": "e8465811693dfe4e96ef2b3dffda539d6edfe896961b7af37b44db2c0e48532b",
+        "signature": "e8465811693dfe4e96ef2b3dffda539d6edfe896961b7af37b44db2c0e48532b",
+        "affectsGlobalScope": false
       }
     },
     "options": {
@@ -1534,9 +2144,115 @@
       "outDir": "./",
       "baseUrl": "..",
       "incremental": true,
+      "resolveJsonModule": true,
       "configFilePath": "../tsconfig.build.json"
     },
     "referencedMap": {
+      "../node_modules/@firebase/app-types/index.d.ts": [
+        "../node_modules/@firebase/logger/dist/index.d.ts"
+      ],
+      "../node_modules/@firebase/database-types/index.d.ts": [
+        "../node_modules/@firebase/app-types/index.d.ts"
+      ],
+      "../node_modules/@firebase/logger/dist/index.d.ts": [
+        "../node_modules/@firebase/logger/dist/src/logger.d.ts"
+      ],
+      "../node_modules/@google-cloud/common/build/src/index.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/operation.d.ts",
+        "../node_modules/@google-cloud/common/build/src/service-object.d.ts",
+        "../node_modules/@google-cloud/common/build/src/service.d.ts",
+        "../node_modules/@google-cloud/common/build/src/util.d.ts",
+        "../node_modules/google-auth-library/build/src/index.d.ts"
+      ],
+      "../node_modules/@google-cloud/common/build/src/operation.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/service-object.d.ts"
+      ],
+      "../node_modules/@google-cloud/common/build/src/service-object.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/util.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/teeny-request/build/src/index.d.ts"
+      ],
+      "../node_modules/@google-cloud/common/build/src/service.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/service-object.d.ts",
+        "../node_modules/@google-cloud/common/build/src/util.d.ts",
+        "../node_modules/google-auth-library/build/src/index.d.ts",
+        "../node_modules/teeny-request/build/src/index.d.ts"
+      ],
+      "../node_modules/@google-cloud/common/build/src/util.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/service-object.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/google-auth-library/build/src/index.d.ts",
+        "../node_modules/teeny-request/build/src/index.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/acl.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/bucket.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/acl.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/channel.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/file.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/iam.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/notification.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/signer.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/storage.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/channel.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/storage.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/file.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/common/build/src/util.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/acl.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/bucket.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/signer.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/storage.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/hmacKey.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/storage.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/iam.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/bucket.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/index.d.ts": [
+        "../node_modules/@google-cloud/storage/build/src/acl.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/bucket.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/channel.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/file.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/hmacKey.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/iam.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/notification.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/signer.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/storage.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/notification.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/common/build/src/util.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/bucket.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/signer.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/storage.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/bucket.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/channel.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/file.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/hmacKey.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
       "../node_modules/@nestjs/common/cache/cache.module.d.ts": [
         "../node_modules/@nestjs/common/cache/interfaces/cache-module.interface.d.ts",
         "../node_modules/@nestjs/common/interfaces/index.d.ts"
@@ -2259,6 +2975,340 @@
       "../node_modules/@nestjs/swagger/index.d.ts": [
         "../node_modules/@nestjs/swagger/dist/index.d.ts"
       ],
+      "../node_modules/@types/node/base.d.ts": [
+        "../node_modules/@types/node/assert.d.ts",
+        "../node_modules/@types/node/ts3.6/base.d.ts"
+      ],
+      "../node_modules/@types/node/child_process.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@types/node/cluster.d.ts": [
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/net.d.ts"
+      ],
+      "../node_modules/@types/node/console.d.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/node/constants.d.ts": [
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/os.d.ts"
+      ],
+      "../node_modules/@types/node/crypto.d.ts": [
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@types/node/dgram.d.ts": [
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/net.d.ts"
+      ],
+      "../node_modules/@types/node/domain.d.ts": [
+        "../node_modules/@types/node/events.d.ts"
+      ],
+      "../node_modules/@types/node/events.d.ts": [
+        "../node_modules/@types/node/events.d.ts"
+      ],
+      "../node_modules/@types/node/fs.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs/promises.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@types/node/fs/promises.d.ts": [
+        "../node_modules/@types/node/fs.d.ts"
+      ],
+      "../node_modules/@types/node/http.d.ts": [
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@types/node/http2.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@types/node/https.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@types/node/index.d.ts": [
+        "../node_modules/@types/node/base.d.ts"
+      ],
+      "../node_modules/@types/node/inspector.d.ts": [
+        "../node_modules/@types/node/events.d.ts"
+      ],
+      "../node_modules/@types/node/module.d.ts": [
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@types/node/net.d.ts": [
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@types/node/perf_hooks.d.ts": [
+        "../node_modules/@types/node/async_hooks.d.ts"
+      ],
+      "../node_modules/@types/node/process.d.ts": [
+        "../node_modules/@types/node/tty.d.ts"
+      ],
+      "../node_modules/@types/node/readline.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@types/node/repl.d.ts": [
+        "../node_modules/@types/node/readline.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/vm.d.ts"
+      ],
+      "../node_modules/@types/node/stream.d.ts": [
+        "../node_modules/@types/node/events.d.ts"
+      ],
+      "../node_modules/@types/node/tls.d.ts": [
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.4/base.d.ts": [
+        "../node_modules/@types/node/async_hooks.d.ts",
+        "../node_modules/@types/node/buffer.d.ts",
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/cluster.d.ts",
+        "../node_modules/@types/node/console.d.ts",
+        "../node_modules/@types/node/constants.d.ts",
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/dgram.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/domain.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/fs/promises.d.ts",
+        "../node_modules/@types/node/globals.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/http2.d.ts",
+        "../node_modules/@types/node/https.d.ts",
+        "../node_modules/@types/node/inspector.d.ts",
+        "../node_modules/@types/node/module.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/os.d.ts",
+        "../node_modules/@types/node/path.d.ts",
+        "../node_modules/@types/node/perf_hooks.d.ts",
+        "../node_modules/@types/node/process.d.ts",
+        "../node_modules/@types/node/punycode.d.ts",
+        "../node_modules/@types/node/querystring.d.ts",
+        "../node_modules/@types/node/readline.d.ts",
+        "../node_modules/@types/node/repl.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/string_decoder.d.ts",
+        "../node_modules/@types/node/timers.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/trace_events.d.ts",
+        "../node_modules/@types/node/tty.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/v8.d.ts",
+        "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/@types/node/worker_threads.d.ts",
+        "../node_modules/@types/node/zlib.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.6/base.d.ts": [
+        "../node_modules/@types/node/globals.global.d.ts",
+        "../node_modules/@types/node/ts3.4/base.d.ts",
+        "../node_modules/@types/node/wasi.d.ts"
+      ],
+      "../node_modules/@types/node/tty.d.ts": [
+        "../node_modules/@types/node/net.d.ts"
+      ],
+      "../node_modules/@types/node/url.d.ts": [
+        "../node_modules/@types/node/querystring.d.ts"
+      ],
+      "../node_modules/@types/node/v8.d.ts": [
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@types/node/worker_threads.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs/promises.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/vm.d.ts"
+      ],
+      "../node_modules/@types/node/zlib.d.ts": [
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/abort-controller/dist/abort-controller.d.ts": [
+        "../node_modules/event-target-shim/index.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/auth/index.d.ts": [
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/credential/index.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/database/index.d.ts": [
+        "../node_modules/@firebase/database-types/index.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/firebase-admin/lib/auth/index.d.ts",
+        "../node_modules/firebase-admin/lib/credential/index.d.ts",
+        "../node_modules/firebase-admin/lib/database/index.d.ts",
+        "../node_modules/firebase-admin/lib/firestore/index.d.ts",
+        "../node_modules/firebase-admin/lib/instance-id/index.d.ts",
+        "../node_modules/firebase-admin/lib/machine-learning/index.d.ts",
+        "../node_modules/firebase-admin/lib/messaging/index.d.ts",
+        "../node_modules/firebase-admin/lib/project-management/index.d.ts",
+        "../node_modules/firebase-admin/lib/remote-config/index.d.ts",
+        "../node_modules/firebase-admin/lib/security-rules/index.d.ts",
+        "../node_modules/firebase-admin/lib/storage/index.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/firebase-namespace.d.ts": [
+        "../node_modules/firebase-admin/lib/auth/index.d.ts",
+        "../node_modules/firebase-admin/lib/credential/index.d.ts",
+        "../node_modules/firebase-admin/lib/database/index.d.ts",
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts",
+        "../node_modules/firebase-admin/lib/firestore/index.d.ts",
+        "../node_modules/firebase-admin/lib/instance-id/index.d.ts",
+        "../node_modules/firebase-admin/lib/machine-learning/index.d.ts",
+        "../node_modules/firebase-admin/lib/messaging/index.d.ts",
+        "../node_modules/firebase-admin/lib/project-management/index.d.ts",
+        "../node_modules/firebase-admin/lib/remote-config/index.d.ts",
+        "../node_modules/firebase-admin/lib/security-rules/index.d.ts",
+        "../node_modules/firebase-admin/lib/storage/index.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/firestore/index.d.ts": [
+        "../node_modules/@google-cloud/firestore/types/firestore.d.ts",
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/instance-id/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/machine-learning/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/messaging/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/project-management/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/remote-config/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/security-rules/index.d.ts": [
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/storage/index.d.ts": [
+        "../node_modules/@google-cloud/storage/build/src/index.d.ts",
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/gaxios/build/src/common.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/abort-controller/dist/abort-controller.d.ts"
+      ],
+      "../node_modules/gaxios/build/src/gaxios.d.ts": [
+        "../node_modules/gaxios/build/src/common.d.ts"
+      ],
+      "../node_modules/gaxios/build/src/index.d.ts": [
+        "../node_modules/gaxios/build/src/common.d.ts",
+        "../node_modules/gaxios/build/src/gaxios.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/authclient.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/gaxios/build/src/index.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts",
+        "../node_modules/google-auth-library/build/src/transporters.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/computeclient.d.ts": [
+        "../node_modules/gaxios/build/src/index.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/googleauth.d.ts": [
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/gaxios/build/src/index.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/computeclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/envDetect.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/idtokenclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/jwtclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/refreshclient.d.ts",
+        "../node_modules/google-auth-library/build/src/transporters.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/idtokenclient.d.ts": [
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/jwtaccess.d.ts": [
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/jwtclient.d.ts": [
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/idtokenclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts",
+        "../node_modules/gtoken/build/src/index.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts": [
+        "../node_modules/gaxios/build/src/index.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/authclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/loginticket.d.ts",
+        "../node_modules/google-auth-library/build/src/crypto/crypto.d.ts",
+        "../node_modules/google-auth-library/build/src/transporters.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/refreshclient.d.ts": [
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/crypto/crypto.d.ts": [
+        "../node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/index.d.ts": [
+        "../node_modules/google-auth-library/build/src/auth/computeclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/envDetect.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/googleauth.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/iam.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/idtokenclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/jwtaccess.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/jwtclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/loginticket.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/refreshclient.d.ts",
+        "../node_modules/google-auth-library/build/src/transporters.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/transporters.d.ts": [
+        "../node_modules/gaxios/build/src/index.d.ts"
+      ],
       "../node_modules/rxjs/index.d.ts": [
         "../node_modules/rxjs/internal/AsyncSubject.d.ts",
         "../node_modules/rxjs/internal/BehaviorSubject.d.ts",
@@ -2555,6 +3605,13 @@
       ],
       "../node_modules/rxjs/internal/util/pipe.d.ts": [
         "../node_modules/rxjs/internal/types.d.ts"
+      ],
+      "../node_modules/teeny-request/build/src/index.d.ts": [
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/https.d.ts",
+        "../node_modules/@types/node/index.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/teeny-request/build/src/TeenyStatistics.d.ts"
       ],
       "../src/app.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -2563,18 +3620,151 @@
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.controller.ts",
-        "../src/app.service.ts"
+        "../src/app.service.ts",
+        "../src/auth/auth.module.ts",
+        "../src/database/preauth.middleware.ts",
+        "../src/process/process.module.ts",
+        "../src/user/user.module.ts"
       ],
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/auth/auth.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/database/preauth.middleware.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/firebase-admin/lib/index.d.ts",
+        "../src/database/firebaseServiceAccount.json"
       ],
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
         "../src/app.module.ts"
+      ],
+      "../src/process/process.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/process/process.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/process/process.controller.ts",
+        "../src/process/process.service.ts"
+      ],
+      "../src/process/process.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/user/user.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/user/user.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/user/user.controller.ts",
+        "../src/user/user.service.ts"
+      ],
+      "../src/user/user.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
       ]
     },
     "exportedModulesMap": {
+      "../node_modules/@firebase/app-types/index.d.ts": [
+        "../node_modules/@firebase/logger/dist/index.d.ts"
+      ],
+      "../node_modules/@firebase/database-types/index.d.ts": [
+        "../node_modules/@firebase/app-types/index.d.ts"
+      ],
+      "../node_modules/@firebase/logger/dist/index.d.ts": [
+        "../node_modules/@firebase/logger/dist/src/logger.d.ts"
+      ],
+      "../node_modules/@google-cloud/common/build/src/index.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/operation.d.ts",
+        "../node_modules/@google-cloud/common/build/src/service-object.d.ts",
+        "../node_modules/@google-cloud/common/build/src/service.d.ts",
+        "../node_modules/@google-cloud/common/build/src/util.d.ts",
+        "../node_modules/google-auth-library/build/src/index.d.ts"
+      ],
+      "../node_modules/@google-cloud/common/build/src/operation.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/service-object.d.ts"
+      ],
+      "../node_modules/@google-cloud/common/build/src/service-object.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/util.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/events.d.ts",
+        "../node_modules/teeny-request/build/src/index.d.ts"
+      ],
+      "../node_modules/@google-cloud/common/build/src/service.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/service-object.d.ts",
+        "../node_modules/@google-cloud/common/build/src/util.d.ts",
+        "../node_modules/google-auth-library/build/src/index.d.ts",
+        "../node_modules/teeny-request/build/src/index.d.ts"
+      ],
+      "../node_modules/@google-cloud/common/build/src/util.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/service-object.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/stream.d.ts",
+        "../node_modules/google-auth-library/build/src/index.d.ts",
+        "../node_modules/teeny-request/build/src/index.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/acl.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/bucket.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/acl.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/channel.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/file.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/iam.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/notification.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/signer.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/storage.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/http.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/channel.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/storage.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/file.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/common/build/src/util.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/acl.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/bucket.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/signer.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/storage.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/http.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/hmacKey.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/storage.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/iam.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/bucket.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/index.d.ts": [
+        "../node_modules/@google-cloud/storage/build/src/acl.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/bucket.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/channel.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/file.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/hmacKey.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/iam.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/notification.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/signer.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/storage.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/notification.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/common/build/src/util.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/bucket.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/signer.d.ts": [
+        "../node_modules/firebase-admin/node_modules/@types/node/http.d.ts"
+      ],
+      "../node_modules/@google-cloud/storage/build/src/storage.d.ts": [
+        "../node_modules/@google-cloud/common/build/src/index.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/bucket.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/channel.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/file.d.ts",
+        "../node_modules/@google-cloud/storage/build/src/hmacKey.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/stream.d.ts"
+      ],
       "../node_modules/@nestjs/common/cache/cache.module.d.ts": [
         "../node_modules/@nestjs/common/cache/interfaces/cache-module.interface.d.ts",
         "../node_modules/@nestjs/common/interfaces/index.d.ts"
@@ -3297,6 +4487,331 @@
       "../node_modules/@nestjs/swagger/index.d.ts": [
         "../node_modules/@nestjs/swagger/dist/index.d.ts"
       ],
+      "../node_modules/@types/node/base.d.ts": [
+        "../node_modules/@types/node/assert.d.ts",
+        "../node_modules/@types/node/ts3.6/base.d.ts"
+      ],
+      "../node_modules/@types/node/child_process.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@types/node/cluster.d.ts": [
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/net.d.ts"
+      ],
+      "../node_modules/@types/node/console.d.ts": [
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../node_modules/@types/node/constants.d.ts": [
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/os.d.ts"
+      ],
+      "../node_modules/@types/node/crypto.d.ts": [
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@types/node/dgram.d.ts": [
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/net.d.ts"
+      ],
+      "../node_modules/@types/node/domain.d.ts": [
+        "../node_modules/@types/node/events.d.ts"
+      ],
+      "../node_modules/@types/node/events.d.ts": [
+        "../node_modules/@types/node/events.d.ts"
+      ],
+      "../node_modules/@types/node/fs.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs/promises.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@types/node/fs/promises.d.ts": [
+        "../node_modules/@types/node/fs.d.ts"
+      ],
+      "../node_modules/@types/node/http.d.ts": [
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@types/node/http2.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@types/node/https.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@types/node/index.d.ts": [
+        "../node_modules/@types/node/base.d.ts"
+      ],
+      "../node_modules/@types/node/inspector.d.ts": [
+        "../node_modules/@types/node/events.d.ts"
+      ],
+      "../node_modules/@types/node/module.d.ts": [
+        "../node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/@types/node/net.d.ts": [
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@types/node/perf_hooks.d.ts": [
+        "../node_modules/@types/node/async_hooks.d.ts"
+      ],
+      "../node_modules/@types/node/process.d.ts": [
+        "../node_modules/@types/node/tty.d.ts"
+      ],
+      "../node_modules/@types/node/readline.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@types/node/repl.d.ts": [
+        "../node_modules/@types/node/readline.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/vm.d.ts"
+      ],
+      "../node_modules/@types/node/stream.d.ts": [
+        "../node_modules/@types/node/events.d.ts"
+      ],
+      "../node_modules/@types/node/tls.d.ts": [
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.4/base.d.ts": [
+        "../node_modules/@types/node/async_hooks.d.ts",
+        "../node_modules/@types/node/buffer.d.ts",
+        "../node_modules/@types/node/child_process.d.ts",
+        "../node_modules/@types/node/cluster.d.ts",
+        "../node_modules/@types/node/console.d.ts",
+        "../node_modules/@types/node/constants.d.ts",
+        "../node_modules/@types/node/crypto.d.ts",
+        "../node_modules/@types/node/dgram.d.ts",
+        "../node_modules/@types/node/dns.d.ts",
+        "../node_modules/@types/node/domain.d.ts",
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/fs/promises.d.ts",
+        "../node_modules/@types/node/globals.d.ts",
+        "../node_modules/@types/node/http.d.ts",
+        "../node_modules/@types/node/http2.d.ts",
+        "../node_modules/@types/node/https.d.ts",
+        "../node_modules/@types/node/inspector.d.ts",
+        "../node_modules/@types/node/module.d.ts",
+        "../node_modules/@types/node/net.d.ts",
+        "../node_modules/@types/node/os.d.ts",
+        "../node_modules/@types/node/path.d.ts",
+        "../node_modules/@types/node/perf_hooks.d.ts",
+        "../node_modules/@types/node/process.d.ts",
+        "../node_modules/@types/node/punycode.d.ts",
+        "../node_modules/@types/node/querystring.d.ts",
+        "../node_modules/@types/node/readline.d.ts",
+        "../node_modules/@types/node/repl.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/string_decoder.d.ts",
+        "../node_modules/@types/node/timers.d.ts",
+        "../node_modules/@types/node/tls.d.ts",
+        "../node_modules/@types/node/trace_events.d.ts",
+        "../node_modules/@types/node/tty.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/v8.d.ts",
+        "../node_modules/@types/node/vm.d.ts",
+        "../node_modules/@types/node/worker_threads.d.ts",
+        "../node_modules/@types/node/zlib.d.ts"
+      ],
+      "../node_modules/@types/node/ts3.6/base.d.ts": [
+        "../node_modules/@types/node/globals.global.d.ts",
+        "../node_modules/@types/node/ts3.4/base.d.ts",
+        "../node_modules/@types/node/wasi.d.ts"
+      ],
+      "../node_modules/@types/node/tty.d.ts": [
+        "../node_modules/@types/node/net.d.ts"
+      ],
+      "../node_modules/@types/node/url.d.ts": [
+        "../node_modules/@types/node/querystring.d.ts"
+      ],
+      "../node_modules/@types/node/v8.d.ts": [
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/@types/node/worker_threads.d.ts": [
+        "../node_modules/@types/node/events.d.ts",
+        "../node_modules/@types/node/fs/promises.d.ts",
+        "../node_modules/@types/node/stream.d.ts",
+        "../node_modules/@types/node/url.d.ts",
+        "../node_modules/@types/node/vm.d.ts"
+      ],
+      "../node_modules/@types/node/zlib.d.ts": [
+        "../node_modules/@types/node/stream.d.ts"
+      ],
+      "../node_modules/abort-controller/dist/abort-controller.d.ts": [
+        "../node_modules/event-target-shim/index.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/auth/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/credential/index.d.ts": [
+        "../node_modules/firebase-admin/node_modules/@types/node/http.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/database/index.d.ts": [
+        "../node_modules/@firebase/database-types/index.d.ts",
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts": [
+        "../node_modules/firebase-admin/lib/auth/index.d.ts",
+        "../node_modules/firebase-admin/lib/credential/index.d.ts",
+        "../node_modules/firebase-admin/lib/database/index.d.ts",
+        "../node_modules/firebase-admin/lib/firestore/index.d.ts",
+        "../node_modules/firebase-admin/lib/instance-id/index.d.ts",
+        "../node_modules/firebase-admin/lib/machine-learning/index.d.ts",
+        "../node_modules/firebase-admin/lib/messaging/index.d.ts",
+        "../node_modules/firebase-admin/lib/project-management/index.d.ts",
+        "../node_modules/firebase-admin/lib/remote-config/index.d.ts",
+        "../node_modules/firebase-admin/lib/security-rules/index.d.ts",
+        "../node_modules/firebase-admin/lib/storage/index.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/http.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/firebase-namespace.d.ts": [
+        "../node_modules/firebase-admin/lib/auth/index.d.ts",
+        "../node_modules/firebase-admin/lib/credential/index.d.ts",
+        "../node_modules/firebase-admin/lib/database/index.d.ts",
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts",
+        "../node_modules/firebase-admin/lib/firestore/index.d.ts",
+        "../node_modules/firebase-admin/lib/instance-id/index.d.ts",
+        "../node_modules/firebase-admin/lib/machine-learning/index.d.ts",
+        "../node_modules/firebase-admin/lib/messaging/index.d.ts",
+        "../node_modules/firebase-admin/lib/project-management/index.d.ts",
+        "../node_modules/firebase-admin/lib/remote-config/index.d.ts",
+        "../node_modules/firebase-admin/lib/security-rules/index.d.ts",
+        "../node_modules/firebase-admin/lib/storage/index.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/firestore/index.d.ts": [
+        "../node_modules/@google-cloud/firestore/types/firestore.d.ts",
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/instance-id/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/machine-learning/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/messaging/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/project-management/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/remote-config/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/security-rules/index.d.ts": [
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/index.d.ts"
+      ],
+      "../node_modules/firebase-admin/lib/storage/index.d.ts": [
+        "../node_modules/@google-cloud/storage/build/src/index.d.ts",
+        "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts"
+      ],
+      "../node_modules/gaxios/build/src/common.d.ts": [
+        "../node_modules/abort-controller/dist/abort-controller.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/http.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/url.d.ts"
+      ],
+      "../node_modules/gaxios/build/src/gaxios.d.ts": [
+        "../node_modules/gaxios/build/src/common.d.ts"
+      ],
+      "../node_modules/gaxios/build/src/index.d.ts": [
+        "../node_modules/gaxios/build/src/common.d.ts",
+        "../node_modules/gaxios/build/src/gaxios.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/authclient.d.ts": [
+        "../node_modules/firebase-admin/node_modules/@types/node/events.d.ts",
+        "../node_modules/gaxios/build/src/index.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts",
+        "../node_modules/google-auth-library/build/src/transporters.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/computeclient.d.ts": [
+        "../node_modules/gaxios/build/src/index.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/googleauth.d.ts": [
+        "../node_modules/firebase-admin/node_modules/@types/node/stream.d.ts",
+        "../node_modules/gaxios/build/src/index.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/computeclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/envDetect.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/idtokenclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/jwtclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/refreshclient.d.ts",
+        "../node_modules/google-auth-library/build/src/transporters.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/idtokenclient.d.ts": [
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/jwtaccess.d.ts": [
+        "../node_modules/firebase-admin/node_modules/@types/node/stream.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/jwtclient.d.ts": [
+        "../node_modules/firebase-admin/node_modules/@types/node/stream.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/idtokenclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts",
+        "../node_modules/gtoken/build/src/index.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts": [
+        "../node_modules/gaxios/build/src/index.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/authclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/loginticket.d.ts",
+        "../node_modules/google-auth-library/build/src/crypto/crypto.d.ts",
+        "../node_modules/google-auth-library/build/src/transporters.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/auth/refreshclient.d.ts": [
+        "../node_modules/firebase-admin/node_modules/@types/node/stream.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/index.d.ts": [
+        "../node_modules/google-auth-library/build/src/auth/computeclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/envDetect.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/googleauth.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/iam.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/idtokenclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/jwtaccess.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/jwtclient.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/loginticket.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts",
+        "../node_modules/google-auth-library/build/src/auth/refreshclient.d.ts",
+        "../node_modules/google-auth-library/build/src/transporters.d.ts"
+      ],
+      "../node_modules/google-auth-library/build/src/transporters.d.ts": [
+        "../node_modules/gaxios/build/src/index.d.ts"
+      ],
       "../node_modules/rxjs/index.d.ts": [
         "../node_modules/rxjs/internal/AsyncSubject.d.ts",
         "../node_modules/rxjs/internal/BehaviorSubject.d.ts",
@@ -3594,11 +5109,43 @@
       "../node_modules/rxjs/internal/util/pipe.d.ts": [
         "../node_modules/rxjs/internal/types.d.ts"
       ],
+      "../node_modules/teeny-request/build/src/index.d.ts": [
+        "../node_modules/firebase-admin/node_modules/@types/node/http.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/https.d.ts",
+        "../node_modules/firebase-admin/node_modules/@types/node/stream.d.ts",
+        "../node_modules/teeny-request/build/src/TeenyStatistics.d.ts"
+      ],
       "../src/app.controller.ts": [
         "../src/app.service.ts"
+      ],
+      "../src/app.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/database/preauth.middleware.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
+      "../node_modules/@firebase/app-types/index.d.ts",
+      "../node_modules/@firebase/database-types/index.d.ts",
+      "../node_modules/@firebase/logger/dist/index.d.ts",
+      "../node_modules/@firebase/logger/dist/src/logger.d.ts",
+      "../node_modules/@google-cloud/common/build/src/index.d.ts",
+      "../node_modules/@google-cloud/common/build/src/operation.d.ts",
+      "../node_modules/@google-cloud/common/build/src/service-object.d.ts",
+      "../node_modules/@google-cloud/common/build/src/service.d.ts",
+      "../node_modules/@google-cloud/common/build/src/util.d.ts",
+      "../node_modules/@google-cloud/firestore/types/firestore.d.ts",
+      "../node_modules/@google-cloud/storage/build/src/acl.d.ts",
+      "../node_modules/@google-cloud/storage/build/src/bucket.d.ts",
+      "../node_modules/@google-cloud/storage/build/src/channel.d.ts",
+      "../node_modules/@google-cloud/storage/build/src/file.d.ts",
+      "../node_modules/@google-cloud/storage/build/src/hmacKey.d.ts",
+      "../node_modules/@google-cloud/storage/build/src/iam.d.ts",
+      "../node_modules/@google-cloud/storage/build/src/index.d.ts",
+      "../node_modules/@google-cloud/storage/build/src/notification.d.ts",
+      "../node_modules/@google-cloud/storage/build/src/signer.d.ts",
+      "../node_modules/@google-cloud/storage/build/src/storage.d.ts",
       "../node_modules/@nestjs/common/cache/cache.constants.d.ts",
       "../node_modules/@nestjs/common/cache/cache.module.d.ts",
       "../node_modules/@nestjs/common/cache/decorators/cache-key.decorator.d.ts",
@@ -3809,7 +5356,90 @@
       "../node_modules/@nestjs/swagger/dist/utils/get-schema-path.util.d.ts",
       "../node_modules/@nestjs/swagger/dist/utils/index.d.ts",
       "../node_modules/@nestjs/swagger/index.d.ts",
+      "../node_modules/@types/long/index.d.ts",
+      "../node_modules/@types/node/assert.d.ts",
+      "../node_modules/@types/node/async_hooks.d.ts",
+      "../node_modules/@types/node/base.d.ts",
+      "../node_modules/@types/node/buffer.d.ts",
+      "../node_modules/@types/node/child_process.d.ts",
+      "../node_modules/@types/node/cluster.d.ts",
+      "../node_modules/@types/node/console.d.ts",
+      "../node_modules/@types/node/constants.d.ts",
+      "../node_modules/@types/node/crypto.d.ts",
+      "../node_modules/@types/node/dgram.d.ts",
+      "../node_modules/@types/node/dns.d.ts",
+      "../node_modules/@types/node/domain.d.ts",
+      "../node_modules/@types/node/events.d.ts",
+      "../node_modules/@types/node/fs.d.ts",
+      "../node_modules/@types/node/fs/promises.d.ts",
+      "../node_modules/@types/node/globals.d.ts",
+      "../node_modules/@types/node/globals.global.d.ts",
+      "../node_modules/@types/node/http.d.ts",
+      "../node_modules/@types/node/http2.d.ts",
+      "../node_modules/@types/node/https.d.ts",
+      "../node_modules/@types/node/index.d.ts",
+      "../node_modules/@types/node/inspector.d.ts",
+      "../node_modules/@types/node/module.d.ts",
+      "../node_modules/@types/node/net.d.ts",
+      "../node_modules/@types/node/os.d.ts",
+      "../node_modules/@types/node/path.d.ts",
+      "../node_modules/@types/node/perf_hooks.d.ts",
+      "../node_modules/@types/node/process.d.ts",
+      "../node_modules/@types/node/punycode.d.ts",
+      "../node_modules/@types/node/querystring.d.ts",
+      "../node_modules/@types/node/readline.d.ts",
+      "../node_modules/@types/node/repl.d.ts",
+      "../node_modules/@types/node/stream.d.ts",
+      "../node_modules/@types/node/string_decoder.d.ts",
+      "../node_modules/@types/node/timers.d.ts",
+      "../node_modules/@types/node/tls.d.ts",
+      "../node_modules/@types/node/trace_events.d.ts",
+      "../node_modules/@types/node/ts3.4/base.d.ts",
+      "../node_modules/@types/node/ts3.6/base.d.ts",
+      "../node_modules/@types/node/tty.d.ts",
+      "../node_modules/@types/node/url.d.ts",
+      "../node_modules/@types/node/util.d.ts",
+      "../node_modules/@types/node/v8.d.ts",
+      "../node_modules/@types/node/vm.d.ts",
+      "../node_modules/@types/node/wasi.d.ts",
+      "../node_modules/@types/node/worker_threads.d.ts",
+      "../node_modules/@types/node/zlib.d.ts",
+      "../node_modules/abort-controller/dist/abort-controller.d.ts",
       "../node_modules/axios/index.d.ts",
+      "../node_modules/event-target-shim/index.d.ts",
+      "../node_modules/firebase-admin/lib/auth/index.d.ts",
+      "../node_modules/firebase-admin/lib/credential/index.d.ts",
+      "../node_modules/firebase-admin/lib/database/index.d.ts",
+      "../node_modules/firebase-admin/lib/firebase-namespace-api.d.ts",
+      "../node_modules/firebase-admin/lib/firebase-namespace.d.ts",
+      "../node_modules/firebase-admin/lib/firestore/index.d.ts",
+      "../node_modules/firebase-admin/lib/index.d.ts",
+      "../node_modules/firebase-admin/lib/instance-id/index.d.ts",
+      "../node_modules/firebase-admin/lib/machine-learning/index.d.ts",
+      "../node_modules/firebase-admin/lib/messaging/index.d.ts",
+      "../node_modules/firebase-admin/lib/project-management/index.d.ts",
+      "../node_modules/firebase-admin/lib/remote-config/index.d.ts",
+      "../node_modules/firebase-admin/lib/security-rules/index.d.ts",
+      "../node_modules/firebase-admin/lib/storage/index.d.ts",
+      "../node_modules/gaxios/build/src/common.d.ts",
+      "../node_modules/gaxios/build/src/gaxios.d.ts",
+      "../node_modules/gaxios/build/src/index.d.ts",
+      "../node_modules/google-auth-library/build/src/auth/authclient.d.ts",
+      "../node_modules/google-auth-library/build/src/auth/computeclient.d.ts",
+      "../node_modules/google-auth-library/build/src/auth/credentials.d.ts",
+      "../node_modules/google-auth-library/build/src/auth/envDetect.d.ts",
+      "../node_modules/google-auth-library/build/src/auth/googleauth.d.ts",
+      "../node_modules/google-auth-library/build/src/auth/iam.d.ts",
+      "../node_modules/google-auth-library/build/src/auth/idtokenclient.d.ts",
+      "../node_modules/google-auth-library/build/src/auth/jwtaccess.d.ts",
+      "../node_modules/google-auth-library/build/src/auth/jwtclient.d.ts",
+      "../node_modules/google-auth-library/build/src/auth/loginticket.d.ts",
+      "../node_modules/google-auth-library/build/src/auth/oauth2client.d.ts",
+      "../node_modules/google-auth-library/build/src/auth/refreshclient.d.ts",
+      "../node_modules/google-auth-library/build/src/crypto/crypto.d.ts",
+      "../node_modules/google-auth-library/build/src/index.d.ts",
+      "../node_modules/google-auth-library/build/src/transporters.d.ts",
+      "../node_modules/gtoken/build/src/index.d.ts",
       "../node_modules/reflect-metadata/index.d.ts",
       "../node_modules/rxjs/index.d.ts",
       "../node_modules/rxjs/internal/AsyncSubject.d.ts",
@@ -3875,10 +5505,21 @@
       "../node_modules/rxjs/internal/util/isObservable.d.ts",
       "../node_modules/rxjs/internal/util/noop.d.ts",
       "../node_modules/rxjs/internal/util/pipe.d.ts",
+      "../node_modules/teeny-request/build/src/TeenyStatistics.d.ts",
+      "../node_modules/teeny-request/build/src/index.d.ts",
       "../src/app.controller.ts",
       "../src/app.module.ts",
       "../src/app.service.ts",
+      "../src/auth/auth.module.ts",
+      "../src/database/firebaseServiceAccount.json",
+      "../src/database/preauth.middleware.ts",
       "../src/main.ts",
+      "../src/process/process.controller.ts",
+      "../src/process/process.module.ts",
+      "../src/process/process.service.ts",
+      "../src/user/user.controller.ts",
+      "../src/user/user.module.ts",
+      "../src/user/user.service.ts",
       "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.dom.d.ts",
       "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.dom.iterable.d.ts",
       "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2015.collection.d.ts",
@@ -3900,7 +5541,15 @@
       "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
       "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2017.string.d.ts",
       "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2018.d.ts",
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es2020.bigint.d.ts",
       "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.es5.d.ts",
+      "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.scripthost.d.ts",
       "../../../../../usr/local/lib/node_modules/@nestjs/cli/node_modules/typescript/lib/lib.webworker.importscripts.d.ts"
     ]
