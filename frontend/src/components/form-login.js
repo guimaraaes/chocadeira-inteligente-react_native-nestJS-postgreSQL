@@ -2,7 +2,10 @@ import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
-export default function FormLogin() {
+export default function FormLogin({ navigation }) {
+  function navigateToHome() {
+    navigation.navigate("home");
+  }
   return (
     <View style={styles.container}>
       <Image
@@ -37,7 +40,7 @@ export default function FormLogin() {
         style={styles.button}
         color="#F9A825"
         mode="contained"
-        onPress={() => {}}
+        onPress={navigateToHome}
       >
         Entrar
       </Button>

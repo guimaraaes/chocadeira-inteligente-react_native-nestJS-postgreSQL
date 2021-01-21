@@ -1,9 +1,8 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import Home from "./src/views/home";
-
+import Routes from "./src/routes";
 export default function App() {
-  return <Home />;
+  return <Routes />;
 }
 
 const styles = StyleSheet.create({

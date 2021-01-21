@@ -25,7 +25,7 @@ const data = {
     },
   ],
 };
-export default function Process() {
+export default function ProcessComponent() {
   return (
     <View style={styles.container}>
       <Text style={styles.info}>Outubro 2020</Text>

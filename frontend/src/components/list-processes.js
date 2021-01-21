@@ -1,19 +1,26 @@
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { Card, IconButton, Paragraph, Title } from "react-native-paper";
-export default function ListProcesses() {
+export default function ListProcesses({ navigation }) {
+  function navigateToProcess() {
+    navigation.navigate("process");
+  }
+
+  function navigateToCreateProcess() {
+    navigation.navigate("createProcess");
+  }
   return (
     <View style={styles.container}>
       <IconButton
         icon="plus"
         size={44}
-        onPress={() => {}}
+        onPress={navigateToCreateProcess}
         style={styles.iconAdd}
       ></IconButton>
       <ScrollView>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => {
           return (
-            <Card key={i} onPress={() => {}} style={styles.card}>
+            <Card key={i} onPress={navigateToProcess} style={styles.card}>
               <Card.Content>
                 <Title>Outubro 2020</Title>
                 <Paragraph>

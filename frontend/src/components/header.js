@@ -14,6 +14,9 @@ export default function Header(props) {
 
   const closeMenu = () => setVisible(false);
   const [active, setActive] = React.useState("");
+  function navigateToLogin() {
+    props.navigation.navigate("login");
+  }
 
   return (
     <Appbar.Header style={styles.header}>
@@ -39,7 +42,14 @@ export default function Header(props) {
               />
             </View>
 
-            <Menu.Item icon="logout" title="Sair" onPress={() => {}} />
+            <Menu.Item
+              icon="logout"
+              title="Sair"
+              onPress={() => {
+                navigateToLogin();
+                closeMenu();
+              }}
+            />
             <Menu.Item
               style={styles.menuFooter}
               title={
