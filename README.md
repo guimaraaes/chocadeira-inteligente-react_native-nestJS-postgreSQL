@@ -7,5 +7,7 @@ As linhas tracejadas indicam que após cadastrar um processo, apenas é possíve
 
 Outra funcionalidade é para acompanhar os processos, tanto os finalizados como os em andamento. Em ambos é possível compartilhar os excluir o processo selecionado, entretanto, pra os processos em andamento é possível editar as configurações definidas anteriormente, obter gráfico dos dados em escala diária, semanal ou desde o início do processo, além de finilizar o corrente processo. Para os processo finalizados é possível obter o gráfico das medições do período de duração do processo. 
 
+![img](https://github.com/guimaraaes/chocadeira-inteligente-react_native/blob/main/assets/chocadeira-inteligente_%20funcionalidades.png)
+
 ### Telas frontend
 
