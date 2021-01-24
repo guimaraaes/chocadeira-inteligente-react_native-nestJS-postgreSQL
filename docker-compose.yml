@@ -1,0 +1,30 @@
+version: "3.1"
+services:
+  postgres:
+    image: postgres:11.1-alpine
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=chocadeira
+    ports:
+      - "8892:5432"
+    networks:
+      - postgres-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com.br"
+      PGADMIN_DEFAULT_PASSWORD: "admin!"
+    ports:
+      - "16543:80"
+    depends_on:
+      - postgres
+    networks:
+      - postgres-network
+
+networks:
+  postgres-network:
+    driver: bridge
