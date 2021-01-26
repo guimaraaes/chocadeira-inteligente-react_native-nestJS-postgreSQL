@@ -26,6 +26,7 @@
     "@nestjs/platform-express": "^7.6.5",
     "@nestjs/swagger": "^4.7.12",
     "@nestjs/typeorm": "^7.1.5",
+    "class-validator": "^0.13.1",
     "firebase-admin": "^9.4.2",
     "pg": "^8.5.1",
     "reflect-metadata": "^0.1.13",
