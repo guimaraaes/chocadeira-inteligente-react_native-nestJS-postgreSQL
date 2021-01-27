@@ -9,8 +9,8 @@ export class AuthController {
         private readonly authService: AuthService
     ){}
 
-    @Post()
+    @Post('/singin')
     logIn(@Body(ValidationPipe) credential: AuthLogIn){
-        
+        return this.authService.singIn(credential)
     }
 }

@@ -1,15 +1,17 @@
 import { ConflictException, Injectable, InternalServerErrorException } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
-import { EntityRepository, Repository } from 'typeorm';
 import { CreateUser } from './user.dto';
 import { User } from './user.entity';
+import { UserRepository } from './user.repository';
 
-@Injectable()
-@EntityRepository(User)
-export class UserService extends Repository<User> {
+ @Injectable()
+export class UserService  {
+    constructor (
+        private readonly userRepository: UserRepository
+    ){}
 
-    findUser(){
-        return 1
+    async findUser(){
+        return await this.userRepository.findOne()
     }
 
 
@@ -20,15 +22,17 @@ export class UserService extends Repository<User> {
 
     async createUser(UserDTO: CreateUser){
         const {email, senha, nome, cpf} = UserDTO
-        if (this.findOne({email}))
+        if (await this.userRepository.findOne({email}))
             throw new ConflictException('E-mail já cadastrado')
         const user = new User()
         user.nome = nome
         user.email = email
         user.cpf = cpf
-
         const salt = await bcrypt.genSalt()
 
+        user.salt = salt
+
+        user.senha = await bcrypt.hash(senha, salt)
 
         try {
             await user.save()
@@ -36,7 +40,9 @@ export class UserService extends Repository<User> {
             throw new InternalServerErrorException()
         }
     
+        
     }
+ 
 
  
 
