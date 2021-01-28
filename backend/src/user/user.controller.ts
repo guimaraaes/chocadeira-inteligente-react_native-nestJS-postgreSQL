@@ -1,16 +1,21 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-import { ApiOperation, ApiTags } from '@nestjs/swagger';
+import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
+import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { CreateUser, EditUser } from './user.dto';
 import { UserService } from './user.service';
 
 @ApiTags('user')
 @Controller('user')
+@ApiBearerAuth()
+
 export class UserController {
     constructor(
         private readonly userService: UserService
     ){}
 
+    
     @Get()
+    @UseGuards(AuthGuard())
     @ApiOperation({summary: 'get all User'})
     getUser(){
         return this.userService.findUser()

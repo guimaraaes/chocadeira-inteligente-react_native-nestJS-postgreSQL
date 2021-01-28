@@ -3742,12 +3742,12 @@
         "affectsGlobalScope": false
       },
       "../src/user/user.controller.ts": {
-        "version": "fe2082d384f39fedff241ddca741b6d689de86da1d46ea47ed9138b2bbae9ac1",
+        "version": "3a92eab636f6965f19f4122a7a948a90322f9eef39c4303f072d5c1863bcfea3",
         "signature": "3f8fb4c4eb094631a7be85d0517217f270bf6f9a6ddaef4d20417dda3d1603c8",
         "affectsGlobalScope": false
       },
       "../src/user/user.module.ts": {
-        "version": "ee8a97fff597e296a6e18ce61c1160aa2a1556a4c5acdd890db4e8647c401a44",
+        "version": "b7c8ba257c94526d8424b28fddaeb227d2133c92bf2d6a237e12163c8b35c4fd",
         "signature": "482b8f0d35a3d453500a15b6c6057c1e4c40baa4329b39da9e1026d8e1de4329",
         "affectsGlobalScope": false
       },
@@ -3937,7 +3937,7 @@
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "0ca1740d30687e23f3b50a09678d1e38684107e50a2e17dd5ba125864b00a7f6",
+        "version": "b83602bd38848894d5994da7f140f3df83f04e1bfef8ddcf72f06eac95f7491d",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
@@ -6917,6 +6917,7 @@
       ],
       "../src/user/user.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/passport/index.d.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
         "../src/user/user.dto.ts",
         "../src/user/user.service.ts"
@@ -6931,6 +6932,7 @@
       "../src/user/user.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/auth/auth.module.ts",
         "../src/user/user.controller.ts",
         "../src/user/user.repository.ts",
         "../src/user/user.service.ts"
