@@ -3697,7 +3697,7 @@
         "affectsGlobalScope": false
       },
       "../src/auth/auth.module.ts": {
-        "version": "b9790c80f144c592e0e10a621d74f440c13d394f6a634653e8d94d835ab9ecc9",
+        "version": "762d11e4ee198801a81b9b26a7374431be519f11e73b9419fe022ac0da611513",
         "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1",
         "affectsGlobalScope": false
       },
@@ -3731,6 +3731,11 @@
         "signature": "3e96b15b87ad8c07da2e1bc348c3e14b4d812c23a63a2190e2a615a4ba565276",
         "affectsGlobalScope": false
       },
+      "../src/auth/get-user.decorator.ts": {
+        "version": "d0435fd9cf5f8964a0c36085246b684c94075b772f5179ec5ecfb7c0bbaad05b",
+        "signature": "2edbd67ef5c8b5f94d7abaea90ab48657ff66e5277a1409c425ff253daa65751",
+        "affectsGlobalScope": false
+      },
       "../src/user/user.dto.ts": {
         "version": "18a2e8e56c95bcfc30201646f878b62e6def1733f2018d6c59e7ef63a9ccac87",
         "signature": "ae93d3b2102388e6b9f8dbd1c1bf8059e77a58d7ea6875a76f7aac224e70897b",
@@ -3742,8 +3747,8 @@
         "affectsGlobalScope": false
       },
       "../src/user/user.controller.ts": {
-        "version": "3a92eab636f6965f19f4122a7a948a90322f9eef39c4303f072d5c1863bcfea3",
-        "signature": "3f8fb4c4eb094631a7be85d0517217f270bf6f9a6ddaef4d20417dda3d1603c8",
+        "version": "b8884ca7cfa7b602f089de53b57859c11bfd449a85ad250de070ba141bf972b4",
+        "signature": "9343f07602e85e7d5c16160af920a26191261424f81db845a33894610acff7ca",
         "affectsGlobalScope": false
       },
       "../src/user/user.module.ts": {
@@ -6875,6 +6880,10 @@
         "../src/auth/jwt-payload.interface.ts",
         "../src/user/user.repository.ts"
       ],
+      "../src/auth/get-user.decorator.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/user/user.entity.ts"
+      ],
       "../src/auth/jwt.strategy.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/passport/index.d.ts",
@@ -6919,7 +6928,9 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/passport/index.d.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
+        "../src/auth/get-user.decorator.ts",
         "../src/user/user.dto.ts",
+        "../src/user/user.entity.ts",
         "../src/user/user.service.ts"
       ],
       "../src/user/user.dto.ts": [
@@ -10613,6 +10624,7 @@
       "../src/auth/auth.dto.ts",
       "../src/auth/auth.module.ts",
       "../src/auth/auth.service.ts",
+      "../src/auth/get-user.decorator.ts",
       "../src/auth/jwt-payload.interface.ts",
       "../src/auth/jwt.strategy.ts",
       "../src/config/typeorm.config.ts",

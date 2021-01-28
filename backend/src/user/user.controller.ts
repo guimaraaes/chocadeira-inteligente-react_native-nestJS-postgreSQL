@@ -1,7 +1,9 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
+import { GetUser } from 'src/auth/get-user.decorator';
 import { CreateUser, EditUser } from './user.dto';
+import { User } from './user.entity';
 import { UserService } from './user.service';
 
 @ApiTags('user')
@@ -17,7 +19,8 @@ export class UserController {
     @Get()
     @UseGuards(AuthGuard())
     @ApiOperation({summary: 'get all User'})
-    getUser(){
+    getUser(@GetUser() user: User){
+        return user
         return this.userService.findUser()
     }
 
