@@ -1,10 +1,13 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-import { ApiOperation, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
+import { GetUser } from 'src/auth/get-user.decorator';
+import { User } from 'src/user/user.entity';
 import { CreateHistory, CreateProcess, EditProcess } from './process.dto';
 import { ProcessService } from './process.service';
 
 @ApiTags('process')
 @Controller('process')
+@ApiBearerAuth()
 export class ProcessController {
     constructor (
         private readonly processService: ProcessService
@@ -23,15 +26,15 @@ export class ProcessController {
     }
 
     @Post()
-    @ApiOperation({summary: 'post process'})
-    postProcess(@Param('id_user') id_user: number,
+    @ApiOperation({summary: 'post process by user auth id'})
+    postProcess(@GetUser() user : User,
                 @Body() process: CreateProcess){
-        return this.processService.createProcess(id_user, process)
+        return this.processService.createProcess(user.id, process)
     }
 
     @Post('history')
-    @ApiOperation({summary: 'post history by process id'})
-    postHistory(@Param('id') id: number, 
+    @ApiOperation({summary: 'post history by user auth id'})
+    postHistory(@GetUser() user : User,
                 @Body() history: CreateHistory){
         return this.processService.createHistory()
     }

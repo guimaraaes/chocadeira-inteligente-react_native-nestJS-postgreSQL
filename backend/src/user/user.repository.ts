@@ -8,7 +8,7 @@ export class UserRepository extends Repository<User> {
 
     async validateUserPassword(credential: AuthLogIn){
         const{email, senha} = credential
-        const user = await this.findOne()
+        const user = await this.findOne({email})
         if(user && await user.validatePassword(senha)){
             return user.email
         }else {
