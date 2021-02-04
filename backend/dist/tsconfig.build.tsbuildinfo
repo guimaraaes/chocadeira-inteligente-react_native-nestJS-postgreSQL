@@ -3712,27 +3712,37 @@
         "affectsGlobalScope": false
       },
       "../src/process/process.dto.ts": {
-        "version": "ce25f620e2bfbb17590060ea3ac90e10ed9f22f710aebac90f3058ca2ee2f9be",
-        "signature": "ee8abfea24173db8c0c258d18da4294b9e9f3ce3478f89ee11a9424b149a1148",
+        "version": "49cbe2e9c8430b1376ff9116e4dec1fd50eee4279b119d7f83f79a6a53a63cf9",
+        "signature": "51e3aa7077b8084a01d993359b019e3323002dd42b5188fcaf2964f47a1e8fc8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/moment/ts3.1-typings/moment.d.ts": {
+        "version": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
+        "signature": "f97edc4d3b4dd0b32766e9633086497565c37657fb591cc84a35864db4bc2fc5",
         "affectsGlobalScope": false
       },
       "../src/process/process.entity.ts": {
-        "version": "345e3c4df2a64608e5aef657250aa572cbfc0fb1efe7c454d3ae9e3aa0c92590",
-        "signature": "fe147c0fb665d05d6546f1edfffe4138ddf8c1c87fed4a923e6f1dad8a35c580",
+        "version": "8356863aab6d1d17742224defc11bb1b2b0f37e062056580d5409cbbe69711b0",
+        "signature": "91eff0341da497fb65f6f4957e2668507ecf71776b6af6ae919bf514c8fcb834",
+        "affectsGlobalScope": false
+      },
+      "../src/process/process.repository.ts": {
+        "version": "774d10ba3c3bec54c307bb79abc71b62e6b8a2a1a6a84da8f8256bb7f5ebffb7",
+        "signature": "d8a40b6b09169447c633f6dc2627447dbc87aaf09a279f7ddf464633ee5af07f",
         "affectsGlobalScope": false
       },
       "../src/process/process.service.ts": {
-        "version": "f78460c361c9ef4ed724aae0f8ec95e0c4e265c36c30eed20a340714d069b96a",
-        "signature": "58ce23c57b2b6b0bfe0a122dda2ed6d70842fd7e3422cf47a6fdd87d6f1fa585",
+        "version": "e9b9d029a9850cc0c84e286ba73b9591c31b644ca36c8a32337b90adb38ac814",
+        "signature": "70e9a1f9bb53b490bd92d44c6f9fd3dfbc51ce6e0fef9a9d2219cb0b8758d5d4",
         "affectsGlobalScope": false
       },
       "../src/process/process.controller.ts": {
-        "version": "bdab5c858cc9b6ddc90eb5e1eb247a39a0c9a535778aff4b8c336b0e9644591e",
-        "signature": "895148ec8fd8760038c4c242c70601da3bc2ce99e39880df128fd4312793d355",
+        "version": "2d58fcf0845cf015046d8854b796f0864decc251121167a46fd908034e83c9c8",
+        "signature": "5e3b23726dce4d6959269ec1ad4c2107763fe780515102e32779691f9e17f785",
         "affectsGlobalScope": false
       },
       "../src/process/process.module.ts": {
-        "version": "b73dedba886388a9e610c869ec6e9a4cbd9fa803433a560b2a7edc51027564e8",
+        "version": "27a93074d077dc4a8f02dc901be5b867949c8f0e3535f5f6a11e77387cbfe7e9",
         "signature": "3e96b15b87ad8c07da2e1bc348c3e14b4d812c23a63a2190e2a615a4ba565276",
         "affectsGlobalScope": false
       },
@@ -3742,13 +3752,13 @@
         "affectsGlobalScope": false
       },
       "../src/user/user.service.ts": {
-        "version": "f70b33af1a45d2ecef1e4fb60197a6c16775b8d8827ec133b2b5a709e53dd328",
+        "version": "74b8e874137b370b68850b523ae58ad5921526fa71bd5104f3081e01f5632368",
         "signature": "71622b35dc7e3c5a3cef511a190a838d1e570c82146e2b3c8685573589389c86",
         "affectsGlobalScope": false
       },
       "../src/user/user.controller.ts": {
-        "version": "05595e4db3f410f17bc8fbe8fb86156bd70b024f498736e4ff64a7cb2bed11c3",
-        "signature": "7ca054228f83a5cb82ecbfa22bf2942073b89634807af3a0c38809b48a318ae1",
+        "version": "abaaa0d9afa2e954bf66fb758b40a4239d5f06d1dfcf7e159c3b35f0f5909f7c",
+        "signature": "b7442e77d86a4babcebd6089bf1ef7241b36c4828b63d5c91e142c041c3283c6",
         "affectsGlobalScope": false
       },
       "../src/user/user.module.ts": {
@@ -6901,6 +6911,7 @@
       ],
       "../src/process/process.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/passport/index.d.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
         "../src/auth/get-user.decorator.ts",
         "../src/process/process.dto.ts",
@@ -6917,14 +6928,21 @@
       "../src/process/process.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/auth/auth.module.ts",
         "../src/process/process.controller.ts",
+        "../src/process/process.repository.ts",
         "../src/process/process.service.ts"
+      ],
+      "../src/process/process.repository.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/process/process.entity.ts"
       ],
       "../src/process/process.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/moment/ts3.1-typings/moment.d.ts",
         "../src/process/process.dto.ts",
-        "../src/process/process.entity.ts"
+        "../src/process/process.entity.ts",
+        "../src/process/process.repository.ts"
       ],
       "../src/user/user.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -9854,16 +9872,21 @@
       ],
       "../src/process/process.controller.ts": [
         "../src/process/process.dto.ts",
+        "../src/process/process.entity.ts",
         "../src/process/process.service.ts",
         "../src/user/user.entity.ts"
       ],
       "../src/process/process.entity.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
-      "../src/process/process.service.ts": [
+      "../src/process/process.repository.ts": [
         "../node_modules/typeorm/index.d.ts",
-        "../src/process/process.dto.ts",
         "../src/process/process.entity.ts"
+      ],
+      "../src/process/process.service.ts": [
+        "../src/process/process.dto.ts",
+        "../src/process/process.entity.ts",
+        "../src/process/process.repository.ts"
       ],
       "../src/user/user.controller.ts": [
         "../src/user/user.dto.ts",
@@ -10295,6 +10318,7 @@
       "../node_modules/class-validator/types/validation/ValidatorOptions.d.ts",
       "../node_modules/libphonenumber-js/index.d.ts",
       "../node_modules/libphonenumber-js/types.d.ts",
+      "../node_modules/moment/ts3.1-typings/moment.d.ts",
       "../node_modules/reflect-metadata/index.d.ts",
       "../node_modules/rxjs/index.d.ts",
       "../node_modules/rxjs/internal/AsyncSubject.d.ts",
@@ -10636,6 +10660,7 @@
       "../src/process/process.dto.ts",
       "../src/process/process.entity.ts",
       "../src/process/process.module.ts",
+      "../src/process/process.repository.ts",
       "../src/process/process.service.ts",
       "../src/user/user.controller.ts",
       "../src/user/user.dto.ts",

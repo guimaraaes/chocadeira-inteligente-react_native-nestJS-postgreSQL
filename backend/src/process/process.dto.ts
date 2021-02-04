@@ -1,10 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsNotEmpty } from "class-validator";
-
-export class CreateProcess{
-    @ApiProperty()
-    @IsNotEmpty()
-    data_inicio: string;
+ 
+export class ProcessParam{
 
     @ApiProperty()
     @IsNotEmpty()
@@ -16,23 +13,10 @@ export class CreateProcess{
 
     @ApiProperty()
     @IsNotEmpty()
-    viragem: string;
+    viragem: Date;
 
 }
 
-export class EditProcess{
-     @ApiProperty()
-    @IsNotEmpty()
-    temperatura: number;
-
-    @ApiProperty()
-    @IsNotEmpty()
-    umidade: number;
-
-    @ApiProperty()
-    @IsNotEmpty()
-    viragem: string;
-}
 
 export class CreateHistory{
     @ApiProperty()

@@ -7,28 +7,28 @@ export class Process extends BaseEntity{
     id: number;
 
     @Column()
-    data_inicio: string;
+    data_inicio: Date;
 
     @Column()
-    data_fim: string;
+    data_fim: Date;
 
-    @Column()
+    @Column({type: 'float'})
     temperatura: number;
 
-    @Column()
+    @Column({type: 'float'})
     umidade: number;
 
-    @Column()
-    viragem: string;
+    @Column({type: 'float'})
+    viragem: number;
 
-    @Column()
+    @Column({type: 'float'})
     temperatura_med: number;
 
-    @Column()
+    @Column({type: 'float'})
     umidade_med: number;
 
-    @Column()
-    viragem_med: string;
+    @Column({type: 'float'})
+    viragem_med: number;
 
     @Column()
     id_user: number;

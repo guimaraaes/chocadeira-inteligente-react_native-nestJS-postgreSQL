@@ -1,13 +1,15 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { GetUser } from 'src/auth/get-user.decorator';
 import { User } from 'src/user/user.entity';
-import { CreateHistory, CreateProcess, EditProcess } from './process.dto';
+import { CreateHistory, ProcessParam } from './process.dto';
 import { ProcessService } from './process.service';
-
+ 
 @ApiTags('process')
 @Controller('process')
 @ApiBearerAuth()
+@UseGuards(AuthGuard())
 export class ProcessController {
     constructor (
         private readonly processService: ProcessService
@@ -15,20 +17,20 @@ export class ProcessController {
 
     @Get()
     @ApiOperation({summary: 'get all process'})
-    getProcess(){
-        return this.processService.findProcess()
+    getProcess(@GetUser() user: User){
+        return this.processService.findProcess(user.id)
     }
 
     @Get(':id')
     @ApiOperation({summary: 'get process by id'})
     getProcessById(@Param('id') id: number){
-        return this.processService.findProcessById()
+        return this.processService.findProcessById(id)
     }
 
     @Post()
     @ApiOperation({summary: 'post process by user auth id'})
     postProcess(@GetUser() user : User,
-                @Body() process: CreateProcess){
+                @Body() process: ProcessParam){
         return this.processService.createProcess(user.id, process)
     }
 
@@ -36,19 +38,19 @@ export class ProcessController {
     @ApiOperation({summary: 'post history by user auth id'})
     postHistory(@GetUser() user : User,
                 @Body() history: CreateHistory){
-        return this.processService.createHistory()
+        return this.processService.createHistory(user.id, history)
     }
 
-    @Put()
+    @Put(':id')
     @ApiOperation({summary: 'put process by id'})
     putProcess(@Param('id') id: number,
-                @Body() process: EditProcess){
-        return this.processService.editProcess()
+                @Body() process: ProcessParam){
+        return this.processService.editProcess(id, process)
     }
     
-    @Delete()
+    @Delete(':id')
     @ApiOperation({summary: 'delete process by id'})
     deleteProcess(@Param('id') id: number){
-        return this.processService.deleteProcess()
+        return this.processService.deleteProcess(id)
     }
 }
