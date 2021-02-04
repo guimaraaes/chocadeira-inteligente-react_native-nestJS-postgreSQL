@@ -1,4 +1,4 @@
-import { ConflictException, Injectable, InternalServerErrorException } from '@nestjs/common';
+import { ConflictException, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
 import { CreateUser, EditUser } from './user.dto';
 import { User } from './user.entity';
@@ -11,12 +11,20 @@ export class UserService  {
     ){}
 
     async findUser(){
-        return await this.userRepository.find()
+        try {
+           return await this.userRepository.find()
+        } catch (error){
+            throw new NotFoundException('Usuário não encontrado')
+        }
     }
 
 
     async findUserById(id: number){
-        return await this.userRepository.find({id})
+        try {
+            return await this.userRepository.find({id})
+        } catch (error){
+            throw new NotFoundException('Usuário não encontrado')
+        }
     }
 
 
@@ -42,6 +50,11 @@ export class UserService  {
     }
  
     async editUser(id: number, user: EditUser){
+        try {
+            await this.userRepository.find({id})
+        } catch (error){
+            throw new NotFoundException('Usuário não encontrado')
+        }
 
         if (await this.userRepository.findOne({email: user.email}))
             throw new ConflictException('E-mail já cadastrado')
@@ -59,6 +72,12 @@ export class UserService  {
 
 
     async deleteUser(id: number){
+        try {
+            await this.userRepository.find({id})
+        } catch (error){
+            throw new NotFoundException('Usuário não encontrado')
+        }
+
         try {
             await this.userRepository.delete(id)
         }catch (error){
