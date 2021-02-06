@@ -50,9 +50,8 @@ export class ProcessController {
 
     @Put('/finish/:id')
     @ApiOperation({summary: 'put process finish by id'})
-    putProcessFinish(@Param('id') id: number,
-                @Body() process: ProcessParam){
-        return this.processService.editProcess(id, process)
+    putProcessFinish(@Param('id') id: number){
+        return this.processService.finishProcess(id)
     }
     
     @Delete(':id')

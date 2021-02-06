@@ -3737,8 +3737,8 @@
         "affectsGlobalScope": false
       },
       "../src/process/process.controller.ts": {
-        "version": "f818b647a2d5fdc457f9b6b79f6898ebc8e4a29536964bfda04cba896d7e7d03",
-        "signature": "92103fa6b754652dc419b36ffff8aa2550a14ba23c9d904f894f5378f559f89a",
+        "version": "1bd6d3fbd2f0c02d0f0e2097d0f460ae6466ffc75e660ea11fe87479bd44b17d",
+        "signature": "143e2f96986754f22dffe420ab645f3d56166596fb7a17b3f7a9d06761e016c6",
         "affectsGlobalScope": false
       },
       "../src/process/process.module.ts": {
