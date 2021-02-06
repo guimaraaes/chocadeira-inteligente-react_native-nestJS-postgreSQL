@@ -1,13 +1,17 @@
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { Card, IconButton, Paragraph, Title } from "react-native-paper";
-export default function ListProcesses({ navigation }) {
+export default function ListProcesses(props) {
   function navigateToProcess() {
-    navigation.navigate("process");
+    props.navigation.navigate("process", {
+      acessToken: props.acessToken,
+    });
   }
 
   function navigateToCreateProcess() {
-    navigation.navigate("createProcess");
+    props.navigation.navigate("createProcess", {
+      acessToken: props.acessToken,
+    });
   }
   return (
     <View style={styles.container}>

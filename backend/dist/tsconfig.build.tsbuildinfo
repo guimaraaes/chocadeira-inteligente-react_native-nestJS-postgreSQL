@@ -3712,8 +3712,8 @@
         "affectsGlobalScope": false
       },
       "../src/process/process.dto.ts": {
-        "version": "49cbe2e9c8430b1376ff9116e4dec1fd50eee4279b119d7f83f79a6a53a63cf9",
-        "signature": "51e3aa7077b8084a01d993359b019e3323002dd42b5188fcaf2964f47a1e8fc8",
+        "version": "0d51bb303aea6bb645d6f8a9446e17029cfffdc3b8f37700feed0e8b98119133",
+        "signature": "5c8856fa1f1638463dc871daf86f25335439295d95eb326bdb9379c11797cb6a",
         "affectsGlobalScope": false
       },
       "../node_modules/moment/ts3.1-typings/moment.d.ts": {
@@ -3722,8 +3722,8 @@
         "affectsGlobalScope": false
       },
       "../src/process/process.entity.ts": {
-        "version": "8356863aab6d1d17742224defc11bb1b2b0f37e062056580d5409cbbe69711b0",
-        "signature": "91eff0341da497fb65f6f4957e2668507ecf71776b6af6ae919bf514c8fcb834",
+        "version": "9b0b8eecd51db928308338899cfbc568d328b9b46f800f4bb32c456d047a7c8c",
+        "signature": "3cac1b650945cf32459f86f025dbb66d766d1993b3f1601b63a75f0fc4b483cc",
         "affectsGlobalScope": false
       },
       "../src/process/process.repository.ts": {
@@ -3732,13 +3732,13 @@
         "affectsGlobalScope": false
       },
       "../src/process/process.service.ts": {
-        "version": "e9b9d029a9850cc0c84e286ba73b9591c31b644ca36c8a32337b90adb38ac814",
-        "signature": "70e9a1f9bb53b490bd92d44c6f9fd3dfbc51ce6e0fef9a9d2219cb0b8758d5d4",
+        "version": "f43cd4c8b67dc38fb622a7d3655484dec7d71967eb39301257c5b3543f14dbd6",
+        "signature": "b7de71699b5b78664e90735d54c1052f0b007b94b674230d0ce1a74c5eb5d0bf",
         "affectsGlobalScope": false
       },
       "../src/process/process.controller.ts": {
-        "version": "2d58fcf0845cf015046d8854b796f0864decc251121167a46fd908034e83c9c8",
-        "signature": "5e3b23726dce4d6959269ec1ad4c2107763fe780515102e32779691f9e17f785",
+        "version": "f818b647a2d5fdc457f9b6b79f6898ebc8e4a29536964bfda04cba896d7e7d03",
+        "signature": "92103fa6b754652dc419b36ffff8aa2550a14ba23c9d904f894f5378f559f89a",
         "affectsGlobalScope": false
       },
       "../src/process/process.module.ts": {
@@ -3952,7 +3952,7 @@
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
-        "version": "b83602bd38848894d5994da7f140f3df83f04e1bfef8ddcf72f06eac95f7491d",
+        "version": "79aa3fc093b71a40ef456d1c647eb6c594002400c34960b281fa5b8bb2a17c10",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },

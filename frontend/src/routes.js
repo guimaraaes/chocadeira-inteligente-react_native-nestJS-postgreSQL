@@ -17,9 +17,21 @@ export default function Routes() {
           }}
         >
           <Stack.Screen name="login" component={Login} />
-          <Stack.Screen name="home" component={Home} />
-          <Stack.Screen name="process" component={Process} />
-          <Stack.Screen name="createProcess" component={CreateProcess} />
+          <Stack.Screen
+            name="home"
+            component={Home}
+            initialParams={{ acessToken: "" }}
+          />
+          <Stack.Screen
+            name="process"
+            component={Process}
+            initialParams={{ acessToken: "" }}
+          />
+          <Stack.Screen
+            name="createProcess"
+            component={CreateProcess}
+            initialParams={{ acessToken: "" }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

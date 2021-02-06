@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import * as moment from 'moment';
-import { CreateHistory, ProcessParam } from './process.dto';
-import { Process } from './process.entity';
+import { ProcessParam } from './process.dto';
+import { History, Process } from './process.entity';
 import { ProcessRepository } from './process.repository';
  @Injectable()
 export class ProcessService  {
@@ -16,7 +16,6 @@ export class ProcessService  {
             throw new NotFoundException('Processo não encontrado')
         }
     }
-
 
     async findProcessById(id: number){
         try {
@@ -111,7 +110,11 @@ export class ProcessService  {
         } 
     }
 
-    async createHistory(id_user: number, historyDTO: CreateHistory){
+    async createHistory(id_user: number, historyDTO: ProcessParam){
+        if (!await this.processRepository.findOne({data_fim: new Date(null), id_user: id_user}))
+            throw new BadRequestException('Nenhum processo em andamento')
+        var history = new History()
+        history.data = new Date(String(moment()))
         return 1
     }
 

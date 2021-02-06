@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image, StyleSheet, View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
-export default function FormLogin({ navigation }) {
+export default function FormLogin(props) {
+  const [email, setEmail] = useState(props.email);
+  const [senha, setSenha] = useState(props.senha);
+
   function navigateToHome() {
-    navigation.navigate("home");
+    props.navigation.navigate("home");
   }
   return (
     <View style={styles.container}>
@@ -17,6 +20,10 @@ export default function FormLogin({ navigation }) {
         underlineColor="#F9A825"
         color="#F9A825"
         mode="outlined"
+        onChangeText={(text) => {
+          setEmail(text);
+          props.setEmail(text);
+        }}
         style={{ margin: 5 }}
       />
 
@@ -25,22 +32,20 @@ export default function FormLogin({ navigation }) {
         underlineColor="#F9A825"
         color="#F9A825"
         mode="outlined"
+        onChangeText={(text) => {
+          setSenha(text);
+          props.setSenha(text);
+        }}
+        secureTextEntry={true}
         style={{ margin: 5 }}
       />
-
-      {/* <View style={styles.alert}>
-        <RadioButton
-          status={value ? "checked" : "unchecked"}
-          onPress={() => setValue(!value)}
-        />
-        <Text>alerta altas variações</Text>
-      </View> */}
 
       <Button
         style={styles.button}
         color="#F9A825"
         mode="contained"
-        onPress={navigateToHome}
+        onPress={props.postLogin}
+        // onPress={navigateToHome}
       >
         Entrar
       </Button>

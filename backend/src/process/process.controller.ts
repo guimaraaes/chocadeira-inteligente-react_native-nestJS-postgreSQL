@@ -3,7 +3,7 @@ import { AuthGuard } from '@nestjs/passport';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { GetUser } from 'src/auth/get-user.decorator';
 import { User } from 'src/user/user.entity';
-import { CreateHistory, ProcessParam } from './process.dto';
+import { ProcessParam } from './process.dto';
 import { ProcessService } from './process.service';
  
 @ApiTags('process')
@@ -37,13 +37,20 @@ export class ProcessController {
     @Post('history')
     @ApiOperation({summary: 'post history by user auth id'})
     postHistory(@GetUser() user : User,
-                @Body() history: CreateHistory){
+                @Body() history: ProcessParam){
         return this.processService.createHistory(user.id, history)
     }
 
     @Put(':id')
     @ApiOperation({summary: 'put process by id'})
     putProcess(@Param('id') id: number,
+                @Body() process: ProcessParam){
+        return this.processService.editProcess(id, process)
+    }
+
+    @Put('/finish/:id')
+    @ApiOperation({summary: 'put process finish by id'})
+    putProcessFinish(@Param('id') id: number,
                 @Body() process: ProcessParam){
         return this.processService.editProcess(id, process)
     }
