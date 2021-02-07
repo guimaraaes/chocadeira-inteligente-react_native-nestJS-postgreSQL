@@ -1,8 +1,8 @@
+import moment from "moment";
 import React from "react";
 import { Dimensions, StyleSheet, Text, View } from "react-native";
 import { LineChart } from "react-native-chart-kit";
 import { Button, IconButton, List } from "react-native-paper";
-
 const screenWidth = Dimensions.get("window").width;
 const chartConfig = {
   backgroundGradientFrom: "#FFF",
@@ -25,27 +25,54 @@ const data = {
     },
   ],
 };
-export default function ProcessComponent() {
+export default function ProcessComponent(props) {
+  function navigateToEdit() {
+    props.navigation.navigate("createProcess", {
+      acessToken: props.acessToken,
+      id: props.process.id,
+    });
+  }
   return (
     <View style={styles.container}>
-      <Text style={styles.info}>Outubro 2020</Text>
-      <View style={styles.edit}>
-        <IconButton icon="pencil" onPress={() => {}} />
-      </View>
+      <Text style={styles.info}>
+        {/* {props.acessToken} */}
+        {moment(props.process.data_inicio).format("LL")}
+      </Text>
+      {new Date(null).toISOString() !== props.process.data_fim ? (
+        <>
+          <Text style={{ marginTop: "10%" }}>variações médias </Text>
+          <View style={styles.header}>
+            <View style={styles.infoHeader}>
+              <Text style={styles.info}>
+                {props.process.temperatura_med} °C
+              </Text>
+              <Text style={styles.info}>{props.process.umidade_med} %</Text>
+              <Text style={styles.info}>
+                {Math.ceil(props.process.viragem_med / 60)}h{" "}
+                {props.process.viragem_med % 60}
+              </Text>
+            </View>
+          </View>
+        </>
+      ) : (
+        <>
+          <View style={styles.edit}>
+            <IconButton icon="pencil" onPress={navigateToEdit} />
+          </View>
+          <Text>configuração </Text>
+          <View style={styles.header}>
+            <View style={styles.infoHeader}>
+              <Text style={styles.info}>{props.process.temperatura} °C</Text>
+              <Text style={styles.info}>{props.process.umidade} %</Text>
+              <Text style={styles.info}>
+                {Math.ceil(props.process.viragem / 60)}h{" "}
+                {props.process.viragem % 60}min
+              </Text>
+            </View>
+          </View>
+        </>
+      )}
 
-      <View style={styles.header}>
-        <View style={styles.infoHeader}>
-          <Text style={styles.info}>30°C</Text>
-          <Text style={styles.info}>90%</Text>
-          <Text style={styles.info}>8h</Text>
-        </View>
-
-        <View style={styles.infoHeader}>
-          <Text style={styles.info}>30°C</Text>
-          <Text style={styles.info}>90%</Text>
-          <Text style={styles.info}>8h</Text>
-        </View>
-      </View>
       <List.Section style={styles.GroupTab}>
         <List.Item style={styles.Tab} onPress={() => {}} title="HOJE" />
         <List.Item style={styles.Tab} onPress={() => {}} title="SEMANA" />
@@ -69,15 +96,26 @@ export default function ProcessComponent() {
         />
       </View>
       <View style={styles.footer}>
-        <Text>processo iniciado dd/mm/aaaa</Text>
-        <Button
-          style={styles.button}
-          onPress={() => {}}
-          color="#F9A825"
-          mode="contained"
-        >
-          FINALIZAR
-        </Button>
+        <Text>
+          processo com início em{" "}
+          {moment(props.process.data_inicio).format("LL")}{" "}
+          {new Date(null).toISOString() !== props.process.data_fim ? (
+            <Text>
+              e finalizado em {moment(props.process.data_fim).format("LL")}{" "}
+            </Text>
+          ) : null}
+        </Text>
+
+        {new Date(null).toISOString() === props.process.data_fim ? (
+          <Button
+            style={styles.button}
+            onPress={() => {}}
+            color="#F9A825"
+            mode="contained"
+          >
+            FINALIZAR
+          </Button>
+        ) : null}
       </View>
     </View>
   );
@@ -92,7 +130,7 @@ const styles = StyleSheet.create({
     margin: "5%",
   },
   header: {
-    width: Dimensions.get("window").width * 0.8,
+    width: Dimensions.get("window").width * 0.9,
     height: Dimensions.get("window").height * 0.1,
     alignSelf: "center",
     alignItems: "center",

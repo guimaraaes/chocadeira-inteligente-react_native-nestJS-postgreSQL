@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { View } from "react-native";
+import React, { useEffect, useState } from "react";
+import { Text, View } from "react-native";
 import { Provider } from "react-native-paper";
 import FormCreate from "../components/form-create-process";
 import Header from "../components/header";
@@ -34,11 +34,43 @@ export default function CreateProcess(props) {
       });
   }
 
+  const [process, setProcess] = useState([]);
+  async function getProcessById() {
+    await api
+      .get("process/" + props.route.params.id, {
+        headers: {
+          accept: "*/*",
+          Authorization: "Bearer " + props.route.params.acessToken,
+        },
+      })
+      .then((response) => {
+        setProcess(response.data);
+        setTemperatura(String(response.data.temperatura));
+        setUmidade(String(response.data.umidade));
+        setViragem(new Date(response.data.viragem));
+      })
+      .catch((error) => {
+        // console.log(error.response);
+        alert(error.response.data.message);
+      });
+  }
+  if (props.route.params.id) {
+    useEffect(() => {
+      getProcessById();
+      // console.log("oks");
+      // setTemperatura(process.temperatura);
+      // setUmidade(process.umidade);
+      // setViragem(new Date(process.viragem));
+    });
+  }
   return (
     <Provider>
       <View>
         <Header navigation={props.navigation} />
+        <Text>{process.temperatura}</Text>
         <FormCreate
+          id={props.route.params.id}
+          process={props.route.params.id ? process : null}
           temperatura={temperatura}
           umidade={umidade}
           viragem={viragem}

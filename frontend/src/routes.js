@@ -30,7 +30,7 @@ export default function Routes() {
           <Stack.Screen
             name="createProcess"
             component={CreateProcess}
-            initialParams={{ acessToken: "" }}
+            initialParams={{ acessToken: "", id: "" }}
           />
         </Stack.Navigator>
       </NavigationContainer>

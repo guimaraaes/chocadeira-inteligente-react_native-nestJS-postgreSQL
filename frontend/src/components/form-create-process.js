@@ -12,19 +12,9 @@ export default function FormCreate(props) {
   const [value, setValue] = React.useState(true);
   const [show, setShow] = useState(false);
 
-  function check() {
-    // props.temperatura ? setTemperatura(true) : setTemperatura(false);
-    // props.umidade ? setUmidade(true) : setUmidade(false);
-    props.viragem ? setViragem(true) : setViragem(false);
-    console.log(temperatura_check && umidade_check && viragem_check);
-
-    // if (temperatura_check && umidade_check && viragem_check) {
-    //   // props.postProcess();
-    //   console.log(temperatura_check && umidade_check && viragem_check);
-    // }
-  }
   return (
     <View style={styles.container}>
+      <Text>{props.process.id}</Text>
       <TextInput
         label="Temperatura °C"
         underlineColor="#F9A825"

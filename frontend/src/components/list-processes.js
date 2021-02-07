@@ -5,9 +5,10 @@ import { ScrollView, StyleSheet, View } from "react-native";
 import { Card, IconButton, Paragraph, Title } from "react-native-paper";
 
 export default function ListProcesses(props) {
-  function navigateToProcess() {
+  function navigateToProcess(id) {
     props.navigation.navigate("process", {
       acessToken: props.acessToken,
+      id: id,
     });
   }
 
@@ -18,6 +19,7 @@ export default function ListProcesses(props) {
   }
   return (
     <View style={styles.container}>
+      {/* <Text>{props.acessToken}</Text> */}
       {props.processInProgress ? null : (
         <IconButton
           icon="plus"
@@ -32,8 +34,10 @@ export default function ListProcesses(props) {
         {props.processes.map((i) => {
           return (
             <Card
-              key={i.id}
-              onPress={navigateToProcess}
+              // key={i.id}
+              onPress={() => {
+                navigateToProcess(i.id);
+              }}
               style={styles.card(new Date(null).toISOString() === i.data_fim)}
             >
               <Card.Content>
