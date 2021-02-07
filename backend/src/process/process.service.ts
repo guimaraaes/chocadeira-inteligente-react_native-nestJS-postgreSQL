@@ -10,11 +10,9 @@ export class ProcessService  {
     ){}
 
     async findProcess(id_user: number){
-        try {
-            return await this.processRepository.find({id_user: id_user})
-        } catch (error){
-            throw new NotFoundException('Processo não encontrado')
-        }
+        return await this.processRepository.createQueryBuilder('processes').where({id_user: id_user}).orderBy('data_fim', 'ASC').getMany()
+        return await  this.processRepository.find({id_user: id_user})
+       
     }
 
     async findProcessById(id: number){

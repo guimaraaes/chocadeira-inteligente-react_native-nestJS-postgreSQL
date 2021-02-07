@@ -6,8 +6,8 @@ import Header from "../components/header";
 import api from "../services/api";
 
 export default function Login({ navigation }) {
-  const [email, setEmail] = useState("email");
-  const [senha, setSenha] = useState("senha");
+  const [email, setEmail] = useState("string");
+  const [senha, setSenha] = useState("string");
   var acessToken = "";
   function navigateToHome() {
     navigation.navigate("home", {

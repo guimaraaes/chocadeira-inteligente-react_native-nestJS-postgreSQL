@@ -1,6 +1,9 @@
+import moment from "moment";
+import "moment/locale/pt-br";
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
 import { Card, IconButton, Paragraph, Title } from "react-native-paper";
+
 export default function ListProcesses(props) {
   function navigateToProcess() {
     props.navigation.navigate("process", {
@@ -15,20 +18,31 @@ export default function ListProcesses(props) {
   }
   return (
     <View style={styles.container}>
-      <IconButton
-        icon="plus"
-        size={44}
-        onPress={navigateToCreateProcess}
-        style={styles.iconAdd}
-      ></IconButton>
+      {props.processInProgress ? null : (
+        <IconButton
+          icon="plus"
+          size={44}
+          onPress={navigateToCreateProcess}
+          style={styles.iconAdd}
+        />
+      )}
+
       <ScrollView>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => {
+        {/* {console.log(props.processes)} */}
+        {props.processes.map((i) => {
           return (
-            <Card key={i} onPress={navigateToProcess} style={styles.card}>
+            <Card
+              key={i.id}
+              onPress={navigateToProcess}
+              style={styles.card(new Date(null).toISOString() === i.data_fim)}
+            >
               <Card.Content>
-                <Title>Outubro 2020</Title>
+                <Title>Início: {moment(i.data_inicio).format("LL")}</Title>
                 <Paragraph>
-                  Duração: 40 dias. Temperatura 30°C. Umidade 90%. Viragem 8h.
+                  Duração: {moment(i.data_inicio).fromNow()}. Temperatura{" "}
+                  {i.temperatura} °C. Umidade
+                  {i.umidade}%. Viragem {Math.ceil(i.viragem / 60)}h
+                  {i.viragem % 60}min.
                 </Paragraph>
               </Card.Content>
             </Card>
@@ -53,10 +67,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#F9A825",
   },
 
-  card: {
+  card: (emandamento) => ({
     width: "90%",
     height: 120,
-    backgroundColor: "#FFDB7E",
+    backgroundColor: emandamento ? "#FFDB7E" : "#FFF",
     shadowColor: "#FFF2",
     shadowOffset: {
       width: 0,
@@ -65,5 +79,5 @@ const styles = StyleSheet.create({
     shadowRadius: 20,
     shadowOpacity: 1.0,
     margin: 8,
-  },
+  }),
 });

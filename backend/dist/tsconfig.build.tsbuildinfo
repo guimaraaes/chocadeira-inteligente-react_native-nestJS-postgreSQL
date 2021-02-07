@@ -3732,7 +3732,7 @@
         "affectsGlobalScope": false
       },
       "../src/process/process.service.ts": {
-        "version": "f43cd4c8b67dc38fb622a7d3655484dec7d71967eb39301257c5b3543f14dbd6",
+        "version": "505c3441cbb1bf53c5bc0e0879494b3a1544f9fd09ae76cfab6614805b697807",
         "signature": "b7de71699b5b78664e90735d54c1052f0b007b94b674230d0ce1a74c5eb5d0bf",
         "affectsGlobalScope": false
       },
