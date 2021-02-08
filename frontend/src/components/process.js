@@ -113,7 +113,7 @@ export default function ProcessComponent(props) {
         {new Date(null).toISOString() === props.process.data_fim ? (
           <Button
             style={styles.button}
-            onPress={() => {}}
+            onPress={props.putFinishProcess}
             color="#F9A825"
             mode="contained"
           >

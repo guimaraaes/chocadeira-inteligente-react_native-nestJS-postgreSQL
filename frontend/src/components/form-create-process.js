@@ -20,6 +20,11 @@ export default function FormCreate(props) {
 
   return (
     <View style={styles.container}>
+      {props.data_inicio ? (
+        <Text style={styles.info}>
+          {moment(props.data_inicio).format("LL")}
+        </Text>
+      ) : null}
       <TextInput
         label="Temperatura °C"
         underlineColor="#F9A825"
@@ -99,7 +104,7 @@ export default function FormCreate(props) {
         style={styles.button}
         color="#F9A825"
         onPress={() => {
-          props.temperatura && props.umidade ? props.postProcess() : null;
+          props.temperatura && props.umidade ? props.postORputProcess() : null;
         }}
         mode="contained"
       >
@@ -112,7 +117,7 @@ export default function FormCreate(props) {
 const styles = StyleSheet.create({
   container: {
     height: "65%",
-    marginTop: "15%",
+    marginTop: "10%",
     margin: 20,
     justifyContent: "space-around",
   },
@@ -122,7 +127,11 @@ const styles = StyleSheet.create({
     color: "#fff2",
     alignSelf: "flex-end",
   },
-
+  info: {
+    alignSelf: "center",
+    fontSize: 25,
+    fontWeight: "bold",
+  },
   alert: {
     flexDirection: "row",
     alignItems: "baseline",

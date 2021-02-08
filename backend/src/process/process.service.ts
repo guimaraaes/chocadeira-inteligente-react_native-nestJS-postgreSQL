@@ -10,7 +10,15 @@ export class ProcessService  {
     ){}
 
     async findProcess(id_user: number){
-        return await this.processRepository.createQueryBuilder('processes').where({id_user: id_user}).orderBy('data_fim', 'ASC').getMany()
+        var result = await this.processRepository.createQueryBuilder('processes').where({id_user: id_user}).orderBy('data_fim', 'ASC').getMany()
+        var result2 = await this.processRepository.createQueryBuilder('processes').where({id_user: id_user}).orderBy('data_fim', 'DESC').getMany()
+
+        if (result[0].data_fim.getTime() === new Date(null).getTime()){
+            result = [result[0]]
+            Array.prototype.push.apply(result, result2.slice(0, -1))
+            return result
+        }
+        return result2
         return await  this.processRepository.find({id_user: id_user})
        
     }

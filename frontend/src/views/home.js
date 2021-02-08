@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { View } from "react-native";
 import { Provider } from "react-native-paper";
 import Header from "../components/header";
@@ -21,31 +21,28 @@ export default function Home(props) {
         },
       })
       .then((response) => {
-        // return response.data;
-        !processes ? setProcesses(response.data) : null;
+        setProcesses(response.data);
+        // !processes ? setProcesses(response.data) : null;
       })
       .catch((error) => {
-        // console.log(error.response);
         alert(error.response.data.message);
       });
   }
+  const mounted = useRef();
 
   useEffect(() => {
     const source = axios.CancelToken.source();
-    getProcess();
-    // !processes ? getProcess().then((res) => setProcesses(res)) : null;
+    if (!mounted.current) getProcess();
 
     return () => {
       source.cancel();
     };
   }, [processes]);
 
-  // console.log(processes);
   return (
     <Provider>
       <View>
         <Header navigation={props.navigation} />
-
         {processes ? (
           <ListProcesses
             processInProgress={
