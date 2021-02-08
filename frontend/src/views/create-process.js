@@ -1,12 +1,14 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import { Provider } from "react-native-paper";
 import FormCreate from "../components/form-create-process";
 import Header from "../components/header";
 import api from "../services/api";
+
 export default function CreateProcess(props) {
-  const [temperatura, setTemperatura] = useState(null);
-  const [umidade, setUmidade] = useState(null);
+  const [temperatura, setTemperatura] = useState();
+  const [umidade, setUmidade] = useState();
   const [viragem, setViragem] = useState();
 
   async function postProcess() {
@@ -34,7 +36,7 @@ export default function CreateProcess(props) {
       });
   }
 
-  const [process, setProcess] = useState([]);
+  const [process, setProcess] = useState(undefined);
   async function getProcessById() {
     await api
       .get("process/" + props.route.params.id, {
@@ -44,10 +46,12 @@ export default function CreateProcess(props) {
         },
       })
       .then((response) => {
-        setProcess(response.data);
-        setTemperatura(String(response.data.temperatura));
-        setUmidade(String(response.data.umidade));
-        setViragem(new Date(response.data.viragem));
+        if (!process) {
+          setProcess(response.data);
+          setTemperatura(String(response.data.temperatura));
+          setUmidade(String(response.data.umidade));
+          setViragem(new Date(response.data.viragem));
+        }
       })
       .catch((error) => {
         // console.log(error.response);
@@ -56,18 +60,19 @@ export default function CreateProcess(props) {
   }
   if (props.route.params.id) {
     useEffect(() => {
+      const source = axios.CancelToken.source();
+
       getProcessById();
-      // console.log("oks");
-      // setTemperatura(process.temperatura);
-      // setUmidade(process.umidade);
-      // setViragem(new Date(process.viragem));
-    });
+      return () => {
+        source.cancel();
+      };
+    }, [process]);
   }
   return (
     <Provider>
       <View>
-        <Header navigation={props.navigation} />
-        <Text>{process.temperatura}</Text>
+        <Header create={true} navigation={props.navigation} />
+        {/* <Text>{process.temperatura}</Text> */}
         <FormCreate
           id={props.route.params.id}
           process={props.route.params.id ? process : null}

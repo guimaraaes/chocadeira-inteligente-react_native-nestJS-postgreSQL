@@ -71,7 +71,7 @@ export default function Header(props) {
           <Appbar.Action icon="share" onPress={() => {}} />
           <Appbar.Action icon="delete" onPress={() => {}} />
         </>
-      ) : search ? (
+      ) : props.create ? null : search ? (
         <>
           <Appbar.Action
             icon="magnify"

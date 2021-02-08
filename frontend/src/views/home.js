@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { View } from "react-native";
 import { Provider } from "react-native-paper";
 import Header from "../components/header";
@@ -6,10 +7,13 @@ import ListProcesses from "../components/list-processes";
 import api from "../services/api";
 
 export default function Home(props) {
-  const [processes, setProcesses] = useState([0]);
+  const [processes, setProcesses] = useState(undefined);
   const [processInProgress, setProcessInProgress] = useState(false);
+
+  const [isMounted, setisMounted] = useState(false);
+
   async function getProcess() {
-    await api
+    return await api
       .get("/process", {
         headers: {
           accept: "*/*",
@@ -17,30 +21,41 @@ export default function Home(props) {
         },
       })
       .then((response) => {
-        setProcesses(response.data);
+        // return response.data;
+        !processes ? setProcesses(response.data) : null;
       })
       .catch((error) => {
         // console.log(error.response);
         alert(error.response.data.message);
       });
   }
-  getProcess();
+
+  useEffect(() => {
+    const source = axios.CancelToken.source();
+    getProcess();
+    // !processes ? getProcess().then((res) => setProcesses(res)) : null;
+
+    return () => {
+      source.cancel();
+    };
+  }, [processes]);
+
   // console.log(processes);
   return (
     <Provider>
       <View>
         <Header navigation={props.navigation} />
-        {/* {setProcessInProgress(
-          processes[0].data_fim === new Date(null).toISOString()
-        )} */}
-        <ListProcesses
-          processInProgress={
-            processes[0].data_fim === new Date(null).toISOString()
-          }
-          processes={processes}
-          navigation={props.navigation}
-          acessToken={props.route.params.acessToken}
-        />
+
+        {processes ? (
+          <ListProcesses
+            processInProgress={
+              processes[0].data_fim === new Date(null).toISOString()
+            }
+            processes={processes}
+            navigation={props.navigation}
+            acessToken={props.route.params.acessToken}
+          />
+        ) : null}
       </View>
     </Provider>
   );

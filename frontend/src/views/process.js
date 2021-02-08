@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { View } from "react-native";
 import { Provider } from "react-native-paper";
 import Header from "../components/header";
@@ -19,7 +20,14 @@ export default function Process(props) {
         // console.log(response.data);
       });
   }
-  getProcessById();
+  useEffect(() => {
+    const source = axios.CancelToken.source();
+
+    getProcessById();
+    return () => {
+      source.cancel();
+    };
+  }, [process]);
   return (
     <Provider>
       <View>

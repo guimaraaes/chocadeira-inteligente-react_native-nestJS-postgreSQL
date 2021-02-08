@@ -6,15 +6,20 @@ import { StyleSheet, Text, View } from "react-native";
 import { Button, RadioButton, TextInput } from "react-native-paper";
 
 export default function FormCreate(props) {
-  const [temperatura_check, setTemperatura] = React.useState(false);
-  const [umidade_check, setUmidade] = React.useState(false);
-  const [viragem_check, setViragem] = React.useState(false);
+  const [temperatura_check, setTemperatura] = React.useState(
+    props.id || props.temperatura ? true : false
+  );
+  const [umidade_check, setUmidade] = React.useState(
+    props.id || props.umidade ? true : false
+  );
+  const [viragem_check, setViragem] = React.useState(
+    props.id || props.viragem ? true : false
+  );
   const [value, setValue] = React.useState(true);
   const [show, setShow] = useState(false);
 
   return (
     <View style={styles.container}>
-      <Text>{props.process.id}</Text>
       <TextInput
         label="Temperatura °C"
         underlineColor="#F9A825"
@@ -32,7 +37,9 @@ export default function FormCreate(props) {
         }}
       />
       {!temperatura_check ? (
-        <Text style={{ color: "#F23" }}>Insira o valor para temperatura</Text>
+        <Text style={{ color: "#F23" }}>
+          Insira o valor para temperatura entre 0 e 80 °C
+        </Text>
       ) : null}
       <TextInput
         label="Umidade %"
@@ -51,7 +58,9 @@ export default function FormCreate(props) {
         }}
       />
       {!umidade_check ? (
-        <Text style={{ color: "#F23" }}>Insira o valor para umidade</Text>
+        <Text style={{ color: "#F23" }}>
+          Insira o valor para umidade entre 0 e 100%
+        </Text>
       ) : null}
       {show && (
         <DateTimePicker

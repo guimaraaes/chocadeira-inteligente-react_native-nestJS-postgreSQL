@@ -31,10 +31,10 @@ export default function ListProcesses(props) {
 
       <ScrollView>
         {/* {console.log(props.processes)} */}
-        {props.processes.map((i) => {
+        {props.processes.map((i, index) => {
           return (
             <Card
-              // key={i.id}
+              key={index}
               onPress={() => {
                 navigateToProcess(i.id);
               }}

@@ -74,8 +74,12 @@ export default function ProcessComponent(props) {
       )}
 
       <List.Section style={styles.GroupTab}>
-        <List.Item style={styles.Tab} onPress={() => {}} title="HOJE" />
-        <List.Item style={styles.Tab} onPress={() => {}} title="SEMANA" />
+        {new Date(null).toISOString() === props.process.data_fim ? (
+          <>
+            <List.Item style={styles.Tab} onPress={() => {}} title="HOJE" />
+            <List.Item style={styles.Tab} onPress={() => {}} title="SEMANA" />
+          </>
+        ) : null}
         <List.Item style={styles.Tab} onPress={() => {}} title="PROCESSO" />
       </List.Section>
 
