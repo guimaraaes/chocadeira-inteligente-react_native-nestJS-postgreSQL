@@ -1,7 +1,7 @@
 import moment from "moment";
 import "moment/locale/pt-br";
-import React from "react";
-import { ScrollView, StyleSheet, View } from "react-native";
+import React, { useState } from "react";
+import { RefreshControl, ScrollView, StyleSheet, View } from "react-native";
 import { Card, IconButton, Paragraph, Title } from "react-native-paper";
 
 export default function ListProcesses(props) {
@@ -11,7 +11,12 @@ export default function ListProcesses(props) {
       id: id,
     });
   }
-
+  const [refreshing, setRefreshing] = useState(false);
+  function _onRefresh() {
+    setRefreshing(true);
+    props.getProcess();
+    setRefreshing(false);
+  }
   function navigateToCreateProcess() {
     props.navigation.navigate("createProcess", {
       acessToken: props.acessToken,
@@ -29,7 +34,14 @@ export default function ListProcesses(props) {
         />
       )}
 
-      <ScrollView>
+      <ScrollView
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={_onRefresh}
+          ></RefreshControl>
+        }
+      >
         {/* {console.log(props.processes)} */}
         {props.processes.map((i, index) => {
           return (

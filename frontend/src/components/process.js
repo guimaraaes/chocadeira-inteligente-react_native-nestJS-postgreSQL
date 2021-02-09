@@ -1,8 +1,15 @@
 import moment from "moment";
 import React from "react";
-import { Dimensions, StyleSheet, Text, View } from "react-native";
+import {
+  Alert,
+  Dimensions,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { LineChart } from "react-native-chart-kit";
-import { Button, IconButton, List } from "react-native-paper";
+import { Button, IconButton } from "react-native-paper";
 const screenWidth = Dimensions.get("window").width;
 const chartConfig = {
   backgroundGradientFrom: "#FFF",
@@ -35,7 +42,6 @@ export default function ProcessComponent(props) {
   return (
     <View style={styles.container}>
       <Text style={styles.info}>
-        {/* {props.acessToken} */}
         {moment(props.process.data_inicio).format("LL")}
       </Text>
       {new Date(null).toISOString() !== props.process.data_fim ? (
@@ -73,7 +79,7 @@ export default function ProcessComponent(props) {
         </>
       )}
 
-      <List.Section style={styles.GroupTab}>
+      {/* <List.Section style={styles.GroupTab}>
         {new Date(null).toISOString() === props.process.data_fim ? (
           <>
             <List.Item style={styles.Tab} onPress={() => {}} title="HOJE" />
@@ -81,24 +87,26 @@ export default function ProcessComponent(props) {
           </>
         ) : null}
         <List.Item style={styles.Tab} onPress={() => {}} title="PROCESSO" />
-      </List.Section>
+      </List.Section> */}
+      <ScrollView>
+        <View style={styles.Graph}>
+          <Text>Temperatura</Text>
+          <LineChart
+            data={data}
+            width={screenWidth * 0.9}
+            height={screenWidth * 0.45}
+            chartConfig={chartConfig}
+          />
+          <Text>Umidade</Text>
+          <LineChart
+            data={data}
+            width={screenWidth * 0.9}
+            height={screenWidth * 0.45}
+            chartConfig={chartConfig}
+          />
+        </View>
+      </ScrollView>
 
-      <View style={styles.Graph}>
-        <Text>Temperatura</Text>
-        <LineChart
-          data={data}
-          width={screenWidth * 0.9}
-          height={screenWidth * 0.25}
-          chartConfig={chartConfig}
-        />
-        <Text>Umidade</Text>
-        <LineChart
-          data={data}
-          width={screenWidth * 0.9}
-          height={screenWidth * 0.25}
-          chartConfig={chartConfig}
-        />
-      </View>
       <View style={styles.footer}>
         <Text>
           processo com início em{" "}
@@ -113,7 +121,24 @@ export default function ProcessComponent(props) {
         {new Date(null).toISOString() === props.process.data_fim ? (
           <Button
             style={styles.button}
-            onPress={props.putFinishProcess}
+            onPress={() => {
+              Alert.alert(
+                "Deseja finalizar?",
+                "Após finalizado o processo não pode ser retomado",
+                [
+                  {
+                    text: "Cancelar",
+                    // onPress: () => console.log("Cancel Pressed"),
+                    style: "cancel",
+                  },
+                  {
+                    text: "Finalizar",
+                    onPress: () => props.putFinishProcess(),
+                  },
+                ],
+                { cancelable: false }
+              );
+            }}
             color="#F9A825"
             mode="contained"
           >
@@ -135,13 +160,14 @@ const styles = StyleSheet.create({
   },
   header: {
     width: Dimensions.get("window").width * 0.9,
-    height: Dimensions.get("window").height * 0.1,
+    // height: Dimensions.get("window").height * 0.1,
     alignSelf: "center",
     alignItems: "center",
     justifyContent: "space-between",
     margin: "3%",
   },
   edit: {
+    marginBottom: "-7%",
     flexDirection: "row",
     width: "100%",
     justifyContent: "flex-end",
@@ -172,7 +198,7 @@ const styles = StyleSheet.create({
   },
   Graph: {
     alignItems: "center",
-    height: "42%",
+    height: "60%",
   },
   button: {
     width: 150,

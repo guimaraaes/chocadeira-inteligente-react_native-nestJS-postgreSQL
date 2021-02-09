@@ -2,11 +2,12 @@ import { BadRequestException, Injectable, InternalServerErrorException, NotFound
 import * as moment from 'moment';
 import { ProcessParam } from './process.dto';
 import { History, Process } from './process.entity';
-import { ProcessRepository } from './process.repository';
+import { HistoryRepository, ProcessRepository } from './process.repository';
  @Injectable()
 export class ProcessService  {
     constructor(
-        private readonly processRepository: ProcessRepository
+        private readonly processRepository: ProcessRepository,
+        private readonly historyRepository: HistoryRepository
     ){}
 
     async findProcess(id_user: number){
@@ -33,7 +34,7 @@ export class ProcessService  {
 
 
     async createProcess(id_user: number, processDTO: ProcessParam){
-        if (await this.processRepository.findOne({data_fim: new Date(null)}))
+        if (await this.processRepository.findOne({data_fim: new Date(null), id_user: id_user}))
             throw new BadRequestException('Existe um processo em andamento')
         const {temperatura, umidade, viragem} = processDTO;
         const virag = new Date(viragem).getHours()*60 + new Date(viragem).getMinutes();
@@ -116,12 +117,41 @@ export class ProcessService  {
         } 
     }
 
+    async getHistory(id_process: number){
+        var histories = await this.historyRepository
+        .createQueryBuilder('histories')
+        .where({id_process: id_process})
+        .groupBy("TO_CHAR(histories.data::DATE, 'dd/mm/yyyy') ")
+        .select("AVG(histories.umidade)", "umidade")
+        .addSelect("AVG(histories.temperatura)", "temperatura")
+        .addSelect("AVG(histories.umidade_def)", "umidade_def")
+        .addSelect("AVG(histories.temperatura_def)", "temperatura_def")
+        .addSelect("TO_CHAR(histories.data::DATE, 'dd/mm/yyyy')", "date")
+        .getRawMany()
+        return histories
+
+    }
+
     async createHistory(id_user: number, historyDTO: ProcessParam){
-        if (!await this.processRepository.findOne({data_fim: new Date(null), id_user: id_user}))
+        var process = await this.processRepository.findOne({data_fim: new Date(null), id_user: id_user})
+        if (!process)
             throw new BadRequestException('Nenhum processo em andamento')
+        const {temperatura, umidade} = historyDTO
+        
         var history = new History()
+
         history.data = new Date(String(moment()))
-        return 1
+        history.temperatura = temperatura
+        history.umidade = umidade
+        history.temperatura_def = process.temperatura
+        history.umidade_def = process.umidade
+        history.id_process = process.id
+
+        try {
+            await history.save()
+        } catch (error){
+            throw new InternalServerErrorException()
+        }
     }
 
 }

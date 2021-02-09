@@ -49,8 +49,8 @@ export class History extends BaseEntity{
     @Column({type: 'float'})
     umidade: number;
 
-    @Column({type: 'float'})
-    viragem: number;
+    // @Column({type: 'float'})
+    // viragem: number;
 
     @Column({type: 'float'})
     temperatura_def: number;
@@ -58,8 +58,8 @@ export class History extends BaseEntity{
     @Column({type: 'float'})
     umidade_def: number;
 
-    @Column({type: 'float'})
-    viragem_def: number;
+    // @Column({type: 'float'})
+    // viragem_def: number;
 
     @Column()
     id_process: number;

@@ -97,7 +97,6 @@ export default function CreateProcess(props) {
     <Provider>
       <View>
         <Header create={true} navigation={props.navigation} />
-        {/* <Text>{process.temperatura}</Text> */}
         <FormCreate
           id={props.route.params.id}
           data_inicio={data_inicio}

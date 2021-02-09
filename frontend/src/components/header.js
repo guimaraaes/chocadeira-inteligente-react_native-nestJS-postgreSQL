@@ -1,5 +1,5 @@
 import React from "react";
-import { Dimensions, StyleSheet, Text, View } from "react-native";
+import { Alert, Dimensions, StyleSheet, Text, View } from "react-native";
 import { Appbar, IconButton, Menu, Searchbar } from "react-native-paper";
 
 export default function Header(props) {
@@ -43,6 +43,24 @@ export default function Header(props) {
             </View>
 
             <Menu.Item
+              icon="account"
+              title="Editar perfil"
+              onPress={() => {
+                // navigateToLogin();
+                // closeMenu();
+              }}
+            />
+
+            <Menu.Item
+              icon="alert-circle"
+              title="Relatar problema"
+              onPress={() => {
+                // navigateToLogin();
+                // closeMenu();
+              }}
+            />
+
+            <Menu.Item
               icon="logout"
               title="Sair"
               onPress={() => {
@@ -69,7 +87,27 @@ export default function Header(props) {
       {props.login ? null : props.process ? (
         <>
           <Appbar.Action icon="share" onPress={() => {}} />
-          <Appbar.Action icon="delete" onPress={() => {}} />
+          <Appbar.Action
+            icon="delete"
+            onPress={() => {
+              Alert.alert(
+                "Deseja excluir?",
+                "Após excluir o processo não será possível recuperar ele",
+                [
+                  {
+                    text: "Cancelar",
+                    // onPress: () => console.log("Cancel Pressed"),
+                    style: "cancel",
+                  },
+                  {
+                    text: "Excluir",
+                    // onPress: () => props.putFinishProcess(),
+                  },
+                ],
+                { cancelable: false }
+              );
+            }}
+          />
         </>
       ) : props.create ? null : search ? (
         <>

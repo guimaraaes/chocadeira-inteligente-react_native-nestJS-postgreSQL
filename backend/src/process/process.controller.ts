@@ -41,6 +41,13 @@ export class ProcessController {
         return this.processService.createHistory(user.id, history)
     }
 
+    @Get('history/:id_process')
+    @ApiOperation({summary: 'gwt history by process id'})
+    getHistory(@GetUser() user : User,
+                @Param('id_process') id_process: number){
+        return this.processService.getHistory(id_process)
+    }
+
     @Put(':id')
     @ApiOperation({summary: 'put process by id'})
     putProcess(@Param('id') id: number,

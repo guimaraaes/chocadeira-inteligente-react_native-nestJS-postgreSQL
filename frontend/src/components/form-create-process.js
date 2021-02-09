@@ -3,7 +3,7 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 import moment from "moment";
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { Button, RadioButton, TextInput } from "react-native-paper";
+import { Button, TextInput } from "react-native-paper";
 
 export default function FormCreate(props) {
   const [temperatura_check, setTemperatura] = React.useState(
@@ -93,13 +93,13 @@ export default function FormCreate(props) {
       {!viragem_check ? (
         <Text style={{ color: "#F23" }}>Insira o valor para viragem</Text>
       ) : null}
-      <View style={styles.alert}>
+      {/* <View style={styles.alert}>
         <RadioButton
           status={value ? "checked" : "unchecked"}
           onPress={() => setValue(!value)}
         />
         <Text>alerta altas variações</Text>
-      </View>
+      </View> */}
       <Button
         style={styles.button}
         color="#F9A825"
@@ -117,7 +117,7 @@ export default function FormCreate(props) {
 const styles = StyleSheet.create({
   container: {
     height: "65%",
-    marginTop: "10%",
+    marginTop: "5%",
     margin: 20,
     justifyContent: "space-around",
   },

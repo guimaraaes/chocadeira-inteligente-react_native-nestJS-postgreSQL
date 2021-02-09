@@ -54,7 +54,7 @@ export default function Process(props) {
     <Provider>
       <View>
         {/* <Text>{process.data_inicio}</Text> */}
-        <Header process={true} />
+        <Header navigation={props.navigation} process={true} />
         {/* {process ? ( */}
         <ProcessComponent
           navigation={props.navigation}

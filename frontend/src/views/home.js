@@ -43,8 +43,10 @@ export default function Home(props) {
     <Provider>
       <View>
         <Header navigation={props.navigation} />
+
         {processes ? (
           <ListProcesses
+            getProcess={getProcess}
             processInProgress={
               processes[0].data_fim === new Date(null).toISOString()
             }
