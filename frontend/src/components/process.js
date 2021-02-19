@@ -12,7 +12,7 @@ import { LineChart } from "react-native-chart-kit";
 import { Button, IconButton } from "react-native-paper";
 const screenWidth = Dimensions.get("window").width;
 const chartConfig = {
-  backgroundGradientFrom: "#FFF",
+  // backgroundGradientFrom: "#FFF",
   backgroundGradientFromOpacity: 0,
   backgroundGradientTo: "#FFF",
   backgroundGradientToOpacity: 0.5,
@@ -22,17 +22,40 @@ const chartConfig = {
   // useShadowColorFromDataset: false, // optional
 };
 
-const data = {
-  labels: ["January", "February", "March", "April", "May", "June"],
-  datasets: [
-    {
-      data: [20, 45, 28, 80, 99, 43],
-      color: (opacity = 1) => `rgba(134, 65, 244, ${opacity})`, // optional
-      strokeWidth: 2, // optional
-    },
-  ],
-};
 export default function ProcessComponent(props) {
+  const data_umidade = {
+    labels: props.history.map((i) => i.date),
+    datasets: [
+      {
+        data: props.history.map((i) => i.umidade),
+        color: () => `rgba(99, 153, 191)`, // optional
+        strokeWidth: 4, // optional
+      },
+
+      {
+        data: props.history.map((i) => i.umidade_def),
+        color: () => `rgba(20, 40, 62)`, // optional
+        strokeWidth: 2, // optional
+      },
+    ],
+  };
+
+  const data_temperatura = {
+    labels: props.history.map((i) => i.date),
+    datasets: [
+      {
+        data: props.history.map((i) => i.temperatura),
+        color: () => `rgba(255, 131, 4)`, // optional
+        strokeWidth: 4, // optional
+      },
+
+      {
+        data: props.history.map((i) => i.temperatura_def),
+        color: () => `rgba(187, 55, 5)`, // optional
+        strokeWidth: 2, // optional
+      },
+    ],
+  };
   function navigateToEdit() {
     props.navigation.navigate("createProcess", {
       acessToken: props.acessToken,
@@ -90,19 +113,21 @@ export default function ProcessComponent(props) {
       </List.Section> */}
       <ScrollView>
         <View style={styles.Graph}>
-          <Text>Temperatura</Text>
+          <Text>Temperatura °C</Text>
           <LineChart
-            data={data}
-            width={screenWidth * 0.9}
+            data={data_temperatura}
+            width={screenWidth * 1}
             height={screenWidth * 0.45}
             chartConfig={chartConfig}
+            withShadow={false}
           />
-          <Text>Umidade</Text>
+          <Text>Umidade %</Text>
           <LineChart
-            data={data}
-            width={screenWidth * 0.9}
+            data={data_umidade}
+            width={screenWidth * 1}
             height={screenWidth * 0.45}
             chartConfig={chartConfig}
+            withShadow={false}
           />
         </View>
       </ScrollView>
@@ -167,7 +192,7 @@ const styles = StyleSheet.create({
     margin: "3%",
   },
   edit: {
-    marginBottom: "-7%",
+    marginBottom: "-10%",
     flexDirection: "row",
     width: "100%",
     justifyContent: "flex-end",
@@ -197,6 +222,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width * 0.8,
   },
   Graph: {
+    marginRight: "15%",
     alignItems: "center",
     height: "60%",
   },

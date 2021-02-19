@@ -42,7 +42,10 @@ export default function Home(props) {
   return (
     <Provider>
       <View>
-        <Header navigation={props.navigation} />
+        <Header
+          navigation={props.navigation}
+          acessToken={props.route.params.acessToken}
+        />
 
         {processes ? (
           <ListProcesses

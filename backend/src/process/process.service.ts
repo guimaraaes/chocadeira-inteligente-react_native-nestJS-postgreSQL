@@ -103,7 +103,6 @@ export class ProcessService  {
 
 
     async deleteProcess(id: number){
-
         try {
             await this.processRepository.findOne({id})
         } catch (error){
@@ -111,6 +110,7 @@ export class ProcessService  {
         }
         
         try {
+            await this.historyRepository.delete({id_process: id})
             await this.processRepository.delete({id})
         } catch (error){
             throw new InternalServerErrorException()

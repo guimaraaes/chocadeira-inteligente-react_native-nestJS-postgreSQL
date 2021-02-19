@@ -7,6 +7,7 @@ import ProcessComponent from "../components/process";
 import api from "../services/api";
 export default function Process(props) {
   const [process, setProcess] = useState([]);
+  const [history, setHistory] = useState(undefined);
   async function getProcessById() {
     await api
       .get("process/" + props.route.params.id, {
@@ -18,6 +19,20 @@ export default function Process(props) {
       .then((response) => {
         setProcess(response.data);
         // console.log(response.data);
+      });
+  }
+
+  async function getHistory() {
+    await api
+      .get("process/history/" + props.route.params.id, {
+        headers: {
+          accept: "*/*",
+          Authorization: "Bearer " + props.route.params.acessToken,
+        },
+      })
+      .then((response) => {
+        setHistory(response.data);
+        // console.log(history.length);
       });
   }
 
@@ -41,28 +56,33 @@ export default function Process(props) {
         alert(error.response.data.message);
       });
   }
-  const mounted = useRef();
+  const mounted = useRef(false);
 
   useEffect(() => {
     const source = axios.CancelToken.source();
-    if (!mounted.current) getProcessById();
+    if (!mounted.current) {
+      getProcessById();
+      getHistory();
+    }
     return () => {
       source.cancel();
     };
   }, [process]);
+
   return (
     <Provider>
       <View>
-        {/* <Text>{process.data_inicio}</Text> */}
         <Header navigation={props.navigation} process={true} />
-        {/* {process ? ( */}
-        <ProcessComponent
-          navigation={props.navigation}
-          acessToken={props.route.params.acessToken}
-          process={process}
-          putFinishProcess={putFinishProcess}
-        />
-        {/* ) : null} */}
+        {/* <Text>{history[0]}</Text> */}
+        {history ? (
+          <ProcessComponent
+            navigation={props.navigation}
+            acessToken={props.route.params.acessToken}
+            process={process}
+            history={history}
+            putFinishProcess={putFinishProcess}
+          />
+        ) : null}
       </View>
     </Provider>
   );

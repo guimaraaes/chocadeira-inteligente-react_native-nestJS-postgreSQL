@@ -1,8 +1,11 @@
-import React from "react";
-import { Alert, Dimensions, StyleSheet, Text, View } from "react-native";
+import DateTimePicker from "@react-native-community/datetimepicker";
+import moment from "moment";
+import React, { useState } from "react";
+import { Alert, Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { Appbar, IconButton, Menu, Searchbar } from "react-native-paper";
-
 export default function Header(props) {
+  const [show, setShow] = useState(false);
+  const [date, setDate] = useState(new Date(String(moment())));
   const [searchQuery, setSearchQuery] = React.useState("");
   const [search, setSearch] = React.useState(true);
 
@@ -14,9 +17,6 @@ export default function Header(props) {
 
   const closeMenu = () => setVisible(false);
   const [active, setActive] = React.useState("");
-  function navigateToLogin() {
-    props.navigation.navigate("login");
-  }
 
   return (
     <Appbar.Header style={styles.header}>
@@ -36,35 +36,53 @@ export default function Header(props) {
                 onPress={closeMenu}
                 style={styles.buttonClose}
               />
-
-              <Menu.Item
-                title={<Text style={styles.client}>Francisco da Silva</Text>}
-              />
+              <View style={{ flexDirection: "row", margin: 8 }}>
+                <Image
+                  source={require("../../assets/chicken-pngrepo-com.png")}
+                  style={{ width: 50, height: 50 }}
+                />
+                <Menu.Item
+                  title={<Text style={styles.client}>Francisco da Silva</Text>}
+                />
+              </View>
             </View>
 
             <Menu.Item
-              icon="account"
-              title="Editar perfil"
+              icon="home"
+              title="Início"
               onPress={() => {
-                // navigateToLogin();
+                closeMenu();
+                props.navigation.navigate("home");
                 // closeMenu();
               }}
             />
 
-            <Menu.Item
+            {/* <Menu.Item
+              icon="account"
+              title="Editar perfil"
+              onPress={() => {
+                closeMenu();
+                props.navigation.navigate("editProfile", {
+                  acessToken: props.acessToken,
+                });
+                // closeMenu();
+              }}
+            /> */}
+
+            {/* <Menu.Item
               icon="alert-circle"
               title="Relatar problema"
               onPress={() => {
                 // navigateToLogin();
                 // closeMenu();
               }}
-            />
+            /> */}
 
             <Menu.Item
               icon="logout"
               title="Sair"
               onPress={() => {
-                navigateToLogin();
+                props.navigation.navigate("login");
                 closeMenu();
               }}
             />
@@ -111,10 +129,26 @@ export default function Header(props) {
         </>
       ) : props.create ? null : search ? (
         <>
+          {show && (
+            <DateTimePicker
+              mode="date"
+              // is24Hour={true}
+              value={date}
+              onChangeText={(event, selectedDate) => {
+                // setShow(false);
+                setDate(selectedDate);
+                setShow(false);
+                // alert(selectedDate);
+              }}
+              onTouchMove={() => setShow(false)}
+            />
+          )}
           <Appbar.Action
             icon="magnify"
             onPress={() => {
-              setSearch(!search);
+              setShow(true);
+
+              // setSearch(!search);
             }}
           />
         </>

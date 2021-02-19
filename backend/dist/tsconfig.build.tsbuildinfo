@@ -3686,9 +3686,14 @@
         "signature": "7ada2e80d7cdab40c4967ab97213a1616025a660b70712631cddd11eb31bf716",
         "affectsGlobalScope": false
       },
+      "../src/auth/get-user.decorator.ts": {
+        "version": "d0435fd9cf5f8964a0c36085246b684c94075b772f5179ec5ecfb7c0bbaad05b",
+        "signature": "2edbd67ef5c8b5f94d7abaea90ab48657ff66e5277a1409c425ff253daa65751",
+        "affectsGlobalScope": false
+      },
       "../src/auth/auth.controller.ts": {
-        "version": "d3160ef74907ab1fab042a985085603d88de24ecc441e626f7c6f98841da7b0a",
-        "signature": "fb96f73e80fee42a52705291fb3646ee2493604d7374747fab33a7ae8c06e515",
+        "version": "f9b81293a436cd57cfa250bf72df67b6fee6f5b86a261c31226d4ba4030ed05b",
+        "signature": "4057e44988af7134940b52e94f676761e56b23c760b845670ac8fe0ba23bfa33",
         "affectsGlobalScope": false
       },
       "../src/auth/jwt.strategy.ts": {
@@ -3704,11 +3709,6 @@
       "../src/config/typeorm.config.ts": {
         "version": "910889f77945009970df587e1560c4c9765cf503a9f4586c7c03ee802a077d33",
         "signature": "e48d1e836452920a823efe3c1f15dbaa531cbb2c536b3d47ad06ed5201a8b847",
-        "affectsGlobalScope": false
-      },
-      "../src/auth/get-user.decorator.ts": {
-        "version": "d0435fd9cf5f8964a0c36085246b684c94075b772f5179ec5ecfb7c0bbaad05b",
-        "signature": "2edbd67ef5c8b5f94d7abaea90ab48657ff66e5277a1409c425ff253daa65751",
         "affectsGlobalScope": false
       },
       "../src/process/process.dto.ts": {
@@ -3732,7 +3732,7 @@
         "affectsGlobalScope": false
       },
       "../src/process/process.service.ts": {
-        "version": "6b18dfd3c6f44f693a3ce5179241ff1ed5e44ce33d7197bfcf0e82364bf3775a",
+        "version": "6031849b6ca9c65bf73c2deafaeb3d14cd254bc65711ddb19dc74995e789c375",
         "signature": "d096112e6f5f899ccb16a50f461d90d473eed30a401c8bc01f26a390ba1303ff",
         "affectsGlobalScope": false
       },
@@ -6866,8 +6866,12 @@
       ],
       "../src/auth/auth.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/passport/index.d.ts",
+        "../node_modules/@nestjs/swagger/index.d.ts",
         "../src/auth/auth.dto.ts",
-        "../src/auth/auth.service.ts"
+        "../src/auth/auth.service.ts",
+        "../src/auth/get-user.decorator.ts",
+        "../src/user/user.entity.ts"
       ],
       "../src/auth/auth.dto.ts": [
         "../node_modules/@nestjs/swagger/index.d.ts",
@@ -9855,7 +9859,8 @@
       ],
       "../src/auth/auth.controller.ts": [
         "../src/auth/auth.dto.ts",
-        "../src/auth/auth.service.ts"
+        "../src/auth/auth.service.ts",
+        "../src/user/user.entity.ts"
       ],
       "../src/auth/auth.service.ts": [
         "../node_modules/@nestjs/jwt/index.d.ts",
