@@ -20,6 +20,7 @@ export default function Header(props) {
 
   return (
     <Appbar.Header style={styles.header}>
+      {/* <Text> {moment(date).format()}</Text> */}
       {props.login ? null : (
         <Menu
           // style={styles.menu}
@@ -91,7 +92,7 @@ export default function Header(props) {
               title={
                 <View>
                   <Text style={styles.menuFooter}>por</Text>
-                  <Text>SARA GUIMARAES</Text>
+                  <Text>SARA GUIMARÃES</Text>
                 </View>
               }
             />
@@ -102,9 +103,12 @@ export default function Header(props) {
         style={{ alignItems: "center" }}
         title="chocadeira inteligente"
       />
+      
+      
       {props.login ? null : props.process ? (
         <>
           <Appbar.Action icon="share" onPress={() => {}} />
+          {new Date(null).toISOString() === props.process_finish ? null: 
           <Appbar.Action
             icon="delete"
             onPress={() => {
@@ -125,7 +129,8 @@ export default function Header(props) {
                 { cancelable: false }
               );
             }}
-          />
+          />}
+          
         </>
       ) : props.create ? null : search ? (
         <>
@@ -134,11 +139,11 @@ export default function Header(props) {
               mode="date"
               // is24Hour={true}
               value={date}
-              onChangeText={(event, selectedDate) => {
-                // setShow(false);
-                setDate(selectedDate);
+              onChange={(event, selectedDate) => {
                 setShow(false);
-                // alert(selectedDate);
+                console.log(selectedDate);
+                // setDate(selectedDate);
+                // setShow(false);
               }}
               onTouchMove={() => setShow(false)}
             />

@@ -68,28 +68,34 @@ export default function FormCreate(props) {
         </Text>
       ) : null}
       {show && (
-        <DateTimePicker
+         <DateTimePicker
           mode="time"
           is24Hour={true}
-          value={new Date(String(moment(props.viragem)))}
+          value={ new Date ( moment(props.viragem).format() )}
           onChange={(event, selectedDate) => {
             setShow(false);
             setViragem(true);
-            props.setViragem(selectedDate);
+            console.log(selectedDate);
+            props.setViragem(moment(selectedDate).format() );
           }}
-          onTouchMove={() => setShow(false)}
+          onTouchMove={() => {
+            setShow(false);
+ 
+          }}
         />
-      )}
+       )}
+ 
       <TextInput
         label="Viragem H"
         underlineColor="#F9A825"
         color="#F9A825"
         mode="outlined"
-        value={props.viragem ? moment(props.viragem).format("hh:mm") : null}
+        value={ moment(props.viragem).format("HH:mm")  }
         onTouchStart={() => {
           setShow(true);
         }}
       />
+      {/* <Text>{moment(props.viragem).format()}</Text> */}
       {!viragem_check ? (
         <Text style={{ color: "#F23" }}>Insira o valor para viragem</Text>
       ) : null}

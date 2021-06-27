@@ -53,10 +53,10 @@ export default function ListProcesses(props) {
               style={styles.card(new Date(null).toISOString() === i.data_fim)}
             >
               <Card.Content>
-                <Title>Início: {moment(i.data_inicio).format("LL")}</Title>
+                <Title>Início: {moment(i.data_inicio).format("ll")}</Title>
                 <Paragraph>
                   Duração: {moment(i.data_inicio).fromNow()}. Temperatura{" "}
-                  {i.temperatura} °C. Umidade
+                  {i.temperatura}°C. Umidade{" "}
                   {i.umidade}%. Viragem {Math.ceil(i.viragem / 60)}h
                   {i.viragem % 60}min.
                 </Paragraph>

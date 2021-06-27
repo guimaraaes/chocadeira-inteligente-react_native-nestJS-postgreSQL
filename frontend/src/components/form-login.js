@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Image, StyleSheet, View } from "react-native";
+import { Image, Linking, StyleSheet, Text, View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
 export default function FormLogin(props) {
@@ -37,6 +37,12 @@ export default function FormLogin(props) {
         style={{ margin: 5 }}
       />
 
+      <Text
+        onPress={() => Linking.openURL("http://google.com")}
+        style={{ alignSelf: "flex-end", margin: 10, color: "blue" }}
+      >
+        Esqueceu a senha?
+      </Text>
       <Button
         style={styles.button}
         color="#F9A825"
@@ -46,6 +52,17 @@ export default function FormLogin(props) {
       >
         Entrar
       </Button>
+      <View>
+        <Text style={{ margin: 10 }}>
+          Primeiro cadastro?{" "}
+          <Text
+            onPress={() => Linking.openURL("http://google.com")}
+            style={{ color: "blue" }}
+          >
+            Utilize seu código
+          </Text>
+        </Text>
+      </View>
     </View>
   );
 }
@@ -58,7 +75,8 @@ const styles = StyleSheet.create({
   },
   button: {
     width: 200,
-    marginTop: 30,
+    marginTop: 15,
+    marginBottom: 15,
     color: "#fff2",
     alignSelf: "center",
   },

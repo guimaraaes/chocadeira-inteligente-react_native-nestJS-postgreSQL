@@ -1,12 +1,11 @@
 import moment from "moment";
-import React from "react";
+import React, { useState } from "react";
 import {
   Alert,
-  Dimensions,
-  ScrollView,
+  Dimensions, RefreshControl, ScrollView,
   StyleSheet,
   Text,
-  View,
+  View
 } from "react-native";
 import { LineChart } from "react-native-chart-kit";
 import { Button, IconButton } from "react-native-paper";
@@ -23,6 +22,12 @@ const chartConfig = {
 };
 
 export default function ProcessComponent(props) {
+  const [refreshing, setRefreshing] = useState(false);
+  function _onRefresh() {
+    setRefreshing(true);
+    props.getHistory();
+    setRefreshing(false);
+  }
   const data_umidade = {
     labels: props.history.map((i) => i.date),
     datasets: [
@@ -32,11 +37,11 @@ export default function ProcessComponent(props) {
         strokeWidth: 4, // optional
       },
 
-      {
-        data: props.history.map((i) => i.umidade_def),
-        color: () => `rgba(20, 40, 62)`, // optional
-        strokeWidth: 2, // optional
-      },
+      // {
+      //   data: props.history.map((i) => i.umidade_def),
+      //   color: () => `rgba(20, 40, 62)`, // optional
+      //   strokeWidth: 2, // optional
+      // },
     ],
   };
 
@@ -45,15 +50,15 @@ export default function ProcessComponent(props) {
     datasets: [
       {
         data: props.history.map((i) => i.temperatura),
-        color: () => `rgba(255, 131, 4)`, // optional
+        color: () => `rgba(255, 140, 1)`, // optional
         strokeWidth: 4, // optional
       },
 
-      {
-        data: props.history.map((i) => i.temperatura_def),
-        color: () => `rgba(187, 55, 5)`, // optional
-        strokeWidth: 2, // optional
-      },
+      // {
+      //   data: props.history.map((i) => i.temperatura_def),
+      //   color: () => `rgba(200, 55, 5)`, // optional
+      //   strokeWidth: 2, // optional
+      // },
     ],
   };
   function navigateToEdit() {
@@ -69,7 +74,7 @@ export default function ProcessComponent(props) {
       </Text>
       {new Date(null).toISOString() !== props.process.data_fim ? (
         <>
-          <Text style={{ marginTop: "10%" }}>variações médias </Text>
+          {/* <Text style={{ marginTop: "10%" }}>variações médias </Text>
           <View style={styles.header}>
             <View style={styles.infoHeader}>
               <Text style={styles.info}>
@@ -81,14 +86,14 @@ export default function ProcessComponent(props) {
                 {props.process.viragem_med % 60}
               </Text>
             </View>
-          </View>
+          </View> */}
         </>
       ) : (
         <>
           <View style={styles.edit}>
             <IconButton icon="pencil" onPress={navigateToEdit} />
           </View>
-          <Text>configuração </Text>
+          {/* <Text>configuração </Text>
           <View style={styles.header}>
             <View style={styles.infoHeader}>
               <Text style={styles.info}>{props.process.temperatura} °C</Text>
@@ -98,7 +103,7 @@ export default function ProcessComponent(props) {
                 {props.process.viragem % 60}min
               </Text>
             </View>
-          </View>
+          </View> */}
         </>
       )}
 
@@ -111,9 +116,18 @@ export default function ProcessComponent(props) {
         ) : null}
         <List.Item style={styles.Tab} onPress={() => {}} title="PROCESSO" />
       </List.Section> */}
-      <ScrollView>
+      <ScrollView
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={_onRefresh}
+          ></RefreshControl>
+        }
+      >
         <View style={styles.Graph}>
-          <Text>Temperatura °C</Text>
+          <Text style={{ color: "#bb2505", fontWeight: "bold", marginTop: 10 }}>
+            Temperatura: {props.process.temperatura} °C
+          </Text>
           <LineChart
             data={data_temperatura}
             width={screenWidth * 1}
@@ -121,7 +135,9 @@ export default function ProcessComponent(props) {
             chartConfig={chartConfig}
             withShadow={false}
           />
-          <Text>Umidade %</Text>
+          <Text style={{ color: "#14283e", fontWeight: "bold", marginTop: 10 }}>
+            Umidade: {props.process.umidade} %
+          </Text>
           <LineChart
             data={data_umidade}
             width={screenWidth * 1}
@@ -129,12 +145,23 @@ export default function ProcessComponent(props) {
             chartConfig={chartConfig}
             withShadow={false}
           />
+          <Text style={{ fontWeight: "bold", marginTop: 10 }}>
+            viragem: {moment('2013-05-09T00:00:00-03:00').add(props.process.viragem, 'minutes').format('HH:mm')}
+          {/* viragem: {Math.ceil(props.process.viragem / 60)}h{props.process.viragem % 60}min */}
+          </Text> 
+          {new Date(null).toISOString() === props.process.data_fim ?   
+          <Text style={{ fontWeight: "bold" , textTransform: 'lowercase'}}>
+           última {moment('2021-06-26T00:00:00-03:00').add(props.process.viragem, 'minutes').calendar()}
+           {" "}||
+          próxima {moment('2021-06-27T00:00:00-03:00').add(props.process.viragem, 'minutes').calendar()}
+          </Text> 
+          : null}
+         
         </View>
-      </ScrollView>
 
       <View style={styles.footer}>
         <Text>
-          processo com início em{" "}
+          processo iniciado em{" "}
           {moment(props.process.data_inicio).format("LL")}{" "}
           {new Date(null).toISOString() !== props.process.data_fim ? (
             <Text>
@@ -171,6 +198,8 @@ export default function ProcessComponent(props) {
           </Button>
         ) : null}
       </View>
+      </ScrollView>
+
     </View>
   );
 }
@@ -192,7 +221,7 @@ const styles = StyleSheet.create({
     margin: "3%",
   },
   edit: {
-    marginBottom: "-10%",
+    margin: "-3%",
     flexDirection: "row",
     width: "100%",
     justifyContent: "flex-end",
@@ -217,14 +246,15 @@ const styles = StyleSheet.create({
     width: "33%",
   },
   footer: {
-    height: "15%",
-    flexDirection: "column",
-    width: Dimensions.get("window").width * 0.8,
+    // height: "18%",
+    margin: "3%",
+    // flexDirection: "column",
+    width: Dimensions.get("window").width * 0.85,
   },
   Graph: {
     marginRight: "15%",
     alignItems: "center",
-    height: "60%",
+    // height: "60%",
   },
   button: {
     width: 150,

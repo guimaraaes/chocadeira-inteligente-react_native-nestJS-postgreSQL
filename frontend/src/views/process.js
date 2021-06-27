@@ -72,7 +72,7 @@ export default function Process(props) {
   return (
     <Provider>
       <View>
-        <Header navigation={props.navigation} process={true} />
+        <Header navigation={props.navigation} process={true} process_finish={process.data_fim} />
         {/* <Text>{history[0]}</Text> */}
         {history ? (
           <ProcessComponent
@@ -80,6 +80,7 @@ export default function Process(props) {
             acessToken={props.route.params.acessToken}
             process={process}
             history={history}
+            getHistory={getHistory}
             putFinishProcess={putFinishProcess}
           />
         ) : null}

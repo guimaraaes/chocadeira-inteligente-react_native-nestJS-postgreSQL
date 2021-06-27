@@ -1,4 +1,5 @@
 import axios from "axios";
+import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { View } from "react-native";
 import { Provider } from "react-native-paper";
@@ -9,7 +10,7 @@ import api from "../services/api";
 export default function CreateProcess(props) {
   const [temperatura, setTemperatura] = useState();
   const [umidade, setUmidade] = useState();
-  const [viragem, setViragem] = useState();
+  const [viragem, setViragem] = useState( );
 
   async function postProcess() {
     await api
@@ -18,7 +19,9 @@ export default function CreateProcess(props) {
         {
           temperatura: Number(temperatura),
           umidade: Number(umidade),
-          viragem: Number(viragem.getHours() * 60 + viragem.getMinutes()),
+          viragem: String(viragem),
+
+          // viragem: Number(viragem.getHours() * 60 + viragem.getMinutes()),
         },
         {
           headers: {
@@ -42,7 +45,8 @@ export default function CreateProcess(props) {
         {
           temperatura: Number(temperatura),
           umidade: Number(umidade),
-          viragem: Number(viragem.getHours() * 60 + viragem.getMinutes()),
+          viragem: viragem,
+          // viragem: Number(viragem.getHours() * 60 + viragem.getMinutes()),
         },
         {
           headers: {
@@ -72,10 +76,11 @@ export default function CreateProcess(props) {
       })
       .then((response) => {
         if (!data_inicio) {
+          // console.log("sssssss" +  moment().format() );
           setData_inicio(response.data.data_inicio);
           setTemperatura(String(response.data.temperatura));
           setUmidade(String(response.data.umidade));
-          setViragem(new Date(response.data.viragem));
+          setViragem(moment('2013-05-09T00:00:00-03:00').add(response.data.viragem, 'minutes').format() );
         }
       })
       .catch((error) => {
@@ -96,7 +101,8 @@ export default function CreateProcess(props) {
   return (
     <Provider>
       <View>
-        <Header create={true} navigation={props.navigation} />
+         <Header create={true} navigation={props.navigation} />
+ 
         <FormCreate
           id={props.route.params.id}
           data_inicio={data_inicio}
