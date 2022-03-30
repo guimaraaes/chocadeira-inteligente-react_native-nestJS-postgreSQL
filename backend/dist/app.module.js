@@ -18,7 +18,7 @@ const user_module_1 = require("./user/user.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         imports: [
             typeorm_1.TypeOrmModule.forRoot(typeorm_config_1.typeOrmConfig),
             auth_module_1.AuthModule,
