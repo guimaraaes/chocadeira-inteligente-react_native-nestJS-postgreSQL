@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Image, Linking, StyleSheet, Text, View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
 export default function FormLogin(props) {
-  const [email, setEmail] = useState(props.email);
-  const [senha, setSenha] = useState(props.senha);
-
   return (
     <View style={styles.container}>
       <Image
@@ -18,7 +15,6 @@ export default function FormLogin(props) {
         color="#F9A825"
         mode="outlined"
         onChangeText={(text) => {
-          setEmail(text);
           props.setEmail(text);
         }}
         style={{ margin: 5 }}
@@ -30,7 +26,6 @@ export default function FormLogin(props) {
         color="#F9A825"
         mode="outlined"
         onChangeText={(text) => {
-          setSenha(text);
           props.setSenha(text);
         }}
         secureTextEntry={true}
@@ -56,10 +51,12 @@ export default function FormLogin(props) {
         <Text style={{ margin: 10 }}>
           Primeiro cadastro?{" "}
           <Text
-            onPress={() => Linking.openURL("http://google.com")}
+            onPress={() => {
+              props.navigation.navigate("register");
+            }}
             style={{ color: "blue" }}
           >
-            Utilize seu código
+            Utilize seu códigoo
           </Text>
         </Text>
       </View>

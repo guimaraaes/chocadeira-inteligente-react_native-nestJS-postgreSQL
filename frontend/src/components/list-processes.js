@@ -1,7 +1,13 @@
 import moment from "moment";
 import "moment/locale/pt-br";
 import React, { useState } from "react";
-import { RefreshControl, ScrollView, StyleSheet, View } from "react-native";
+import {
+  RefreshControl,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { Card, IconButton, Paragraph, Title } from "react-native-paper";
 
 export default function ListProcesses(props) {
@@ -56,15 +62,15 @@ export default function ListProcesses(props) {
                 <Title>Início: {moment(i.data_inicio).format("ll")}</Title>
                 <Paragraph>
                   Duração: {moment(i.data_inicio).fromNow()}. Temperatura{" "}
-                  {i.temperatura}°C. Umidade{" "}
-                  {i.umidade}%. Viragem {Math.ceil(i.viragem / 60)}h
-                  {i.viragem % 60}min.
+                  {i.temperatura}°C. Umidade {i.umidade}%. Viragem{" "}
+                  {Math.ceil(i.viragem / 60)}h{i.viragem % 60}min.
                 </Paragraph>
               </Card.Content>
             </Card>
           );
         })}
       </ScrollView>
+      <Text style={styles.processTotal}>xx processos</Text>
     </View>
   );
 }
@@ -72,11 +78,16 @@ export default function ListProcesses(props) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#FFF3",
-    height: "80%",
+    height: "85%",
     alignItems: "center",
     marginTop: 20,
     marginLeft: 20,
     marginRight: 0,
+  },
+  processTotal: {
+    alignSelf: "flex-end",
+    marginRight: "12%",
+    marginTop: "8%",
   },
   iconAdd: {
     marginRight: 20,
@@ -85,7 +96,7 @@ const styles = StyleSheet.create({
 
   card: (emandamento) => ({
     width: "90%",
-    height: 120,
+    height: 125,
     backgroundColor: emandamento ? "#FFDB7E" : "#FFF",
     shadowColor: "#FFF2",
     shadowOffset: {
@@ -95,5 +106,6 @@ const styles = StyleSheet.create({
     shadowRadius: 20,
     shadowOpacity: 1.0,
     margin: 8,
+    marginBottom: 2,
   }),
 });

@@ -15,8 +15,6 @@ export default function Login({ navigation }) {
     });
   }
   async function postLogin() {
-    // navigateToHome();
-
     await api
       .post("/auth/singin", {
         email: email,
@@ -40,8 +38,6 @@ export default function Login({ navigation }) {
 
         <FormLogin
           navigation={navigation}
-          email={email}
-          senha={senha}
           setEmail={setEmail}
           setSenha={setSenha}
           postLogin={postLogin}

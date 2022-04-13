@@ -2,10 +2,12 @@ import moment from "moment";
 import React, { useState } from "react";
 import {
   Alert,
-  Dimensions, RefreshControl, ScrollView,
+  Dimensions,
+  RefreshControl,
+  ScrollView,
   StyleSheet,
   Text,
-  View
+  View,
 } from "react-native";
 import { LineChart } from "react-native-chart-kit";
 import { Button, IconButton } from "react-native-paper";
@@ -146,60 +148,66 @@ export default function ProcessComponent(props) {
             withShadow={false}
           />
           <Text style={{ fontWeight: "bold", marginTop: 10 }}>
-            viragem: {moment('2013-05-09T00:00:00-03:00').add(props.process.viragem, 'minutes').format('HH:mm')}
-          {/* viragem: {Math.ceil(props.process.viragem / 60)}h{props.process.viragem % 60}min */}
-          </Text> 
-          {new Date(null).toISOString() === props.process.data_fim ?   
-          <Text style={{ fontWeight: "bold" , textTransform: 'lowercase'}}>
-           última {moment('2021-06-26T00:00:00-03:00').add(props.process.viragem, 'minutes').calendar()}
-           {" "}||
-          próxima {moment('2021-06-27T00:00:00-03:00').add(props.process.viragem, 'minutes').calendar()}
-          </Text> 
-          : null}
-         
-        </View>
-
-      <View style={styles.footer}>
-        <Text>
-          processo iniciado em{" "}
-          {moment(props.process.data_inicio).format("LL")}{" "}
-          {new Date(null).toISOString() !== props.process.data_fim ? (
-            <Text>
-              e finalizado em {moment(props.process.data_fim).format("LL")}{" "}
+            viragem:{" "}
+            {moment("2013-05-09T00:00:00-03:00")
+              .add(props.process.viragem, "minutes")
+              .format("HH:mm")}
+            {/* viragem: {Math.ceil(props.process.viragem / 60)}h{props.process.viragem % 60}min */}
+          </Text>
+          {new Date(null).toISOString() === props.process.data_fim ? (
+            <Text style={{ fontWeight: "bold", textTransform: "lowercase" }}>
+              última{" "}
+              {moment("2021-06-26T00:00:00-03:00")
+                .add(props.process.viragem, "minutes")
+                .calendar()}{" "}
+              || próxima{" "}
+              {moment("2021-06-27T00:00:00-03:00")
+                .add(props.process.viragem, "minutes")
+                .calendar()}
             </Text>
           ) : null}
-        </Text>
+        </View>
 
-        {new Date(null).toISOString() === props.process.data_fim ? (
-          <Button
-            style={styles.button}
-            onPress={() => {
-              Alert.alert(
-                "Deseja finalizar?",
-                "Após finalizado o processo não pode ser retomado",
-                [
-                  {
-                    text: "Cancelar",
-                    // onPress: () => console.log("Cancel Pressed"),
-                    style: "cancel",
-                  },
-                  {
-                    text: "Finalizar",
-                    onPress: () => props.putFinishProcess(),
-                  },
-                ],
-                { cancelable: false }
-              );
-            }}
-            color="#F9A825"
-            mode="contained"
-          >
-            FINALIZAR
-          </Button>
-        ) : null}
-      </View>
+        <View style={styles.footer}>
+          <Text>
+            processo iniciado em{" "}
+            {moment(props.process.data_inicio).format("LL")}{" "}
+            {new Date(null).toISOString() !== props.process.data_fim ? (
+              <Text>
+                e finalizado em {moment(props.process.data_fim).format("LL")}{" "}
+              </Text>
+            ) : null}
+          </Text>
+
+          {new Date(null).toISOString() === props.process.data_fim ? (
+            <Button
+              style={styles.button}
+              onPress={() => {
+                Alert.alert(
+                  "Deseja finalizar?",
+                  "Após finalizado o processo não pode ser retomado",
+                  [
+                    {
+                      text: "Cancelar",
+                      // onPress: () => console.log("Cancel Pressed"),
+                      style: "cancel",
+                    },
+                    {
+                      text: "Finalizar",
+                      onPress: () => props.putFinishProcess(),
+                    },
+                  ],
+                  { cancelable: false }
+                );
+              }}
+              color="#F9A825"
+              mode="contained"
+            >
+              FINALIZAR
+            </Button>
+          ) : null}
+        </View>
       </ScrollView>
-
     </View>
   );
 }
@@ -252,7 +260,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width * 0.85,
   },
   Graph: {
-    marginRight: "15%",
+    margin: "5%",
     alignItems: "center",
     // height: "60%",
   },

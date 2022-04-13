@@ -1,21 +1,21 @@
 // import { TextField } from "@material-ui/core";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import moment from "moment";
-import React, { useState } from "react";
+import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
 export default function FormCreate(props) {
-  const [temperatura_check, setTemperatura] = React.useState(
+  const [temperatura_check, setTemperatura] = useState(
     props.id || props.temperatura ? true : false
   );
-  const [umidade_check, setUmidade] = React.useState(
+  const [umidade_check, setUmidade] = useState(
     props.id || props.umidade ? true : false
   );
-  const [viragem_check, setViragem] = React.useState(
+  const [viragem_check, setViragem] = useState(
     props.id || props.viragem ? true : false
   );
-  const [value, setValue] = React.useState(true);
+  const [value, setValue] = useState(true);
   const [show, setShow] = useState(false);
 
   return (
@@ -68,29 +68,28 @@ export default function FormCreate(props) {
         </Text>
       ) : null}
       {show && (
-         <DateTimePicker
+        <DateTimePicker
           mode="time"
           is24Hour={true}
-          value={ new Date ( moment(props.viragem).format() )}
+          value={new Date(moment(props.viragem).format())}
           onChange={(event, selectedDate) => {
             setShow(false);
             setViragem(true);
             console.log(selectedDate);
-            props.setViragem(moment(selectedDate).format() );
+            props.setViragem(moment(selectedDate).format());
           }}
           onTouchMove={() => {
             setShow(false);
- 
           }}
         />
-       )}
- 
+      )}
+
       <TextInput
         label="Viragem H"
         underlineColor="#F9A825"
         color="#F9A825"
         mode="outlined"
-        value={ moment(props.viragem).format("HH:mm")  }
+        value={moment(props.viragem).format("HH:mm")}
         onTouchStart={() => {
           setShow(true);
         }}

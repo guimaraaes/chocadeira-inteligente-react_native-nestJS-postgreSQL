@@ -1,33 +1,47 @@
-import React, { useState } from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import React, { createRef } from "react";
+import { Image, StyleSheet, View } from "react-native";
+import { TextInputMask } from "react-native-masked-text";
 import { Button, TextInput } from "react-native-paper";
 
-export default function FormProfile(props) {
-  const [email, setEmail] = useState(props.email);
-  const [senha, setSenha] = useState(props.senha);
-
+export default function FormRegister(props) {
+  const ref = createRef();
+  const ref2 = createRef();
   return (
     <View style={styles.container}>
-      <View style={{ flexDirection: "row" }}>
+      <View style={{ flexDirection: "row", alignSelf: "center" }}>
         <Image
           source={require("../../assets/chicken-pngrepo-com.png")}
           style={{ width: 50, height: 50 }}
         />
-        <Text style={{ fontSize: 30, fontWeight: "bold", marginLeft: 10 }}>
-          {props.user.nome}
-        </Text>
       </View>
+
       <TextInput
         label="CPF"
         underlineColor="#F9A825"
         color="#F9A825"
         mode="outlined"
-        value={props.user.cpf}
-        disabled
-        // onChangeText={(text) => {
-        //   setEmail(text);
-        //   props.setEmail(text);
-        // }}
+        value={props.cpf}
+        style={{ margin: 5 }}
+        setCPF={props.setCPF}
+        render={(props) => (
+          <TextInputMask
+            {...props}
+            type={"cpf"}
+            onChangeText={(text) => {
+              props.setCPF(text);
+            }}
+          />
+        )}
+      />
+
+      <TextInput
+        label="nome"
+        underlineColor="#F9A825"
+        color="#F9A825"
+        mode="outlined"
+        onChangeText={(text) => {
+          props.setName(text);
+        }}
         style={{ margin: 5 }}
       />
 
@@ -36,9 +50,7 @@ export default function FormProfile(props) {
         underlineColor="#F9A825"
         color="#F9A825"
         mode="outlined"
-        value={props.user.email}
         onChangeText={(text) => {
-          setEmail(text);
           props.setEmail(text);
         }}
         style={{ margin: 5 }}
@@ -49,10 +61,8 @@ export default function FormProfile(props) {
         underlineColor="#F9A825"
         color="#F9A825"
         mode="outlined"
-        // value={props.user.senha}
         onChangeText={(text) => {
-          setSenha(text);
-          props.setSenha(text);
+          props.setPassword(text);
         }}
         secureTextEntry={true}
         style={{ margin: 5 }}
@@ -62,10 +72,10 @@ export default function FormProfile(props) {
         style={styles.button}
         color="#F9A825"
         mode="contained"
-        onPress={props.postLogin}
+        onPress={props.postUser}
         // onPress={navigateToHome}
       >
-        Entrar
+        Criar cadastro
       </Button>
     </View>
   );

@@ -1,4 +1,3 @@
-import DateTimePicker from "@react-native-community/datetimepicker";
 import moment from "moment";
 import React, { useState } from "react";
 import { Alert, Dimensions, Image, StyleSheet, Text, View } from "react-native";
@@ -58,26 +57,14 @@ export default function Header(props) {
               }}
             />
 
-            {/* <Menu.Item
-              icon="account"
-              title="Editar perfil"
+            <Menu.Item
+              icon="egg"
+              title="Catálogo chocagem"
               onPress={() => {
                 closeMenu();
-                props.navigation.navigate("editProfile", {
-                  acessToken: props.acessToken,
-                });
-                // closeMenu();
+                props.navigation.navigate("catalog");
               }}
-            /> */}
-
-            {/* <Menu.Item
-              icon="alert-circle"
-              title="Relatar problema"
-              onPress={() => {
-                // navigateToLogin();
-                // closeMenu();
-              }}
-            /> */}
+            />
 
             <Menu.Item
               icon="logout"
@@ -91,8 +78,8 @@ export default function Header(props) {
               style={styles.menuFooter}
               title={
                 <View>
-                  <Text style={styles.menuFooter}>por</Text>
-                  <Text>SARA GUIMARÃES</Text>
+                  {/* <Text style={styles.menuFooter}>por</Text>
+                  <Text>SARA GUIMARÃES</Text> */}
                 </View>
               }
             />
@@ -103,61 +90,35 @@ export default function Header(props) {
         style={{ alignItems: "center" }}
         title="chocadeira inteligente"
       />
-      
-      
+
       {props.login ? null : props.process ? (
         <>
           <Appbar.Action icon="share" onPress={() => {}} />
-          {new Date(null).toISOString() === props.process_finish ? null: 
-          <Appbar.Action
-            icon="delete"
-            onPress={() => {
-              Alert.alert(
-                "Deseja excluir?",
-                "Após excluir o processo não será possível recuperar ele",
-                [
-                  {
-                    text: "Cancelar",
-                    // onPress: () => console.log("Cancel Pressed"),
-                    style: "cancel",
-                  },
-                  {
-                    text: "Excluir",
-                    // onPress: () => props.putFinishProcess(),
-                  },
-                ],
-                { cancelable: false }
-              );
-            }}
-          />}
-          
-        </>
-      ) : props.create ? null : search ? (
-        <>
-          {show && (
-            <DateTimePicker
-              mode="date"
-              // is24Hour={true}
-              value={date}
-              onChange={(event, selectedDate) => {
-                setShow(false);
-                console.log(selectedDate);
-                // setDate(selectedDate);
-                // setShow(false);
+          {new Date(null).toISOString() === props.process_finish ? null : (
+            <Appbar.Action
+              icon="delete"
+              onPress={() => {
+                Alert.alert(
+                  "Deseja excluir?",
+                  "Após excluir o processo não será possível recuperar ele",
+                  [
+                    {
+                      text: "Cancelar",
+                      // onPress: () => console.log("Cancel Pressed"),
+                      style: "cancel",
+                    },
+                    {
+                      text: "Excluir",
+                      // onPress: () => props.putFinishProcess(),
+                    },
+                  ],
+                  { cancelable: false }
+                );
               }}
-              onTouchMove={() => setShow(false)}
             />
           )}
-          <Appbar.Action
-            icon="magnify"
-            onPress={() => {
-              setShow(true);
-
-              // setSearch(!search);
-            }}
-          />
         </>
-      ) : (
+      ) : props.create ? null : show ? (
         <>
           <Searchbar
             placeholder="Buscar por processo"
@@ -168,10 +129,19 @@ export default function Header(props) {
           <Appbar.Action
             icon="close"
             onPress={() => {
-              setSearch(!search);
+              //setSearch(!search);
+              setShow(false);
             }}
           ></Appbar.Action>
         </>
+      ) : (
+        <Appbar.Action
+          icon="magnify"
+          onPress={() => {
+            setShow(true);
+            // setSearch(!search);
+          }}
+        />
       )}
     </Appbar.Header>
   );
@@ -211,6 +181,7 @@ const styles = StyleSheet.create({
   },
   search: {
     marginLeft: -10,
+    visible: false,
     // backgroundColor: "#FFF",
     width: Dimensions.get("window").width * 0.7,
   },
