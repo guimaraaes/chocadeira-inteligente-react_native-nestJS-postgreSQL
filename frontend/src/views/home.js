@@ -7,7 +7,8 @@ import ListProcesses from "../components/list-processes";
 import api from "../services/api";
 
 export default function Home(props) {
-  const [processes, setProcesses] = useState(undefined);
+  const [processes, setProcesses] = useState([]);
+  const [count, setCount] = useState(undefined);
   const [processInProgress, setProcessInProgress] = useState(false);
 
   const [isMounted, setisMounted] = useState(false);
@@ -21,7 +22,8 @@ export default function Home(props) {
         },
       })
       .then((response) => {
-        setProcesses(response.data);
+        setProcesses(response.data.result);
+        setCount(response.data.count);
         // !processes ? setProcesses(response.data) : null;
       })
       .catch((error) => {
@@ -46,18 +48,18 @@ export default function Home(props) {
           navigation={props.navigation}
           acessToken={props.route.params.acessToken}
         />
-
-        {processes ? (
-          <ListProcesses
-            getProcess={getProcess}
-            processInProgress={
-              processes[0].data_fim === new Date(null).toISOString()
-            }
-            processes={processes}
-            navigation={props.navigation}
-            acessToken={props.route.params.acessToken}
-          />
-        ) : null}
+        <ListProcesses
+          getProcess={getProcess}
+          processInProgress={
+            processes.length > 0
+              ? processes[0].data_fim === new Date(null).toISOString()
+              : false
+          }
+          processes={processes}
+          count={count}
+          navigation={props.navigation}
+          acessToken={props.route.params.acessToken}
+        />
       </View>
     </Provider>
   );

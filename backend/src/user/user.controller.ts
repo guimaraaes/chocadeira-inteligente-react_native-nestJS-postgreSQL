@@ -9,19 +9,19 @@ import { UserService } from './user.service';
 @ApiTags('user')
 @Controller('user')
 @ApiBearerAuth()
-@UseGuards(AuthGuard())
 export class UserController {
     constructor(
         private readonly userService: UserService
     ){}
-    
+    @UseGuards(AuthGuard())
     @Get()
-    @ApiOperation({summary: 'get all User'})
+    @ApiOperation({summary: 'get User'})
     getUser(@GetUser() user: User){
         return user
         return this.userService.findUser()
     }
-
+    
+    @UseGuards(AuthGuard())
     @Get(':id')
     @ApiOperation({summary: 'get User by id'})
     getUserById(@Param('id') id: number){
@@ -34,7 +34,7 @@ export class UserController {
          return this.userService.createUser(User)
     }
 
-
+    @UseGuards(AuthGuard())
     @Put(':id')
     @ApiOperation({summary: 'put User by id'})
     putUser(@GetUser() user: User, 
@@ -45,6 +45,7 @@ export class UserController {
         return this.userService.editUser(id, User)
     }
     
+    @UseGuards(AuthGuard())
     @Delete(':id')
     @ApiOperation({summary: 'delete User by id'})
     deleteUser(@Param('id') id: number){

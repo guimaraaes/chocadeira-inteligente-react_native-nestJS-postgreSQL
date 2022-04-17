@@ -11,22 +11,40 @@ export class ProcessService  {
     ){}
 
     async findProcess(id_user: number){
-        var result = await this.processRepository.createQueryBuilder('processes').where({id_user: id_user}).orderBy('data_fim', 'ASC').getMany()
-        var result2 = await this.processRepository.createQueryBuilder('processes').where({id_user: id_user}).orderBy('data_fim', 'DESC').getMany()
+        
+        try{
+            var result = await this.processRepository.createQueryBuilder('processes')
+            .where({id_user: id_user}).orderBy('data_fim', 'ASC').getMany()
+            var result2 = await this.processRepository.createQueryBuilder('processes')
+            .where({id_user: id_user}).orderBy('data_fim', 'DESC').getMany()
 
-        if (result[0].data_fim.getTime() === new Date(null).getTime()){
-            result = [result[0]]
-            Array.prototype.push.apply(result, result2.slice(0, -1))
-            return result
+            var count = await this.processRepository.createQueryBuilder('processes')
+            .where({id_user: id_user}).orderBy('data_fim', 'DESC').getCount()
+
+            if (result[0].data_fim.getTime() === new Date(null).getTime()){
+                result = [result[0]]
+                Array.prototype.push.apply(result, result2.slice(0, -1))
+                return {result, count}
+            }
+            return {result2, count}
         }
-        return result2
-        return await  this.processRepository.find({id_user: id_user})
-       
+        catch{
+            return {result: 0, count: 0}
+        }       
     }
 
     async findProcessById(id: number){
         try {
             return await this.processRepository.findOne({id})
+        } catch (error){
+            throw new NotFoundException('Processo não encontrado')
+        }
+    }
+
+    async findProcessByDataInicio(id_user: number, data_inicio: String){
+        try {
+            return await this.processRepository.createQueryBuilder().where({id_user: id_user})
+            .getMany()
         } catch (error){
             throw new NotFoundException('Processo não encontrado')
         }

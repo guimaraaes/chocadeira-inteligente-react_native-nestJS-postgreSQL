@@ -27,6 +27,12 @@ export class ProcessController {
         return this.processService.findProcessById(id)
     }
 
+    @Get('search/:data_inicio')
+    @ApiOperation({summary: 'get process by data inicio'})
+    getProcessByDataInicio(@GetUser() user: User, @Param('data_inicio') data_inicio: String){
+        return this.processService.findProcessByDataInicio(user.id, data_inicio)
+    }
+
     @Post()
     @ApiOperation({summary: 'post process by user auth id'})
     postProcess(@GetUser() user : User,

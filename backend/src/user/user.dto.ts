@@ -3,7 +3,7 @@ import { IsNotEmpty } from "class-validator";
 
 export class CreateUser{
     @ApiProperty()
-    @IsNotEmpty()
+    //@IsNotEmpty()
     nome: string;
 
     @ApiProperty()
@@ -11,20 +11,20 @@ export class CreateUser{
     cpf: string;
 
     @ApiProperty()
-    @IsNotEmpty()
+    //@IsNotEmpty()
     email: string;
 
     @ApiProperty()
-    @IsNotEmpty()
+    //@IsNotEmpty()
     senha: string;
 }
 
 export class EditUser{
     @ApiProperty()
-    @IsNotEmpty()
+    //@IsNotEmpty()
     email: string;
 
     @ApiProperty()
-    @IsNotEmpty()
+    //@IsNotEmpty()
     senha: string;
 }

@@ -6,8 +6,8 @@ import Header from "../components/header";
 import api from "../services/api";
 
 export default function Login({ navigation }) {
-  const [email, setEmail] = useState("string");
-  const [senha, setSenha] = useState("string");
+  const [email, setEmail] = useState("s");
+  const [senha, setSenha] = useState("s");
   var acessToken = "";
   function navigateToHome() {
     navigation.navigate("home", {
@@ -28,7 +28,6 @@ export default function Login({ navigation }) {
       })
       .catch((error) => {
         alert("Credenciais inválidas");
-        // console.log(error);
       });
   }
   return (

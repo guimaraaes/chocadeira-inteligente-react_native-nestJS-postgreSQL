@@ -1,11 +1,9 @@
-import React, { createRef } from "react";
+import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 import { TextInputMask } from "react-native-masked-text";
 import { Button, TextInput } from "react-native-paper";
 
 export default function FormRegister(props) {
-  const ref = createRef();
-  const ref2 = createRef();
   return (
     <View style={styles.container}>
       <View style={{ flexDirection: "row", alignSelf: "center" }}>
@@ -14,7 +12,6 @@ export default function FormRegister(props) {
           style={{ width: 50, height: 50 }}
         />
       </View>
-
       <TextInput
         label="CPF"
         underlineColor="#F9A825"
@@ -73,7 +70,6 @@ export default function FormRegister(props) {
         color="#F9A825"
         mode="contained"
         onPress={props.postUser}
-        // onPress={navigateToHome}
       >
         Criar cadastro
       </Button>

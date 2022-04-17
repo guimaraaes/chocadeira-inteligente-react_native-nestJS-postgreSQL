@@ -31,14 +31,6 @@ export default function ListProcesses(props) {
   return (
     <View style={styles.container}>
       {/* <Text>{props.acessToken}</Text> */}
-      {props.processInProgress ? null : (
-        <IconButton
-          icon="plus"
-          size={44}
-          onPress={navigateToCreateProcess}
-          style={styles.iconAdd}
-        />
-      )}
 
       <ScrollView
         refreshControl={
@@ -48,29 +40,42 @@ export default function ListProcesses(props) {
           ></RefreshControl>
         }
       >
+        {props.processInProgress ? null : (
+          <IconButton
+            icon="plus"
+            size={44}
+            onPress={navigateToCreateProcess}
+            style={styles.iconAdd}
+          />
+        )}
         {/* {console.log(props.processes)} */}
-        {props.processes.map((i, index) => {
-          return (
-            <Card
-              key={index}
-              onPress={() => {
-                navigateToProcess(i.id);
-              }}
-              style={styles.card(new Date(null).toISOString() === i.data_fim)}
-            >
-              <Card.Content>
-                <Title>Início: {moment(i.data_inicio).format("ll")}</Title>
-                <Paragraph>
-                  Duração: {moment(i.data_inicio).fromNow()}. Temperatura{" "}
-                  {i.temperatura}°C. Umidade {i.umidade}%. Viragem{" "}
-                  {Math.ceil(i.viragem / 60)}h{i.viragem % 60}min.
-                </Paragraph>
-              </Card.Content>
-            </Card>
-          );
-        })}
+        {props.processes
+          ? props.processes.map((i, index) => {
+              return (
+                <Card
+                  key={index}
+                  onPress={() => {
+                    navigateToProcess(i.id);
+                  }}
+                  style={styles.card(
+                    new Date(null).toISOString() === i.data_fim
+                  )}
+                >
+                  <Card.Content>
+                    <Title>Início: {moment(i.data_inicio).format("ll")}</Title>
+                    <Paragraph>
+                      Duração: {moment(i.data_inicio).fromNow()}. Temperatura{" "}
+                      {i.temperatura}°C. Umidade {i.umidade}%. Viragem{" "}
+                      {Math.ceil(i.viragem / 60)}h{i.viragem % 60}min.
+                    </Paragraph>
+                  </Card.Content>
+                </Card>
+              );
+            })
+          : null}
+        {}
       </ScrollView>
-      <Text style={styles.processTotal}>xx processos</Text>
+      <Text style={styles.processTotal}>{props.count} processos</Text>
     </View>
   );
 }

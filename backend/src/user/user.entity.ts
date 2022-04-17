@@ -7,19 +7,19 @@ export class User extends BaseEntity{
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column({nullable: true})
     nome: string;
 
     @Column()
     cpf: string;
 
-    @Column()
+    @Column({nullable: true})
     email: string;
 
-    @Column()
+    @Column({nullable: true})
     senha: string;
 
-    @Column()
+    @Column({nullable: true})
     salt: string;
 
     async validatePassword(senha: string){
