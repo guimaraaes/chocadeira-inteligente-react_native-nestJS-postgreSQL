@@ -56,7 +56,7 @@ export default function FormLogin(props) {
             }}
             style={{ color: "blue" }}
           >
-            Utilize seu códigoo
+            Utilize seu código
           </Text>
         </Text>
       </View>

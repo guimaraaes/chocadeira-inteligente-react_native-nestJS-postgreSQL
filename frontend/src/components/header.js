@@ -42,7 +42,7 @@ export default function Header(props) {
                   style={{ width: 50, height: 50 }}
                 />
                 <Menu.Item
-                  title={<Text style={styles.client}>Francisco da Silva</Text>}
+                  title={<Text style={styles.client}>Olá! Bem-vinde!</Text>}
                 />
               </View>
             </View>
@@ -93,7 +93,7 @@ export default function Header(props) {
 
       {props.login ? null : props.process ? (
         <>
-          <Appbar.Action icon="share" onPress={() => {}} />
+          {/* <Appbar.Action icon="share" onPress={() => {}} /> */}
           {new Date(null).toISOString() === props.process_finish ? null : (
             <Appbar.Action
               icon="delete"

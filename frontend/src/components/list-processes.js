@@ -30,8 +30,6 @@ export default function ListProcesses(props) {
   }
   return (
     <View style={styles.container}>
-      {/* <Text>{props.acessToken}</Text> */}
-
       <ScrollView
         refreshControl={
           <RefreshControl
@@ -48,7 +46,6 @@ export default function ListProcesses(props) {
             style={styles.iconAdd}
           />
         )}
-        {/* {console.log(props.processes)} */}
         {props.processes
           ? props.processes.map((i, index) => {
               return (
@@ -73,7 +70,6 @@ export default function ListProcesses(props) {
               );
             })
           : null}
-        {}
       </ScrollView>
       <Text style={styles.processTotal}>{props.count} processos</Text>
     </View>
