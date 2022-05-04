@@ -1,6 +1,27 @@
 # chocadeira-inteligente-react_native_nestjs
 
-Aplicação mobile desenvolvida com [React Native](https://nestjs.com/), [NestJS](https://reactnative.dev/) e [PostgreSQL](https://www.postgresql.org/) para o gerenciamento de processos em uma chocadeira de baixo custo.
+Aplicação mobile desenvolvida com [React Native](https://nestjs.com/), [NestJS](https://reactnative.dev/) e [PostgreSQL](https://www.postgresql.org/) para o gerenciamento de processos em uma chocadeira inteligente com ESP8266.
+
+
+## Quick Start
+
+Para iniciar a aplicação no seu computador é necessário ter o Docker instalado e seguir os seguintes passos:
+
+```bash
+# clone o repertório na sua máquina local
+git clone github.com/guimaraaes/chocadeira-inteligente-react_native-nestJS-postgreSQL.git
+
+# Direcione-se para o diretório
+cd chocadeira-inteligente-react_native-nestJS-postgreSQL
+
+# Construa a aplicação utilizando Docker
+docker-compose build
+
+# Compile a aplicação utilizando Docker
+docker-compose up
+```
+
+Além disso, no diretório raiz é necessário iniciar tanto o backend como o frontend com ``` npm start ```.
 
 ## Descrição das funcionalidades
 
