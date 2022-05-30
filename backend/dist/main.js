@@ -14,7 +14,7 @@ async function bootstrap() {
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, config);
     swagger_1.SwaggerModule.setup('api', app, document);
-    await app.listen(9000);
+    await app.listen(process.env.PORT || 9000);
     if (module.hot) {
         module.hot.accept();
         module.hot.dispose(() => app.close());

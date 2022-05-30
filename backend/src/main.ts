@@ -17,7 +17,7 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
 
-  await app.listen(9000);
+  await app.listen(process.env.PORT || 9000);
 
   if (module.hot) {
     module.hot.accept();
