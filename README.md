@@ -1,6 +1,6 @@
 # chocadeira-inteligente-react_native_nestjs
 
-Aplicação mobile desenvolvida com [React Native](https://nestjs.com/), [NestJS](https://reactnative.dev/) e [PostgreSQL](https://www.postgresql.org/) para o gerenciamento de processos em uma chocadeira inteligente com ESP8266.
+Aplicação mobile desenvolvida com [React Native](https://nestjs.com/), [NestJS](https://reactnative.dev/) e [PostgreSQL](https://www.postgresql.org/) para o gerenciamento de processos em uma [chocadeira inteligente com ESP8266](https://github.com/guimaraaes/chocadeira-inteligente-sistema-embarcado).
 
 
 ## Quick Start
