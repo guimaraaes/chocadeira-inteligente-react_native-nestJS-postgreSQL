@@ -1,43 +1,73 @@
-# chocadeira-inteligente-react_native_nestjs
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+</p>
 
-Aplicação mobile desenvolvida com [React Native](https://nestjs.com/), [NestJS](https://reactnative.dev/) e [PostgreSQL](https://www.postgresql.org/) para o gerenciamento de processos em uma [chocadeira inteligente com ESP8266](https://github.com/guimaraaes/chocadeira-inteligente-sistema-embarcado).
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Quick Start
+## Description
 
-Para iniciar a aplicação no seu computador é necessário ter o Docker instalado e seguir os seguintes passos:
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+## Installation
 
 ```bash
-# clone o repertório na sua máquina local
-git clone github.com/guimaraaes/chocadeira-inteligente-react_native-nestJS-postgreSQL.git
-
-# Direcione-se para o diretório
-cd chocadeira-inteligente-react_native-nestJS-postgreSQL
-
-# Construa a aplicação utilizando Docker
-docker-compose build
-
-# Compile a aplicação utilizando Docker
-docker-compose up
+$ npm install
 ```
 
-Além disso, no diretório raiz é necessário iniciar tanto o backend como o frontend com ``` npm start ```.
+## Running the app
 
-## Descrição das funcionalidades
+```bash
+# development
+$ npm run start
 
-Conforme o diagrama, após realizar a autenticação na aplicação o usuário possui funcinalidades para cadastrar um processo com a definição das configurações deste (temperatura, umidade e tempo médio de viragem) e posteriormente iniciar esse processo.
+# watch mode
+$ npm run start:dev
 
-As linhas tracejadas indicam que após cadastrar um processo, apenas é possível cadastrar outro quando não houver nenhum em andamento. De modo análogo, apenas é possível acompanhar um processo em andamento quando este tiver sido cadastrado e ainda não tenha sido finalizado.
+# production mode
+$ npm run start:prod
+```
 
-Outra funcionalidade é para acompanhar os processos, tanto os finalizados como os em andamento. Em ambos é possível compartilhar os excluir o processo selecionado, entretanto, pra os processos em andamento é possível editar as configurações definidas anteriormente, obter gráfico dos dados em escala diária, semanal ou desde o início do processo, além de finilizar o corrente processo. Para os processo finalizados é possível obter o gráfico das medições do período de duração do processo.
+## Test
 
-![img](https://github.com/guimaraaes/chocadeira-inteligente-react_native/blob/main/assets/chocadeira-inteligente_%20funcionalidades.png)
+```bash
+# unit tests
+$ npm run test
 
-### :mailbox: Dúvidas? Me manda um [e-mail](sguimaraaes@gmail.com) 
+# e2e tests
+$ npm run test:e2e
 
-<img src="https://raw.githubusercontent.com/guimaraaes/guimaraaes/master/assets/card-readme.png" >
+# test coverage
+$ npm run test:cov
+```
 
-### :globe_with_meridians: para me encontrar na web
-[![LinkedIn](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sara-guimar%C3%A3es-negreiros-aa2382155/)
-[![GitHub](https://img.shields.io/badge/github-%23100000.svg?&style=for-the-badge&logo=github&logoColor=white)](https://guimaraaes.github.io/guimaraaes/)
-[<img height="25" src="https://i.imgur.com/2iVxee6.png">![Lattes](https://img.shields.io/badge/lattes-%23100000?logoColor=blue&style=for-the-badge)](http://lattes.cnpq.br/7082901769077209)
+## Support
+
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+## Stay in touch
+
+- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
+
+## License
+
+Nest is [MIT licensed](LICENSE).
