@@ -23,15 +23,20 @@ docker-compose up
 
 Além disso, no diretório raiz é necessário iniciar tanto o backend como o frontend com ``` npm start ```.
 
-## Descrição das funcionalidades
+## Documentação da api com swagger
+No back-end temos as reguintes rotas HTTP conforme documentação com Swagger:
 
-Conforme o diagrama, após realizar a autenticação na aplicação o usuário possui funcinalidades para cadastrar um processo com a definição das configurações deste (temperatura, umidade e tempo médio de viragem) e posteriormente iniciar esse processo.
+![img](https://github.com/guimaraaes/chocadeira-inteligente-react_native/blob/main/assets/swagger1.png)
+![img](https://github.com/guimaraaes/chocadeira-inteligente-react_native/blob/main/assets/swagger2.png)
+![img](https://github.com/guimaraaes/chocadeira-inteligente-react_native/blob/main/assets/swagger3.png)
 
-As linhas tracejadas indicam que após cadastrar um processo, apenas é possível cadastrar outro quando não houver nenhum em andamento. De modo análogo, apenas é possível acompanhar um processo em andamento quando este tiver sido cadastrado e ainda não tenha sido finalizado.
+## Telas do app mobile
 
-Outra funcionalidade é para acompanhar os processos, tanto os finalizados como os em andamento. Em ambos é possível compartilhar os excluir o processo selecionado, entretanto, pra os processos em andamento é possível editar as configurações definidas anteriormente, obter gráfico dos dados em escala diária, semanal ou desde o início do processo, além de finilizar o corrente processo. Para os processo finalizados é possível obter o gráfico das medições do período de duração do processo.
+Após realizar a autenticação na aplicação o usuário possui funcinalidades para cadastrar um processo com a definição das configurações deste (temperatura, umidade e tempo médio de viragem) e posteriormente iniciar esse processo. Após cadastrar um processo, apenas é possível cadastrar outro quando não houver nenhum em andamento.
 
-![img](https://github.com/guimaraaes/chocadeira-inteligente-react_native/blob/main/assets/chocadeira-inteligente_%20funcionalidades.png)
+Outra funcionalidade é para acompanhar os processos, tanto os finalizados como os em andamento através de gráficos com as informações diárias de temperatura e umidade. Pra os processos em andamento é possível editar as configurações definidas anteriormente.
+
+![img](https://github.com/guimaraaes/chocadeira-inteligente-react_native/blob/main/assets/telas.png)
 
 ### :mailbox: Dúvidas? Me manda um [e-mail](sguimaraaes@gmail.com) 
 
