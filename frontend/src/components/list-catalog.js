@@ -16,9 +16,10 @@ export default function ListCatalog(props) {
           style={styles.card}
         >
           <Card.Content>
-            <Title>Codorna</Title>
+            <Title>Galinha</Title>
             <Paragraph>
-              Duração: 21 dias. Temperatura 50°C. Umidade 60%. Viragem 2h30min.
+              Duração: 21 dias. Temperatura 38 a 39,3°C. Umidade 75%. Viragem
+              1h50min.
             </Paragraph>
           </Card.Content>
         </Card>
@@ -30,10 +31,20 @@ export default function ListCatalog(props) {
           style={styles.card}
         >
           <Card.Content>
-            <Title>Codorna</Title>
-            <Paragraph>
-              Duração: 21 dias. Temperatura 50°C. Umidade 60%. Viragem 2h30min.
-            </Paragraph>
+            <Title>Ganso</Title>
+            <Paragraph>[informações]</Paragraph>
+          </Card.Content>
+        </Card>
+
+        <Card
+          onPress={() => {
+            //navigateToProcess(i.id);
+          }}
+          style={styles.card}
+        >
+          <Card.Content>
+            <Title>Pato</Title>
+            <Paragraph>[informações]</Paragraph>
           </Card.Content>
         </Card>
 
@@ -45,9 +56,7 @@ export default function ListCatalog(props) {
         >
           <Card.Content>
             <Title>Codorna</Title>
-            <Paragraph>
-              Duração: 21 dias. Temperatura 50°C. Umidade 60%. Viragem 2h30min.
-            </Paragraph>
+            <Paragraph>[informações]</Paragraph>
           </Card.Content>
         </Card>
       </ScrollView>

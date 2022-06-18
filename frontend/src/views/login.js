@@ -6,7 +6,7 @@ import Header from "../components/header";
 import api from "../services/api";
 
 export default function Login({ navigation }) {
-  const [email, setEmail] = useState("string");
+  const [email, setEmail] = useState("sguimaraaes@gmail.com");
   const [senha, setSenha] = useState("string");
   var acessToken = "";
   function navigateToHome() {
@@ -27,7 +27,7 @@ export default function Login({ navigation }) {
         navigateToHome();
       })
       .catch((error) => {
-        alert("Credenciais inválidas");
+        alert(error);
       });
   }
   return (

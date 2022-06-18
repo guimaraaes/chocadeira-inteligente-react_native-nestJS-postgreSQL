@@ -8,7 +8,7 @@ async function bootstrap() {
     app.enableCors();
     const config = new swagger_1.DocumentBuilder()
         .setTitle('chocadeira inteligente')
-        .setDescription('api da aplicação mobile')
+        .setDescription('api para aplicação mobile')
         .setVersion('1.0')
         .addBearerAuth()
         .build();

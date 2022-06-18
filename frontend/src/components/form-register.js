@@ -13,6 +13,25 @@ export default function FormRegister(props) {
         />
       </View>
       <TextInput
+        label="Código da CI"
+        underlineColor="#F9A825"
+        color="#F9A825"
+        mode="outlined"
+        value={props.cpf}
+        style={{ margin: 5 }}
+        setCPF={props.setCPF}
+        render={(props) => (
+          <TextInputMask
+            {...props}
+            type={"cpf"}
+            onChangeText={(text) => {
+              props.setCPF(text);
+            }}
+          />
+        )}
+      />
+
+      <TextInput
         label="CPF"
         underlineColor="#F9A825"
         color="#F9A825"

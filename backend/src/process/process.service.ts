@@ -26,7 +26,8 @@ export class ProcessService  {
                 Array.prototype.push.apply(result, result2.slice(0, -1))
                 return {result, count}
             }
-            return {result2, count}
+            result = result2
+            return {result, count}
         }
         catch{
             return {result: 0, count: 0}

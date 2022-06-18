@@ -71,7 +71,9 @@ export default function ListProcesses(props) {
             })
           : null}
       </ScrollView>
-      <Text style={styles.processTotal}>{props.count} processos</Text>
+      <Text style={styles.processTotal}>
+        {props.count} {props.count <= 1 ? "processo" : "processos"}
+      </Text>
     </View>
   );
 }
@@ -92,6 +94,7 @@ const styles = StyleSheet.create({
   },
   iconAdd: {
     marginRight: 20,
+    alignSelf: "center",
     backgroundColor: "#F9A825",
   },
 

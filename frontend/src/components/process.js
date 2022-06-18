@@ -36,14 +36,14 @@ export default function ProcessComponent(props) {
       {
         data: props.history.map((i) => i.umidade),
         color: () => `rgba(99, 153, 191)`, // optional
-        strokeWidth: 4, // optional
+        strokeWidth: 3, // optional
       },
 
-      // {
-      //   data: props.history.map((i) => i.umidade_def),
-      //   color: () => `rgba(20, 40, 62)`, // optional
-      //   strokeWidth: 2, // optional
-      // },
+      {
+        data: props.history.map((i) => i.umidade_def),
+        color: () => `rgba(20, 40, 62)`, // optional
+        strokeWidth: 0.5, // optional
+      },
     ],
   };
 
@@ -53,14 +53,14 @@ export default function ProcessComponent(props) {
       {
         data: props.history.map((i) => i.temperatura),
         color: () => `rgba(255, 140, 1)`, // optional
-        strokeWidth: 4, // optional
+        strokeWidth: 3, // optional
       },
 
-      // {
-      //   data: props.history.map((i) => i.temperatura_def),
-      //   color: () => `rgba(200, 55, 5)`, // optional
-      //   strokeWidth: 2, // optional
-      // },
+      {
+        data: props.history.map((i) => i.temperatura_def),
+        color: () => `rgba(200, 55, 5)`, // optional
+        strokeWidth: 0.5, // optional
+      },
     ],
   };
   function navigateToEdit() {
